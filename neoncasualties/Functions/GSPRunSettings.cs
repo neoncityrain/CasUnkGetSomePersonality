@@ -1,67 +1,47 @@
 ﻿namespace ncrGetSomePersonality;
 
-internal class gspRunSettings
+internal class gspRunSettings : MonoBehaviour
 {
-    public static List<RunSetting> settingTypes = new List<RunSetting>
-    {
+    public List<gspInput> settings = [
+        new gspInput("playername")
+        ];
+    internal GameObject GSPSettings;
+    public gspInput currentSetting;
+    internal TMP_InputField input;
+    internal TMP_ColorGradient colour;
 
-    };
 
-    //[HarmonyPatch(typeof(RunSettingDisplay), "UpdateSetting")]
-    public class updateAndApply
+    internal void Start()
     {
-        public static bool isTxt;
-        internal static void Prefix(RunSettingDisplay __instance, ref
-            Dictionary<string, object> settings)
-        {
-            isTxt = __instance.settingType.Equals(typeof(RunSettingTextInput));
-            if (isTxt)
-            {
-                settings[__instance.associated.name] =
-                    __instance.transform.GetChild(1).GetComponent
-                    <TMP_InputField>().name;
-            }
-        }
+        input = ConsoleScript.instance?.input;
     }
 
-    [HarmonyPatch(typeof(RunSettingDisplay), "UpdateSettingDisplay")]
-    public class displayUpdate
+    internal void Set(gspInput playSetting)
     {
-        private static bool didInitialize;
-        internal static void Prefix(RunSettingDisplay __instance,
-            Dictionary<string, object> settings)
-        {
-            if (!didInitialize)
-            {
-                updateAndApply.isTxt = __instance.settingType.Equals(typeof(
-                    RunSettingTextInput));
-                didInitialize = true;
-                if (updateAndApply.isTxt && __instance.associated is RunSettingTextInput)
-                {
-                    __instance.transform.GetChild(1).GetComponent<TMP_InputField>().
-                        isRichTextEditingAllowed = false;
-                    __instance.transform.GetChild(1).GetComponent<TMP_InputField>().
-                        onValueChanged.AddListener(delegate
-                        {
-                            __instance.UpdateSetting(settings);
-                        });
-                }
-            }
+        currentSetting = playSetting;
+    }
 
-            if (updateAndApply.isTxt && __instance.associated is RunSettingTextInput)
-            {
-                __instance.transform.GetChild(1).GetComponent<TMP_InputField>().
-                    SetTextWithoutNotify((string)settings[__instance.associated.name]);
-            }
-        }
+    internal void initInput()
+    {
+        if (input == null) { return; }
+        input.text = "";
+        input.onValueChanged.AddListener(str =>
+        {
+            currentSetting.inputValue = str;
+        });
     }
 }
-
-public class RunSettingTextInput : RunSetting
+public class gspInput
 {
+    internal string name;
+    internal bool boolValue;
+    internal float floatValue;
+    internal int intValue;
+    internal string inputValue;
+    internal Color colorValue;
 
-    public RunSettingTextInput(string name)
+    public gspInput(string name)
     {
-        base.name = name;
+        this.name = name;
     }
 }
