@@ -1,0 +1,37 @@
+{
+  "name": "feline",
+  "desc": "You appear to be some manner of cat. Unfortunately, the whole 'nine lives' bit seems to be a paid DLC.",
+  "items": {
+    "dogfooddsc": "You would prefer not to eat this."
+  },
+  "dialogue": {
+      "randomnoises": [
+        "Mrrah","Nyeh","Mrrp","Mrrw","Mau","Hsk","Nya","Mrw","Mao","Mew","Mrl"
+      ],
+
+      "eatGood": [
+        "Prrrrr..."
+      ],
+      "verytired": [
+        "Mew... mewl... mrrrrr... mrrrrrl..."
+      ],
+      "pain": [
+        "M-meowch..."
+      ],
+      "hitgroundhard": [
+        "HSSK-- whatever happened to landing on my feet...?"
+      ],
+      "hitbycreature": [
+        "HISSSSS!","MRAAAWR!!","HSSSSS!","MRRRRAOWWWWW!!","MRAAAAAOW!!"
+      ],
+      "dirty": [
+        "I really need to clean my fur...","I'm undergroomed. Sigh..."
+      ],
+      "encumbered": [
+        "I'm not built to carry this many things..."
+      ],
+      "lastmoments": [
+        "Ha... ha... curiousity killed... the cat, huh?...",
+        "What... whatever happened to... t-to my nine... lives?..."
+    ]}
+}

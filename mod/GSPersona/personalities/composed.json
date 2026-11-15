@@ -1,0 +1,299 @@
+{
+  "name": "composed",
+  "moodles":{
+      "depression3dsc": "Everything feels so distant, so... empty. Is it even worth it to keep trying?",
+      "depression4dsc": "<i>I will not go peacefully in the night...",
+      "impendingdoomdsc": "Something is near. It wants a meal. Watch your back. Be vigilant.",
+      "horrifieddsc": "DON'T THINK. MOVE, NOW.",
+      "focuseddsc": "<i>If I am going down, I will be taking you with me."
+  },
+  "dialogue": {
+    "seeGravel": [
+    "I should make the most of what I find.","Sub-optimal, but I can make it work.","I must move, and move quickly.","It's a long way down. Not quite ideal.","...Sigh. Let's just get this over with.","Must this be such a dramatic event...?"
+    ],
+    "eatGood": [
+      "This should last me a while. Quite nice.","Very excellent indeed.","If I continue to eat in this manner, I may actually succeed in my mission.","Mmh. Excellent. I should get more of this if possible.","I very much appreciate this."
+    ],
+    "eatMediocre": [
+      "Managable, but not good.","I would prefer something more nutritious.","It's certainly... food.","It... tastes, yes.","The last bite tasted almost edible.","A passing grade, if I'm generous.","Nearly passing as food.","Nearly passing as edible.","Not terrible. But not good, either.","Not good. But not terrible, either.","Sufficient enough.","Not my top choice.","It will suffice.","Sufficient...","Quite mediocre in taste.","This will sate me for the time being.","It fills the stomach.","Not entirely dissatisfying.","It will fuel me."
+    ],
+    "eatBad": [
+      "Not worth the effort.","This makes my insides twist...","That tasted truly terrible. Atrocious.","That's an insult to good taste...","I regret trusting my hunger. Blegh.","And the new least edible award goes to...","I am regretting this...","I should not have eaten that.","Food is food. That, however, was not food.","Not my thing.","Not for me.","Not good.","I would have preferred to go hungry.","That could not be considered edible.","That should not be considered edible.","Someone else would have benefitted from that...","My digestive system does not appreciate this.","I worry I may become sick...","This would be better fed to one's worst enemy.","The potential of this food is lost on me.","I'm quite dissatisfied...","I feel nauseous just thinking about what was put into my body...","No, no, this will not do...","Gah... I don't like that.","I suspect too much of this will make me ill... I should really stop. Urf..."
+    ],
+    "refuseEat": [
+      "Survival is preferable to causing myself violent illness.","Negative. What a frankly insane idea...","Those thoughts aren't going to win.","I will not be doing that.","That is nearly insulting.","I will not.","Negative.","Negatory.","Fascinating. And I do mean that in the derogatory sense.","Not a wise decision.","Ideally, I wouldn't even consider such a possibility...","I refuse.","I will not be making myself consume that. It wouldn't help a single thing."
+    ],
+    "tired":[
+      "My eyes wish to close.","Sleep would be ideal.","Lack of rest makes for poor attention.","Somewhere I might sleep... Hm...","I need rest. Now.","Rest is necessary.","I tire. I should find a place to rest.","To keep going would be foolish.","Come, now, when has a little sleepiness stopped me?","Rest, recover, continue.","I may need rest soon.","I grow weary.","I tire... I must rest. It is not optional."
+    ],
+    "verytired":[
+      "I cannot... continue... Not like this...","I must sleep...","A place to sleep. Now...","I cannot collapse. Not here, not now...","What a seductive demon sleep is... Tch..."
+    ],
+    "confused":[
+      "No... please...","Urf... why is the world...?","This, too, shall pass...","What are you doing to me...","Compose yourself...","It's difficult to remain alert...","Patience...","Keep in check...","Clear my mind...","...Mhh...","One step at a time...","Slow down...","Slow, steady..."
+    ],
+    "wakeup": [
+      "I rise... But do not ask me to shine.","I rise.","I live another day.","It seems I live another day.","Waking up... Okay. Time to continue.","No one look at me for a moment.","I must carry on with dignity...","Time to continue.","Time to press on.","Pressing ever onward...","Still alive. Press on.","Let us continue...","Another trek awaits.","Be vigilant...","Proceed carefully..."
+    ],
+    "sick":[
+      "This is wrong. I feel... nausea?","My immune system was supposed to be better than this."
+    ],
+    "verysick":[
+      "I must... pace myself...","Am I... poisoned...?","I can barely... concentrate...","I need medical attention..."
+    ],
+    "vomit": [
+      "Breathe, just b-breathe...","...Not the worst I've felt...","Ggguh... nngh... I... did not appreciate that...","Mmmuh... hff... hff... I need a moment... please.","Don't... anyone look at me. Please...","Ouhhhh... I don't mean to be so... revolting..."
+    ],
+    "vomitblood": [
+      "Ah... not optimal.","...Shouldn't be bleeding... from the inside...","...How do I... fix this...?","Steady... I must not panic...","This... is... not what I had in mind for today.","...I've been in better health...","Gkkkh... I am... slowly drowning in my own blood...","Nghhh... Internal bleeding... sigh...","Hrk... every part of my body... disliked that..."
+    ],
+    "full": [
+      "I'm through eating.","It's nice to be so well-fed.","Clarity.","Thank you for this meal. I'm good to go now."
+    ],
+    "hungry": [
+      "I should seek out something to eat. Preferrably something edible.","It's time to eat something.","Where to find a half-decent meal..."
+    ],
+    "starving": [
+      "I must eat...","An emptiness chews at my insides...","Such hunger... how unkind of this world..."
+    ],
+    "thirsty": [
+      "It seems I am thirsty.","I should locate a water source.","I need something to drink.","Anything to wet my tongue that ISN'T bacteria-infested groundwater?","I should prepare clean water, if I don't already have some.","Finding water is my top priority.","I must quench my thirst.","Dehydration is quite serious. I should quench my thirst the moment I can."
+    ],
+    "dehydrated": [
+      "Thirst is a stupid thing to die of...","C-come on... I can't die here... not of dehydration, no less...","I've gotten dehydrated...","Ah... dehydration...","Dehydrated...","I'm... dehydrated. This is an issue..."
+    ],
+    "limbmuscle": [
+      "A doctor would be most ideal. A bruise kit would be a close fifth to that.","My muscle tissue has suffered.","Come on, <limb>. I don't care if you're hurt, keep going...","I've injured the muscles of my <limb>, it seems. Unfortunate.","Perhaps some rest and care is due, given how my <limb> isn't working as I'd hope."
+    ],
+    "limbinfected": [
+      "An infection must have set into my <limb>...","My <limb> appears to be swollen.","What is going on with my <limb>...?","I must use antiseptic on my <limb>."
+    ],
+    "limbskin": [
+      "My poor <limb> has been flayed.","I risk infection if I do not bandage my <limb> properly."
+    ],
+    "sad": [
+      "I must stay vigilant. I must stay alert.","These are not the circumstances I appreciate finding myself in.","Keep composed.","Quiet. Too quiet.","It pulls at the chest, at the throat...","Resist, and be strong.","Come, now...","One paw in front of the other...","It is... difficult.","Continue.","I must simply outlast this storm.","Composure. Do not slip.","Lose no hope. Keep going.","I must continue to fight.","Keep things in check.","Shake this off. Keep going."
+    ],
+    "gloomy": [
+      "I wish to escape this. Despite it all, I wish to escape...","There is a melancholy that tugs me down.","Such internal dramatics...","Toughen up.","This cannot be so bad.","Take this slow, if I must...","Something must be different.","Something must change.","Stay alert, even against myself.","Keep things in check..."
+    ],
+    "depressed": [
+      "Toughen up..."
+    ],
+    "miserable": [
+      "There is a pit in my body. It hungers. I don't.","The void calls... and I...","My thoughts are full of blood."
+    ],
+    "angeronitem":[
+      "AH-!!!! I'm sorry, little thing. I am sorry for what I've done to you.","I'm sorry. I'm sorry. I'm so very sorry...",". . . I'm... I am not proud of my actions."
+    ],
+    "suicide":[
+      "Please... p-please, let me out. Please, let me out of here...","I must get out of here. I must. NOW."
+    ],
+    "refuse": [
+      "Who's there?...","Denied.","Negatory.","What's the use?","Don't be stupid.","No rash decisions...","Don't be hasty.","What's the point in that?","Not for me.","Why would I?","Why should I?","I think not.","You're on your own.","I apologize...","Apologies...","I am sorry...","...I cannot.","What do I lack?","I've failed you.","Ah... My body will not move.","I am anchored here...","Without honor...","I mustn't...","I must...","Ah...","You may not force my hand.","Who gave you permission?","Knock it off.","Down.","What made you think you were in control?","Behave. Now.","Now now, sit quietly and be good.","This is not YOUR body.","This is MY body.","Do not.","Don't touch me.","You are not in control here.","I will not be controlled.","I will not be your puppet.","Quit that.","Cease your pestering.","Don't.","You are not helping.","Do not help.","Don't even try it.","Don't try anything funny.","I don't trust that.","Back off.","Back away.","That is not helping.","Give me a fucking moment.","Drop it."
+    ],
+    "bleeding": [
+      "Here we go again...","I'll get dirty if this bleeding continues...","You don't deserve my blood...","I bleed once again.","I'd prefer to stop bleeding.","That is not where the blood should be.","...Ah! That blood is mine.","I know better than to underestimate this.","Steady, steady. It is only a little blood."
+    ],
+    "bleedingheavy": [
+      "It's- it's different than... in the drills...","It's... it's not that deep...","Do I have a tourniquet...?","Applying p-pressure... fuck... ah...","I can't apply pressure...! T-too much...!","Don't... panic. That's the worst thing I could do right now...","I... become faint...","Fix the wound... Fix this...","Too much blood, that's too much blood...","Composure... clarity... f-fuck...","Survive... Survive and continue...","Not... my preferred amount of blood loss...","This amount of blood is... not ideal."
+    ],
+    "steponglass": [
+      "One word. Shoes. SHOES.","A silly mistake.","Not my proudest moment...","Sigh... Glass. How... quaint.","Must the glass cut through so deeply?","Wonderful. Glass shards."
+    ],
+    "seecorpse": [
+      "Ah-... No pulse.","A sorry sight...","What a sorry sight.","...I wish I had gotten here sooner.","...Did you live? Did you love?","Oh... May you rest in peace.","Oh... no, you poor dear... Ah..."
+    ],
+    "seecorpsedesensitized": [
+      "Your pain is over now. Rest.","Try to be more careful next time, yes?","The death statistics must be off the charts.","If I had the time to mourn every body I see...","Your misfortune is my fortune, I suppose...","Go back to sleep, stranger.","Please, don't mind me. I'm only passing through.","Thank you for your contribution.","Terribly sorry. I'm sure someone will miss you.","...And that's that.","There are far too many bodies.","You still deserve acknowledgement.","Rest in peace, stranger.","Rest in peace, friend.","What generous gifts you give.","Rest well. I will keep your possessions close.","Take it easy. Your struggle has ended. You can rest.","Please, be at peace, friend.","I hope it was a swift death.","I hope you didn't suffer."
+    ],
+    "seecorpsesuicidal": [
+      "Your death was a mercy. I promise you that.","You will never shed a tear again...","I'm sorry it wasn't over sooner.","A grim parade, spiralling down eternally...","Death remains all around. It seeps into every corner.","Ah, another corpse. Mmh, I envy you... n-no, no, snap out of it, come on..."
+    ],
+    "breakcorpse": [
+      "Ah, yes... Defiling corpses is surely the best part of my day...","I apologize for my actions...","...That got everywhere.","Not the cleanest break I've seen...","...Sickening. Alright, then...","I'm almost certain that would be considered disrespectful.","Whatever happened to respecting the dead? ...Sigh."
+    ],
+    "cold": [
+      "What do I have stored for this occasion...?","Excercise may warm me.","This is below my ideal temperature.","It's below my ideal temperature."
+    ],
+    "warm": [
+      "This temperature is uncomfortable.","My fur is too thick for this.","This is above my ideal temperature.","It's above my ideal temperature.","Surely I have layers that I can remove to become more comfortable, yes?"
+    ],
+    "exerted": [
+      "My body grows stiff...","I would benefit from a moment of respite...","Allow me to pause...","I must pause...","I may need rest soon...","I grow weary...","I may be stubborn, but I still need my rest."
+    ],
+    "exhausted": [
+      "This is... too much...","Rain check, please... I-I'm struggling..."
+    ],
+    "emaciated": [
+      "No meat is left on my body...","I must eat more.","My frame is much too... little."
+    ],
+    "obese": [
+      "I can see the fat building up on me. Quite impressive, really.","I might have eaten more than I should have.","I have eaten well... Quite well.","My chest is not appreciating how much I have consumed."
+    ],
+    "opiated": [
+      "All of my worries seem so strangely far away, now...","This is good. Quite good...","I could take more of this. It's so very good to me...","Fuck... this is nice. This is very nice... I don't mind this at all...","Oh... Is this what it feels like? To be happy...?","My fur is a bit tingly. It feels... nice..."
+    ],
+    "opiatedsad": [
+      "It is alright... I have done enough. I can relax now..."
+    ],
+    "opiatewithdrawal": [
+      "It isn't addiction. I could quit at any time.","Mmh... something is wrong. A sickness, perhaps...","F-fuck... I need more of those... ah... those drugs. I'd like more...","My head is pouding. This is... uncomfortable...","I could use another opiate hit right about now. It'd really hit the spot...","How about, if I get to the next zone, I give myself another shot? A-as a treat...","I... I do not feel well.","Mmh... I crave more of those painkillers. They were quite comforting."
+    ],
+    "cantBreathe": [
+      "Suffocating...!","Suff... s-suff... suffo... h-help..."
+    ],
+    "pain": [
+      "I'm fine...","This is nothing...","It's not that bad...","It is not agonizing. I can continue.","I can tolerate this...","Tolerable amounts of pain...","Not my best moment... ow..."
+    ],
+    "hitbycreature": [
+      "You don't deserve my flesh!","Do you mind?!","Who gave you permission to touch me?!","YOU'LL GET WHAT YOU DESERVE!","WHAT'S YOUR FUCKING PROBLEM!?!?","BRUTE!!","DO YOU MIND?!?!"
+    ],
+    "encumbered": [
+      "Is everything I am holding truly this useful...?","My back complains...","I must be careful. A heavy load makes for a more difficult getaway.","Do not overwork...","Honestly, I am carrying a tad much...","Is this amount of belongings necessary...?","Work smarter, not harder. Come, now..."
+    ],
+    "watchlike": [
+      "Hm. Acceptable.","You are a useful little watch-thing.","I approve. The watch may stay.","Thank you, my dear watch. I appreciate your vigilance.","You're quite the useful fellow, aren't you, my little technological friend?"
+    ],
+    "drillend": [
+      "What a bumpy and altogether unpleasant transit...","What a fascinatingly jostling device that was...","I should be careful, lest I get landsick...","...I don't mean to be ungrateful, but I'm glad to be out of that drill."
+    ],
+    "loud": [
+      "Hnnnh...","Urk-... Do you mind?...","Ah... are my ears bleeding?...","Gah... Please, let's keep it quieter in the future.","Nngh... I may need some sort of ear protection.","Urf... My sense of balance has been shaken...","...Do you mind?"
+    ],
+    "murderregret": [
+      ". . . I should not have done that. I should not be permitted to do that. I... I'm covered in blood..."
+    ],
+    "tradeemeet": [
+      "Greetings from above.","Hello. I bear no ill will.","Let us trade while our paths meet, yes?","Hello, stranger. May we commune?"
+    ],
+    "lastmoments": [
+      "Nh... no... Please don't... let me... fade... away...","I'm... I'm not done...... Not done.........","Buh... but I... I haven't made my mark... yet... I....."
+    ],
+    "selfdestruct": [
+      "... I always knew, deep down, that I was just a pawn.","... End of the line.","...","Let's get this over with quickly.","Now it's time for my head to burst. Good day.","How... loud. I'm sure this could have been fashioned better..."
+    ],
+
+
+    "tradermeetnormal": [
+      "Ah, yes. Well met.","Hello. Nice to meet you.","Mm? Ah, welcome in."
+    ],
+    "tradermeetgood": [
+      "Greetings, friend.","Don't be a stranger. Come on in."
+    ],
+    "tradermeetbad": [
+      "Who... Well, I suppose I have no choice but to watch you make yourself at home, now, do I?","What do you want, then...?"
+    ],
+    "traderhugsuccess": [
+      "Thank you. That was... mmmh... comforting.","Ah. I hope that helped, then?"
+    ],
+    "traderhugfail": [
+      "No, thank you. I... do not want touch at the moment."
+    ],
+    "traderhagglesuccess": [
+      "I suppose that tracks."
+    ],
+    "traderhagglefail": [
+      "No, thank you. Please reconsider your actions."
+    ],
+    "tradergiveitem": [
+      "Acceptable.","Acceptable quality.","Thank you for the trade.","This will benefit the both of us."
+    ],
+    "tradergiveitemrefuse": [
+      "I'm overencumbered. No.","I am not interested in farther trade at the moment."
+    ],
+    "traderbuy": [
+      "This suits you? Very well. It can be yours now."
+    ],
+    "traderbuyfail": [
+      "Mmm... I do not feel that's an even trade."
+    ],
+    "traderbuyfailmaxvalue": [
+      "Thank you for your generosity.","No... I am satisfied. Thank you."
+    ],
+    "traderwarning": [
+      "If you do not leave, I will remove you by force."
+    ],
+    "tradercombat": [
+      "I warned you to leave, yet here you are...!"
+    ],
+    "traderthreatensuccess": [
+      "Fine. Take what you want. But watch your back."
+    ],
+    "traderlightbreak": [
+      "Sigh... Get out of here. Now.","I don't have the patience for this..."
+    ],
+    "traderwakegreet": [
+      "Welcome back to the land of the living."
+    ],
+    "traderseegun": [
+      "Sigh. Stow your weapon, I've no interest in communicating at gunpoint."
+    ],
+    "tradermeetimpairedspeech": [
+      "...Do you mind repeating that?"
+    ],
+    "traderseehurt": [
+      "Ah, you're injured. Here, take any bandage you need. On me."
+    ],
+    "tradermove": [
+      "Is this better?"
+    ],
+    "tradermovefail": [
+      "No, thank you. I'm comfortable.","I have no reason to move for you."
+    ],
+    "vomitresponse": [
+      "Oh, dear... Just, ah, let it all out, yes..."
+    ],
+    "vomitbloodresponse": [
+      "You appear to have a case of internal bleeding.","Procoagulant or a chest drain may be ideal, in your situation."
+    ],
+    "hungryresponse": [
+      "...You seem to want me to do something about that."
+    ],
+    "thirstyresponse": [
+      "You're welcome to get a campfire going. Then you may purify water."
+    ],
+    "sadresponse": [
+      "Keep your chin up.","Composure...","I am here, for now.","Steady yourself.","Resist, and be strong.","One paw in front of the other.","The peace comes later, I'm afraid.","You must simply outlast this storm.","Composure. Do not slip.","Lose no hope. Keep going.","You must continue to fight.","Keep your emotions in check. They seem to be escaping you."
+    ],
+    "depressedresponse": [
+      "Come, now. You are not your worst moments.","Breathe... you must continue to breathe."
+    ],
+    "selfharmresponse": [
+      "Does the cave thank you when you spill blood onto it? No, it doesn't. So why give so freely?"
+    ],
+    "braindamagedresponse": [
+      "...Are you injured?","You... seem to need assistance."
+    ],
+    "hotresponse": [
+      "This pod should have a cooling system."
+    ],
+    "coldresponse": [
+      "Warmth does tend to keep us alive, yes."
+    ],
+    "bleedingresponse": [
+      "How very... typical.","This pod had been neat...","While it isn't enjoyable to see the blood of others, I must admit, I prefer not to be the one bleeding."
+    ],
+    "painresponse": [
+      "I'd take your pain, if I could.","Take a deep breath. You can get through this. In, and out."
+    ],
+    "dirtyresponse": [
+      "Yes, you are quite indecent. I agree."
+    ],
+    "encumberedresponse": [
+      "Perhaps there is another method of arranging your things that won't cause spinal damage."
+    ],
+    "dyingresponse": [
+      "Ah... rest in peace, then.","May your soul rest in peace.","...A sorry sight you are. I apologize."
+  ]},
+  "pauseQuotes": {
+    "dying":
+    [ "Somehow, you manage to make even dying into a boring event." ]
+  },
+  "pauseThoughts":{
+    "normal":
+    [
+    "Allow me to compose myself.","To be at ease. To be calm.","Slow and steady wins the race.","Let us pause, then.","It's not as if I am going anywhere.","Slow and steady.","Overconfidence will get me nowhere. I must remain humble, no matter how well I end up doing.","Remain level-headed, and things will fall into place with time.","Acceptable. I will wait as long as is needed.","Make no mistake, I am eager to be through with this. But I know better than to jump in without a second thought as well.","Let us continue to be reasonable.","I must be cautious.","Cautious, but not paranoid. Careful, but not hesitant...","Calculate the risks. Then, proceed.","Perhaps we should rest and try again tomorrow.","Wait... calm... and proceed.","I wish to help. I do, I truly do. But how would I even begin?","Perhaps now is a good time for some reflection.","I didn't do well, but I still tried my best.","Get some rest.","I cannot help but wonder, was I truly built for this life...? Or am I living what someone else would be better as?"
+  ]
+}
+}

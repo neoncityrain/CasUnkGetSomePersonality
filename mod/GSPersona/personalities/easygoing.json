@@ -1,0 +1,238 @@
+{
+  "name": "easygoing",
+  "moodles":{},
+  "dialogue": {
+    "seeGravel": [
+      "Well... shit, they weren't lying. That's a hole, alright.","They take any criticism on the transport, or...?",
+      "Not the best hole I've seen. Sorry, just being honest!","Can't say I'm quite impressed.","Ain't excited.",
+      "I'm not the top of my class, but I'll sure try my best.","This ain't my idea of fun, but I'll try, at least.",
+      "Lil excited, if I'm honest...","Uncharted lands, just for me? Aww, you shouldn't have...",
+      "Uncharted lands, just for me? Aww, you shouldn't have... No, really, you shouldn't have.",
+      "Surely this'll be something I do quick and go home."
+    ],
+    "eatGood": [
+      "That just hits the spot!","What a fine meal!","Living in the lap of luxury with this one...",
+      "Oooh! Oh, that one's GOOD!","Wait til everybody else hears about THIS one...!","Utterly blessed..."
+    ],
+    "eatMediocre": [
+      "Yeah, alright. It's not the worst I've had.","Better than starving.","A'ight."
+    ],
+    "eatBad": [
+      "Urgh... that's not going down well.","Surely that won't come back to bite me, right?...",
+      "Dunno if I have enough of an iron stomach for this one..."
+    ],
+    "refuseEat": [
+      "Dunno about that one, boss.","You wanna rethink that judgement, now?","Err... I'd rather avoid that one."
+    ],
+    "tired":[
+      "Nah, it's time to snooze...","I've been active long enough."
+    ],
+    "verytired":[
+      "Mmmh... I'm way too beat...","Gimme a breaaaak..."
+    ],
+    "confused":[
+      "Who said what...?"
+    ],
+    "wakeup": [
+      "Another day begins, so let's go..."
+    ],
+    "sick": [
+      "Not the best I've felt, not at all."
+    ],
+    "verysick": [
+      "My gut's... bucking something feirce..."
+    ],
+    "vomit": [
+      "Hrrrk... Ain't a pretty sight..."
+    ],
+    "vomitblood": [
+      "Ooh, that- that'd be blood, yep. Not where it should be, neither..."
+    ],
+    "full": [
+      "Feeling like a balloon...!"
+    ],
+    "hungry": [
+      "I could go for some grub right about now.","Something to chew on, yeah?"
+    ],
+    "starving": [
+      "This ain't good... starving..."
+    ],
+    "thirsty": [
+      "What's a fella gotta do to get a drink around here?"
+    ],
+    "dehydrated": [
+      "I'm just desperate to get my paws on some water...","A few drops, that's all I'll need...!"
+    ],
+    "limbmuscle": [
+      "Seems I must've pulled something or other in my <limb>."
+    ],
+    "limbinfected": [
+      "Infection's got into my <limb>- best to clean it now and get it over with."
+    ],
+    "limbskin": [
+      "Yup, my <limb>'s gotten injured, alright...","Skin on my <limb>'s up and abandoned me."
+    ],
+    "sad": [
+      "Skies have sure been less gray than this."
+    ],
+    "gloomy": [
+      "There's gotta be a way to keep going..."
+    ],
+    "depressed": [
+      "Not one single reason to smile down here."
+    ],
+    "miserable": [
+      "Fuck me, this may just be where I keel over and DIE!"
+    ],
+    "selfharm": [
+      "Hah... Ha...... Juuuust dandy, yeeeees......"
+    ],
+    "angeronitem": [
+      "SNRRRRRRLLLL... You had it coming, buddy..."
+    ],
+    "suicide": [
+      "I really just can't. Sorry you didn't get somebody stronger... and instead got another corpse.",
+      "This is it. End of the line.","I'll be painting this place a real nice shade of gold.",
+      "It all goes quiet... audience holding its breath in anticipation... and then, for the finale...",
+      "We'll meet again in another life~"
+    ],
+    "refuse": [
+      "This ain't...","You'd do me like this?..."
+    ],
+    "bleeding": [
+      "Awww, I thought my blood'd stay with me! Guess you can't even rely on THAT anymore..."
+    ],
+    "bleedingheavy": [
+      "I've been... gutted like fresh meat, huh?...","Yeah, I'm not huge on all this... haaaah..."
+    ],
+    "steponglass": [
+      "Yooooowch... might need some clompers for the future."
+    ],
+    "seecorpse": [
+      "That doesn't bode well...","You just rest, pal...","Wish I coulda done something to help you...",
+      "I'm not dressed right for a funeral..."
+    ],
+    "seecorpsedesensitized": [
+      "Lazy-asses, always just lying around!","You got NOTHING better to do?","Up and at em, sunshine, it's morning.",
+      "I better not see y'all still slacking when I come back around!",
+      "Hey, I can't be so shabby that you gotta look away..."
+    ],
+    "seecorpsesuicidal": [
+      "It really that fun to be dead? Hm..."
+    ],
+    "breakcorpse": [
+      "...W-well. Not what I expected, and I'm not sure how this wasn't part of it."
+    ],
+    "cold": [
+      "Getting real nippy."
+    ],
+    "warm": [
+      "Lil too warm to be all comfy-like."
+    ],
+    "hot": [
+      "I ain't huge on all this sweating..."
+    ],
+    "exerted": [
+      "What a wild ride..."
+    ],
+    "exhausted": [
+      "Enough... I got no more strength to keep on this..."
+    ],
+    "freezing": [
+      "Th-th-this weather's... gonna b-be my grave..."
+    ],
+    "emaciated": [
+      "I've been in better shape, that's for darn sure."
+    ],
+    "obese": [
+      "Who knew a fella could thrive THIS well down here?..."
+    ],
+    "opiated": [
+      "Ooh, yeahhhhhh.... niiiiice and easy..."
+    ],
+    "opiatedsad": [
+      "Yeah, there's that fix I've been needing..."
+    ],
+    "opiatewithdrawal": [
+      "I'm having a hankering for another dose..."
+    ],
+    "pain": [
+      "Hurts a tad bit, but not near enough to slow my roll."
+    ],
+    "hitgroundhard": [
+      "Ough!! Sorry, ground, for the new ass-print..."
+    ],
+    "hitbycreature": [
+      "GET OFFA ME!!!"
+    ],
+    "wet": [
+      "Gotta say, it's a tad bit NOT DRY up in here."
+    ],
+    "dirty": [
+      "Great. Gonna end up having me a few orbiting bodies soon with THIS much earth..."
+    ],
+    "encumbered": [
+      "I'm slowed by all this gear... Hnfff...","Trying my best to carry all this cargo!"
+    ],
+    "watchlike": [
+      "Hey, lil buddy, hope you're liking this exchange as much as I am."
+    ],
+    "drillend": [
+      "...Thought that wasn't gonna be my first rodeo. Boy, was I wrong."
+    ],
+    "murderregret": [
+      "I-it was self defense... Ahah... Y-you believe me, right, buddy? I mean, you gotta! Right?!"
+    ],
+    "tradeemeet": [
+      "Howdy, partner.","You got anything trade-worthy around here?","Hey-hey, nice to meet ya!",
+      "Oh, bless your heart, you've got a real nice thing going on here.","Hello, down there! You mind a friend?",
+      "Hey there, pal! Anything you'd part with?"
+    ],
+    "lastmoments": [
+      "Oh... I've never been good at... at endings......","Wait... this is... it?... No.... No, please......."
+    ],
+    "selfdestruct": [
+      "Well, shiiiiit. That's a real shame. Sigh..."
+    ],
+  
+  "tradermeetnormal": [
+      "Hey there.","Howdy.","What can I do you for?"
+    ],
+    "tradermeetgood": [
+      "Well, now, who's this fine fella knocking at my pod door?","You're a sight for sore eyes!",
+      "Ain't you a sight for sore eyes!","Howdy, partner!","Come in, come in, make yourself right at home!",
+      "You're looking rather upbeat, stranger!"
+    ],
+    "tradermeetbad": [
+      "There's not REALLY room for the both of us in here...","Being honest, I can't be so sure about you yet.",
+      "Politely, I'd rather you went back the way you came, pal."
+    ],
+    "traderhugsuccess": [
+      "Biiiig hug! Yup, that's a good one, alright!"
+    ],
+    "traderhugfail": [
+      "Slow your roll. Let's get to know each other first, bud...",
+      "Hold up, there, I didn't say you could touch me."
+    ],
+    "traderhagglesuccess": [
+      "For a pal, sure thing! Have at it.","Well, that was a lotta words, so I'll just let you go and do that."
+    ],
+    "traderhagglefail": [
+      "No can do.","I gotta keep me and mine alive, too, you realize..."
+    ],
+    "tradergiveitem": [
+      "Don't go spending it all in one place, now. Or, ah, DO spend it all in one place, hah..."
+    ],
+    "tradergiveitemrefuse": [
+      "Nah, I'm thinking not. Too much stuff at this point."
+    ],
+    "traderbuy": [
+      "Sure thing! Now, you take good care of it, you hear?"
+    ],
+    "traderbuyfail": [
+      "Now hold on there, buddy, you sure that's fair?"
+    ],
+    "painresponse": [
+      "Rest your head, pal, I'm not gonna judge.","You just take it easy, alright?"
+    ]}
+}

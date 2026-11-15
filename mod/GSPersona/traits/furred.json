@@ -1,0 +1,21 @@
+{
+  "name": "furred",
+  "desc": "You have fur covering your body.",
+  "impliesTraits": [],
+  "dialogue": {
+      "eatGood": [
+        "Wagging my big fluffy f*cking tail!"
+      ],
+      "verysick":[
+        "My... my fur won't stay flat... Ahahah..."
+      ],
+      "wet": [
+        "I'm practically drowning in my own fur, here!"
+      ],
+      "drillend": [
+        "My fur itches from the transit."
+      ],
+      "dirty": [
+        "My fur's going to be soooo matted at this rate..."
+    ]}
+}

@@ -1,0 +1,6 @@
+{
+  "name": "missingeyes",
+  "desc": "You lack eyes. You are completely blind, and rely on your other senses to navigate.",
+  "impliesTraits": ["blind"],
+  "isDisability": true
+}

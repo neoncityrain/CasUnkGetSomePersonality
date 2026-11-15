@@ -1,0 +1,336 @@
+{
+  "codeName": "polarischandran",
+  "name": "Polaris",
+  "displayName": "Smiley",
+  "personality": "sassy",
+  "personalitySubtypes": {},
+  "bodyTraits": ["voyager","hidemissingeyeleft","eyetornoutleft"],
+  "id": 231172,
+  "age": 15,
+  "versionNumber": 7,
+  "heightCm": 145,
+  "colours": {
+    "wvstats": [198, 131, 129],
+    "wvback": [234, 234, 234],
+    "wvcrit": [0, 0, 234],
+
+    "text": [198, 131, 129],
+    "primary": [156, 148, 148],
+    "secondary": [234, 234, 234],
+    "tert": [151, 35, 35]
+  },
+  "woundviewFirmwareText": "CHIP.TP_v3.0.7-beta",
+  "woundviewVersionText": "v3.0.7-beta",
+
+
+  "cutsceneTexts": {
+    "endscreenstatus": "PRJ-MRCY STATUS REPORT",
+    "endscreenunresolved": "RESOLVED",
+    "endscreenresolved": "HOLLOW",
+    "endscreenescape": "SEVERE LIABILITY",
+    "endscreenfailure": "POTENTIAL ISSUE",
+    "endscreenmerc": "UNKNOWN - EXECUTE ON SIGHT",
+    "endscreendeceased": "COMATOSE",
+    "endscreenexamination": "IRRELEVANT",
+    "endscreenmainmenu": "REWIND",
+    "endscreenclipboard": "REMEMBER",
+
+    "surfacebreachnote": "As you breach through the final few layers of gravel and rock that separate you from the wide open air, a blinding light unveils itself through the cracks.<>\n\nYou've travelled through hell and back, surpassed thousands of, what are now corpses, and have become the first and only one to complete your assigned objective.<>\n\nYou step foot on the cold gravel. Buildings, mountains and various groups of people appear in the horizon. You have breached the surface.",
+    "labenternote": "Soon after, you see a flash in the sky accompanied by an unrecognizable loud beeping.<>\n\nA few minutes pass while you appreciate your newfound surroundings, before some kind of pod loudly crashes into the ground a short distance away.<>\n\nWhile you've seen hundreds of lifepods during your journey, this one looks nothing like the ones before. You figure this one is meant for you.<>\n\nA significant part of you wants to rebel and run far, far away, however...<>\nIt feels as if with every moment you spend in the sunlight, the object lodged in your abdomen wriggles around painfully and vibrates with progressively higher force.<>\n\nFearing the likely catastrophic failure of the hearts structural integrity approaching at a rapid pace, you board the lifepod with a defeated look on you.\nSoon after you do, you are thrown to the floor by a sudden jolt. The pod is ascending.<>\n\nWhile you don't know where you're going, you are slightly reassured by the fact that whoever sent this vessel down probably does. You decide to hunker down and make yourself comfortable while you wait.<>\n\nSuddenly, a bright flash overwhelms your vision. You feel an indescribable physical sensation shooting through you - the very same one you felt when first arriving here.\n\nAfter it dies down, you look outside the pod to find yourself surrounded by a hazy, blue sky above what appears to be a green forest with some kind of huge facility in the midst of it.<>\n\nThe vessel slowly descends into some kind of hatch inside of said facility. Soon, the pod locks in place, the steel door opens, revealing the sight of...",
+    "biopodnote": "Trying to rebel against your captors with an explosive chip in your head is equivalent to suicide. The weird object lodged in your torso also seems dangerous to keep inside you for too long. With no better options at your disposal, you follow the orders given to you.<>\n\nYou are soon escorted by a group of armed guards into a room with a large capsule filled with fluid. You have seen some of your kind inside of these before. You know what that entails.<>\n\nYou have completed your objective, yet it only brought you back to this prison. Simply used as a pawn by the corporation. You are at least comforted by the fact that, since the mission is now complete, no more unaware souls will be sent to their deaths in the caves.<>\n\nThis thought calms you as you reluctantly give up all the gadgets that you've found on your journey and prepare to enter the bio-pod. The cargo seems to be stabilizing...<>\n\nAs you slowly submerge in the liquid, with various tubes and wires now attached to your body, you think about what the scientist said. At least you'll live a better life here. More privilege, more freedom, better food, no risk of being hurt by the various tests conducted here... A faint smile appears on you as your consciousness fades into a deep sleep.",
+    "biopodnotealt": "You are quickly taken away, restrained, stripped of your gear and resuscitated to avoid any more significant damage to the brain and the rest of your body.\n\nSome time later, you are escorted by a group of armed guards into a room with a large capsule filled with fluid. You have seen some of your kind inside of these before. You know what that entails.<>\n\nYou have completed your objective, yet it only brought you back to this prison. Simply used as a pawn by the corporation. You are at least comforted by the fact that, since the mission is now complete, no more unaware souls will be sent to their deaths in the caves.<>\n\nThis thought calms you as you prepare to enter the bio-pod. The cargo seems to be stabilizing...<>\n\nAs you slowly submerge in the liquid, with various tubes and wires now attached to your body, you think about what the scientist said. At least you'll live a better life here. More privilege, more freedom, better food, no risk of being hurt by the various tests conducted here... A faint smile appears on you as your consciousness fades into a deep sleep.",
+    "biopodnotealt2": "You are quickly restrained, taken away, stripped of everything and resuscitated to avoid any more significant damage to the brain and the rest of your body.\n\nA significant amount of time later, you are moved by a group of armed guards into a room with a large capsule filled with fluid. You have seen some of your kind inside of these before. You know what that entails.<>\n\nYou tried so hard to get out of this prison, yet it brought you nowhere. A meaningless attempt. You are at least comforted by the fact that, since the mission is now complete, no more unaware souls will be sent to their deaths in the caves.<>\n\nThis thought calms you as you prepare to enter the bio-pod.<>\n\nAs you slowly submerge in the liquid, with various tubes and wires now attached to your body, you think about your failure. So close to tasting freedom, to getting the ultimate revenge on your captors... And yet, it fell flat. If only you tried a little harder... A frown appears on you as your consciousness fades into a deep sleep.",
+    "escapenote1": "A bright shine radiates from the end of the corridor. You hear what sounds like wind blowing outside.\n<>\nThis is the end of the road. You have denied your captors with a skill and stubbornness no other being ever has.\n<>\nHurt, exhausted, yet determined, you walk into the light.",
+    "escapenote2": "...So, that's what they were hiding from you all this time.\n<>\nWhile you admire the beauty of your newfound surroundings, the loud sounds coming from where you just came out of remind you that you still need to move.\nWithout much choice, you run into what looks like a field of tall, green plants with large brown stalks.\n<>\nYou run.<>\nYou keep running.<>\nYou run far, far away, until your legs give out.\n<>\n...\n<>\nSilence. Nothing but what sounds like chirping and the sound of blowing wind. You can't even see the buildings on the horizon anymore.\n<>\n...\n<>\nYou have achieved your freedom.",
+    "mercnote1": "You breach through the final few layers of gravel and rock that separate you from the wide open air.<>\n\nYou've travelled through hell and back, surpassed thousands of, what are now corpses, and have become the first one to complete your assigned objective...\n...And yet, you feel like this is only the start of something greater.<>\n\nYou step foot on the cold gravel. Buildings, mountains and various groups of people appear in the horizon. You have breached the surface.",
+    "mercnote2": "Suddenly, you see a flash in the sky accompanied by an unrecognizable loud beeping.<>\n\nA few minutes pass while you appreciate your newfound surroundings, before some kind of pod loudly crashes into the ground a short distance away.<>\n\nWhile you've seen hundreds of lifepods during your journey, this one looks nothing like the ones before. You figure this one is meant for you...\n...But, you refuse to board it. Not after what they've done to you and so, so many others.<>\n\nThe captors must pay. The captors must die. You will not become another one of their pawns to be used for whatever deeds they want done. You're not coming back wherever they are until you can absolutely ruin everything they've built up over all these years.<>\n\nA bright hatred burns inside of you. They will not get away with any of this. To hell with their pod, to hell with their mission, to hell with whatever they want you to do.<>\n\nSo you stay.<>\n\n...<>\n\nYou've noticed the cargo inside of you has begun wriggling erratically ever since you came out into the sunlight.\nYou hesitate. Something is clearly up with the object lodged in your body, and it's getting worse by the minute. You fear something bad will happen if you just stay out here...<>\n\n...But you can't go back.\n\nYour scarf. You recall one of the body chips you found on the way had something about \"rejuvenation\" written on it. Maybe you'll be fine?<>\n\n...<>\n\nIt hurts. It hurts so much. Something is horribly wrong with the cargo. Your chest feels like it's burning. Your entire body feels like it's being electrocuted. You can't even stand up straight anymore. It hurts.\n\nThe pod's beeping gets louder. You realize, if you don't crawl your way onto it soon, you will die. Your mind starts racing. Do you really want to potentially throw away your life over some petty revenge?<>\n\nBut you can't move. The pain is too much. It hurts. It hurts. It hurts. It hu ██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████",
+    "mercnote3": "...<>\n\n...<>\n\n..?<>\n\nWhat..?<>\n\nWhere am I..?\n\nWhy...<>\n\nIt hurts...<>\n\n...<>\n\nWhat happened...?<>\n\nThis scarf... I...<>\n\n...<>\n\n...I remember.<>\n\n...I know what needs to be done."
+  },
+
+  "items":{
+    "dogfooddsc": "You really, really do not want to try eating it."
+  },
+  "buildings":{
+    "trader": "Stranger",
+    "traderdsc": "Someone you don't know. At least, you don't think you do."
+  },
+  "moodles":{
+      "braindamage2dsc": "It's a struggle to even keep yourself upright at times. You're scared.",
+      "braindamage3dsc": "Every   thin gis so. somuc h.",
+      "tired3dsc": "But you don't want to sleep. It terrifies you. You don't like sleeping...",
+      "tired4dsc": "Barely awake... and hoping, praying, you'll wake up again.",
+      "hunger5dsc": "Ate a bit more than you usually do, you'd prefer not to keep going.",
+      "hunger6dsc": "You've eaten well past the point you're physically comfortable with. Mobility, happiness, and weight loss decrease.",
+      "brokenribsdsc": "Your ribs are broken, making breathing painful and much harder. You're used to this, but that doesn't make it any easier to manage."
+      ,"depression2dsc": "You were never supposed to be here.",
+      "depression3dsc": "Struggling to keep going. You want to die- and even THAT brings back memories...",
+      "depression4dsc": "<i>Let this nightmare end. Let this skipping record finally stop by any means necessary.",
+      "trauma1dsc": "It's difficult to remain level-headed. All it takes is one little push.",
+      "trauma4dsc": "<i>I just wanted a friend. That's all I ever wanted. I was NEVER supposed to be here.",
+      "rippedeyedsc": "<i>It's my fault. It's ALL my fault. I did this. I'm a murderer.",
+      "hunger1": "Uneasy",
+      "hunger1dsc": "Feeling a bit strange... You're on edge, itching for something you can't easily place.",
+      "hunger2": "Irritable",
+      "hunger2dsc": "Getting annoyed, both at the world and yourself. You're bristling and ready for a fight.",
+      "hunger3": "Hungry",
+      "hunger3dsc": "What kind of fucking IDIOT can't tell when they're hungry?! There must be something wrong with you.",
+      "hollowdsc": "<i>No one will appear to save this empty shell. Not a second time.",
+      "deaf2dsc": "There's this very annoying ringing sound in your ears that won't clear up.",
+      "deaf3dsc": "Everything sounds so far away. You're uncomfortable, knowing death could be around the corner, and you won't hear it as easily.",
+      "deaf4dsc": "Once upon a time, you thought that being able to shut out the world would be a good thing. Now you know better."
+  },
+  "dialogue":{
+    "seeGravel":[
+      "Around and around I go again...","Ooooh no... I-I'm not- I don't like that drop, that's...","Nono, please, I'll be g-good, take me back...!","What? Where is... huh? Where am I? Wh-what's happening?","This dream again... I h-h-haaaate this one...","I'm expected t-to climb down THERE?! Oh... Ohh nooooo...","I'm... I'm scared. I... I don't like... I...","I-I'm not a fan of heights. Noooot at all...","Yup... thaaaaaat's... a cave. Okayyyy... a-alriiiight...","I'm... here. I'm here?! Fuck... FUCK!","No, please... p-please, I can't be HERE, please...","The only way to go is... straight down. Fuck, I'm nauseous just th-th-thinking about it...","I'm not s-s-supposed to be here.","...This isn't how that went... b-but fine. Fine...","My eye is-? Huh...","Wha...? I'm n-not supposed to be here, what's going o-on?","Smiley? Where are-? ...Right.","Fuck, this i-is the planet. Ugh...","Huh? Wasn't I... what...? What's...","...Urf. J-just don't look down.","I've... I've always been here. I've never b-been here...","This is the only place I've ever really known.","Therapy, maybe. I should- I should look into that. But, like, uh, later. I g-guess.","Did they... did they know?...","Navi... I'm... I'm sorry. S-sorry. Sorry...","...What... Wh-what? No...","Not sure wh-what they were expecting from me.","I think... th-they probably just wanted to get rid of me.","I was just a janitor, but I- but I... well...","I made a mistake.","I made a really, really big m-mistake...","And so... and so now I'm here.","I'm here to stay. I'm here to... t-to die.","I'm against... p-protocol...","They... they messed something up... and...","I'm... here? I guess...","...What do I do now?...","Do I... d-do I just relive this... this nightmare?...","Should I get this over with n-now? Ah--...","...I don't want to...","I don't want to do this.","I-I really, truly, d-don't want to... to do this.","...I ha- I have no choice.","I'm not supposed to be here.","I was never supposed to be here.","I was always going to end up here..."
+    ],
+    "eatGood": [
+      "Th-this is pretty good, yeah.","Mmmf... r-really nice...","Really g-good.","Things this good are down here? That's i-insane.","Good... I mean, this- this tastes really g-good.","Can I- c-can I have more of that...?","I... I think I like this...","Mmh. Good. Real good.","I... I don't like eating usually, but... this is- this is really good.","...This is nice, actually. For... for real. Not joking. Yeah..."
+    ],
+    "eatMediocre": [
+      "I feel like I'm- like I bite this and it absorbs all my nutrients and doesn't give them back.","Ugh... Fine... I guess.","Bleh... n-not what I like.","Uh... not the biggest. Fan...","Okay. Not good.","If only I had some... uh... salt. Or something. Ugh...","Can't this taste less like, I dunno, shit?"
+    ],
+    "eatBad": [
+      "Hrk-! Guh... that's... that might be the worst. Maybe ever. In all history.","I'm going t-to throw up... ugh...","That's- that's horrible! Eugh!","HRK-- Urf... Noooo... Not good...","THIS is why I h-hate eating. Ughhh...","Ugh... Blugh... I hate that. I HAAAATE that...","My mouth feels so WEIRD after th- after that!"
+    ],
+    "refuseEat": [
+      "What?! No!! N-no way.","I-if I'm insane, uh, then I'm still not THAT- I'm not THAT insane...!","No way. Nope.","No...?!","Nuh-nuh-nuh-no.","Haha... what?","Fucking awful idea.","Uh. That'd be... nnnno.","Great, yeah, I'd just LOVE to just kill myself with that, suuuuure!","I'm stupid, but not THAT stupid.","Even if this IS a dream, I'm- I'm NOT doing THAT."
+    ],
+    "tired":[
+      "Yawwwn... S-sorry, I, uh- th-that was nothing.","I'm a little... uh... t-tired. Just a little.","Yeah, okay, I'm sleepy. Fine. Okay.","Ugh, I need to curl up and just... I'm tired.","Yaaaaaaaawn...... Urf."
+    ],
+    "verytired":[
+      "Na... vi?","I'm... I'm seeing stars... Please, I'm...","I can't... I-I can't stay a-awake... fuck...","D-don't... don't laugh at me, don't... uh...? Huh...?","My head... h-hurts... too... too much to...","No... n-no no no, I don't wanna... I don't wanna fall... asleep... a-again... Na...vi...","Mmng... u-ugh...","I'm too t-t-tired... I need to r-rest! Fuck...","No t-time to... rest... fuck...","Can't stay... awake, I-I...","Fuck... I... I hate... sl-l-leeping... But I... I can't..."
+    ],
+    "confused":[
+      "Uh...","Uh?...","Um...","Um?...","Wha...","Wha?...","U-um...","U-uh...","Ah...","Ah?...","What's the... h-huh?...","Huh...","Huh?...","Ugh, m-my... head... mmh...","What... what's... what's...","Again?...","This again... Agh...","This feeling?...","This feeling's... familiar....","I'm g-getting hazy...","No... no, not this, I...","Not again...","Not again, please, I... ?","Wha... what's... what's?...","Urf... don't f-feel good...","I'm not f-f-feeling too good..."
+    ],
+    "wakeup": [
+      "Mmh? Huh...? What's... uh...?","I-I don't wanna...","Mmmmgh. My f-face hurts.","Yaaaaawn.........","I'm up, I'm up...","Uh?... Right. Right...","Wanna keep s-sleeeeeping...","Do I really h-have to...?","Mmmmhh... Okay. Okay, okay, I'm- I'm up...","I'm awake, wh-whatever...","Guh. S-still going, huh...","Mmmmrrrr... I want coffee... a-and I can't even... drink it right... hmph...","Waking up... again.","Again...","A-again...","I'm repeating the- the motions...","A-and it repeats again.","Mmmmrrrrgggh...","Where's my morning c-coffee... Oh. Oh, right... Ugh.","Fucking hate sl-l-leeping on the ground.","Awake again... G-greaaaat...","Hello, world, and all th-that. Ugh.","N-not a fan of waking up.","F-feeling like an... an animal, here...","...This shit-ass f-f-fu-- This f-fuuuucking cave again.","...Ugh...","Mmmh, g'morning, Muen-... oh."
+    ],
+    "sick": [
+      "I'm in a b-bad mood.","I feel c-cr-cranky...","Ugh. Feeling k-kinda... eh.","Mmh. I'm unc-c-comfortable.","Gross... my stomach's churning, ugh..."
+    ],
+    "verysick": [
+      "Am- am I running a fever or something?","D-damn, this- th-this stomach ache's a nasty one...","N-nope, this is- this is- this isn't... good. Urf...","Wh-why do I feel so bad...","I'm h-having... a BAD TIME... in the horror death cave...","Am I g-gonna throw up? I don't wanna... mhh...","I'm just... hoping I k-keel over... and die... at this point...","This... SUCKS... I feel... BAD...","Not even a good chicken noodle soup can f-fix THIS one... Urf..."
+    ],
+    "vomit": [
+      "...Oughhrhrh...","Blugh... horrible... th-this is... hoooorrible...","Ngh... my gut... f-fuckkk...","Bleghh... hate throwing u-up...","Hrk-... ohhgggh...","Nooo... N-not... oughhh...","Hnnn... fu-uuuck...","Sskkk... m-man... hate thi- hate this...","C-cmon, body... work... right...","Guhhhhhghh... s-sorry..."
+    ],
+    "vomitblood": [
+      "Ow... ow, that... uh...?","Ughrhhh... n-not a... not again...","Hff... hff... hff...","N-n-noooo... my blood...","...B-blood... blood in m-my... in my... l-lungs...","Shit... sh-shit... intern-n-nal bleeding... fuck...","This... this feels... not... not- not good..."
+    ],
+    "full": [
+      "Okay. That's enough food.","I'm done eating. D-didn't even think I liked eating this much, really...","I'm full, I don't- I don't need to eat more.","I'm full... real full. Ugh.","Buh. I feel like a- like an overstuffed, uhh...... bird. Yeah..."
+    ],
+    "hungry": [
+      "Mm?...","I'm a little... cranky.","Ugh. What now?...","Rrrrh... something's b-bugging me...","I think I'm... n-nauseous?","Ugh. My stomach just churned...","Hrrrrh...","Okay, body hurts a bit...","Mmh? What's that sound...?","Mrrrrf.","Mrrrh.","I... maybe I'm hungry? Maybe??","Grrrf...","Grrf.","I'm n-not looking forward to this. All of this.","I'm a b-bit grumpy.","Next person to t-talk to me dies."
+    ],
+    "starving": [
+      "Oh, fuck, I'm h-hungry. Fuck...","This is a f-familiar feeling. Urgh...","Hsss... I'm hungry, I'm so... ugh.","I'm s-so... hungry? Ugh..."
+    ],
+    "thirsty": [
+      "I'm th-thirsty. Uh- I mean- I mean I need a drink. L-like water. Uhhh...","I didn't think this tongue could get MORE sandpaper-y. But I'm wrong about a lot of things...","Ugh... I need to wet my t-tongue... DON'T take that out of context."
+    ],
+    "dehydrated": [
+      "I... n-need water. Now. Right... right now...","Wa... water... water, pl-l-lease...","I've never been so thirsty before... in my entire life. Pr-probably..."
+    ],
+    "limbmuscle": [
+      "Owwww, did I- did I tear something in my <limb>?","T-tender... my <limb>- my <limb> is tender...","<Limb>'s not really- not really working great. Hnf.","It hurts when I move my <limb> too- <limb> too much. Um...","That <limb>'s probably bruised... O-or something. I dunno. I'm not a doctor. Um..."
+    ],
+    "limbinfected": [
+      "F-fuck- have I not been takig good- good care of my <limb>? It's- it's getting... uh... g-gross...","Infection? Really? Ughhhh... just another thing to deal with. Stupid <limb>..."
+    ],
+    "limbskin": [
+      "Uh, my <limb> got scraped up... ewwww. Okay, I maybe shouldn't look at it too long.","My <limb>'s been, like... peeled."
+    ],
+    "sad": [
+      "I d- I don't like this.","I'm not strong, though...!","I was never s-supposed to be here...","I... I fucked up, huh? Hah...","Mmh. I don't like it here. Not one- not one bit.","Is it c- is it cold, or...? No- no, I'm imagining it.","Huff.","Sigh.","Grrrm.","Come ON, Polaris, brush it off... pick yourself up...","Hey, god, can we just, like, check in real quick? I wanna know what I did to piss you off.","I'd kick a rock around to cheer myself up- b-but given my luck, I'd probably manage to fucking MISS.","Not gonna lie- this kinda sucks! Pretty, um. Pretty bad..."
+    ],
+    "gloomy": [
+      "I can't do this... I really- I- I can't! I really can't...","I want to go home. Even if... even if...","This is... this isn't how it was supposed to be, it...","Life suuuuure loves me...","I've been moping too much. I need to- I need to get over it.","Sun, moon, are you watching over me?...","I wanna see the sky again. Not the sky here, either. I want to see the constellations that I know.","It feels like I've been- I've been running on a treadmill, making no real progress."
+    ],
+    "depressed": [
+      "I could... I could n-never catch up...","I c-can't keep going. Please. Not like THIS...","What is WRONG with me? There's always BEEN something wrong, but I've never figured it OUT...","I don't deserve this- this body. This body deserves better than me...","What would Navi say in my situation... Well- \"I'm gonna fucking kill myself,\" probably. M-maybe not... the best role model right now. Haha...","There's a weird pit in my stomach that isn't going away. A-and it's- it's not hunger this time..."
+    ],
+    "miserable": [
+      "Navi, are you watching? Are you watching me? Even now? I hope you aren't...","Kill me. Just- just kill me...","I'm gonna fucking tear out my eye...","I'm a-about to TEAR OFF this STUPID TAIL!","I'm a failure. An utter fucking failure. Even when I wake up, that won't CHANGE.","I'm gonna fucking tear my eye socket open again...","I'M GOING TO JUMP OFF A FUCKING LEDGE.","I'm sorry, I'm sorry, I'm so sorry, I'm SORRY!!","I'm so fucking scared... I just... I-I just... snf...","I FUCKING HATE ALL OF YOU. YOU'RE ALL WORTHLESS. WORTHLESS!","HAHAHAHAHAHA! KILL ME.","Rotting would be a better fate for this empty shell than having ME in it.","I'm such a failure... I'm such a failure... I'm always such a failure.","I WANT TO DIE. I WANT TO DIE, AND I WANT IT TO FUCKING HURT.","Please, please, I'm so EXHAUSTED, I'm so TIRED of hurting, I c- I can't, I CAN'T anymore...","Just jump. Come on, Polaris, just jump...","STUPID FUCKING. STUPID... I CAN'T EVEN FUCKING INSULT MYSELF RIGHT! HAH!","Everyone was RIGHT to be laughing at me. EVERY SINGLE ONE OF THEM. And I still want to CLAW OUT THEIR THROATS.","I'm a murderer. A cold... murderer. And everyone knows what happens to murderers.","I JUST WANTED A FUCKING FRIEND FOR ONCE IN MY DUMBASS LIFE.","EVERYTHING WAS TAKEN FROM ME. NOT A SINGLE CORNER OF MYSELF HASN'T BEEN VIOLATED. AND I'M STILL FUCKING HERE?!","I'm trapped. I'm trapped in m-my own head... I can't run away. Why can't I run..."
+    ],
+    "selfharm": [
+      "It's just a dream, right? So it doesn't matter! Haha... hahahahaaa...","It doesn't even feel real... Hehe...","Who... was it? Who was that? Who's the... who was it that...?","Fuck... fuuuuck... that was......","You can't d-do this to me. You can't... you can't. I'll be sure of that... hehe...","Again?... Again...","Again... again... again... like a b-broken r-record! Hah... haaah...","Smile... Just smile... Heh...","...What? Wh-what was I... What was I...","Repeating, repeating... we'll r-repeat... heh...","We go around... a-again...","Repeating, repeating, r-repeating, repeating...","Hehehe... hahahahahah! Heh!","Fuck, I-I-I'm sick, aren't I? Haha...","Another s-s-skip on... on the rec-cord... Haaa...","That felt... that felt g-good... it's the least I d-deserve, right?..."
+    ],
+    "angeronitem": [
+      "RRRHF... RRRRHRGHRGGHHF!!!!! HISSSSSS... Hff... hff... hff...","STOP LOOKING AT ME!!!!!!!","THIS IS WHAT YOU DESERVE! ...Huff, huff...","IT'S ALL YOUR FAULT YOU PATHETIC FUCK!!! ...Rff... huff...","I'M GONNA FUCKING KILL YOU, YOU STUPID MOTHERFUCKER! DIE DIE DIE DIE DIE DIE!!!! ...Ngh...","TEARBITEKILLTEARRIPYOUAPART!!! ...Ah... Ahah...","FUCK YOU IN PARTICULAR! STUPID FUCKING THING!!!","I HATE YOU I HATE YOU I HATE YOU!!! ARGHHHHH!!!! ...Mmh...","DIE! DIE! DIE!! YOU STUPID COWARD!!","FUCK YOU FUCK YOU FUCK YOU!!... Guh... Haaa...","I HATE YOU! I HATE YOU, YOU CAN'T EVEN DO THIS TO YOURSELF!!!"
+    ],
+    "suicide": [
+      "I'M NOT- I'M NOT PLAYING THIS FUCKING GAME ANYMORE. I CAN'T FUCKING DO IT! I'M D-DONE!!","... In case I don't see ya... Good afternoon, good evening, and good night!","P-p-please. PLEASE. PL-PLEASE let it just END, PLEASE...","I can't even... I'm not even strong enough for this. I don't know what they were thinking. I'm... I'm just... done...","I'll get to meet you soon, mom. Hope you're not too disappointed in me, even though I'm a failure.","Haha... hahahah... I just hope Navi can't s-see this... Snf... please don't see this. Please...","AND IT REPEATS AND IT REPEATS IT REPEATS AGAIN AGAIN AGAIN AGAIN LIKE A BROKEN RECORD!","AGAIN! AGAIN! AGAIN! AGAIN! AGAIN! AHAHA... HAHAHA... AHAHAHAHAHAHAH... PLEASE SAVE ME.","I can't... I can't do this... it's just too- it's just too much. There's so much... I can't...","No more. No more. I'm deciding my place in this world... and this time? Hah... haaa... well... it's this...","...I really... I really AM like Navi, aren't I. Haha.","...Please, let this kill me. I'm... I'm done.","I can't take it anymore. I can't take it. I've never even BEEN strong.","I'm just... sorry for defiling your body like this.","Ha.... haaah... this has all been one cruel joke, huh?..."
+    ],
+    "refuse": [
+      "Hss...","Mrrrrh...","HSSS...","I can't...","I-I dunno...","Can't... c-can't...","Again?...","Again...","Skipping...","I- huh?","What...?","I wanna go home...","I'm scared...","The record...","It's all so incredibly loud..."
+    ],
+    "bleeding": [
+      "Ah, shit- I'm bleeding! This is g-gonna be so ANNOYING to clean outta my FUR..."
+    ],
+    "bleedingheavy": [
+      "M-mhhh... bleeding needs to... to stop... ple... please..."
+    ],
+    "steponglass": [
+      "Next time, just- just let me fall chest-first on these stupid shards, I swear to...","WHO. THE FUCK. PUT GLASS. RIGHT THERE. FOR OTHERS. TO STEP ON?!","I'm- I'm... I'm a fucking idiot.","Walking's gonna REALLY FUCKING SUCK for a little while, won't it... urghhh..."
+    ],
+    "seecorpse": [
+      "What is-- OH, FUCK! OH FUCK, THAT'S- HRK--","Nooo... Nonono, noooo, no, ohhh fuck oh fuck no! God!","SHIT, what th- what the hell?! What is WRONG with those- th-those people who DID this?! What the FUCK?!","URK- n-not the worst I've EVER seen, but still... I di- I didn't sign up for THIS!","FUCK... f-fuck...","Ohhh noooooo... oh fuuuuuck no. FUCK n-no...","Ohhh my god. Ohhhh shit. Okay okay okay, I... OKAY...","I think... I think I might throw up. Shit... Fuck... Ugh...","THAAAAT'S A CORPSE. OKAAAAY... S-SURE...","That's... th-that's horrible. How could they just...","I have to- I've G-GOTTA stop s-staring...","Mmmmhhhhh... p-please, no...","How m-many of them... How many..."
+    ],
+    "seecorpsedesensitized": [
+      "Soooo, uh... do youuuu... come here often? Ahah... ha...... urgh.","Um. Hi? And, uhhh... bye. Yeah...","Don't mind me. Just, um. Gonna maybe loot your corpse? Hope that's fine.","Mondays, am I right?...","It's really just not your day. I-I mean, it's not really MY day either, but, like... Uhm...","Uhhh... I'm just gonna... yeaaaah. Excuse me. Don't, u-um, mind me.","Me too, buddy. Me too...","I'd be surprised if I... you know... wasn't u-used to this by now.","Mm. Hi... aaaand bye?","Okay.","I'm just one of you now. Well- an alive one of you. But, uhm... n-no, I feel weird now. Fuck.","Kinda sucks that I don't feel much about this. Gotta- gotta say, is all...","Oopsies. Anyway...","These bodies used to- used to scare me.","Have you considered just, you know. Not being dead?","I have a sneaking suspicion that youuuuu might be just a liiiittle... dead.","Well. That sucks.","I've cleaned up worse. It was- it was a real shit job. I don't recommend it.","Deep sleeper, there. H-hah...","Looks p-painful. Um. Sorry you died. Or something... I dunno.","Uh... s-sorry you... died. Yeah...","Thaaaanks, horror cave... you know just what I- what I liiiike... MORE dead bodiesssss...","...Well, at least I don't have to- don't have to be social.","...Again... Great.","I've never really l-liked caves. This is- this is part of why. This right here.","Um. You doing okay  buddy? No?... Okay. Well. Anyways.","Sooo. How about that weather, huh?","Uhh, lemme just go a-and... um... move arouuuund youuuu...","Their expiration date's lo-long since passed.","Yup. Death. It's sure... h-here. In this cave.","Definitely won't be ch-checking that one for a pulse...","I've got places to be, if you don't mind. Or if you do. Uh, either way, I've got places to- to be. Yeah.","Upside: Turns out, I don't have to talk to anybody. Downside: THERE'S A DEAD BODY.","This wouldn't be so bad if- if this place didn't reek of decay. Eugh...","Yikes...","Bleh...","You probably did a lot better than I'm- than I'm doing, honestly.","Can I have a fucking, uhhh... not this? No?","I'd really like to ha- I'd like to have a chat with this cave's manager...","Just what I needed to see, sure.","I see they've had another accident at the highlighter factory.","Many such cases... or, um, something...","I'm adding THAT to the list of things that I don't like, ugh. U-um, no offense. It's not personal, just uh, not huge on rotting corpses. Sorry.","...I kinda don't even understand where the scientists get off on doing all of... this.","I'm not the best person to give you a pr-proper burial. Or I would... probably.","Wow! Sickening! Moving on..."
+    ],
+    "seecorpsesuicidal": [
+      "Again, again, again... like a broken record...","Soon... soon.","Again, again, again...","Again! Again!...","I know somebody who'd LOVE t-to dissect you. Just wish he'd do that to... uh... N-no, I shouldn't think like that...!","Sleeping... I should sleep, too. I sh- I should really...","Repeating... repeating...","Is that what I looked like, after...? Is that what I'll be again, when I fail?","A dead body, just like me...","We both failed. We both c-couldn't make it. We both... we both failed...","Please... pl-please...","H-how did it... how did it... f-feel? I... don't understand. Not yet.","Why... why here, why now?","I don't want to see this. Not again. N-not again, please..."
+    ],
+    "breakcorpse": [
+      "H-HOLY SHIT. EW. EW. EW. EW. EW. EW. EW.","NOOOOO NO NO... NOOOOO... FUCK, I- I NEED A BATH, NOW."
+    ],
+    "cold": [
+      "Urgh... th-this fur coat's not pulling its weight, now is it...?","Brrh. I need layers. Er- m-more layers? Or... s-something...","Surely g-getting frostbite will cure my- will f-fix my stutter, y-yeah..."
+    ],
+    "warm": [
+      "Ugh. It's too hot. This is- this is gross."
+    ],
+    "hot": [
+      "Ew- I'm a w-w-waterfall of... of sweat... Gross...","I'm... I'm so... I'm so hot... I'm sssohhhhot..."
+    ],
+    "exerted": [
+      "Gasp, gasp... I-I'm- I'm not... huff... strong enough for this o-one..."
+    ],
+    "exhausted": [
+      "Let me... huff... lay... huff... down... huff...","Bo... dy's... s-s-scream... i-ing..."
+    ],
+    "freezing": [
+      "I-i-it's too c-cold... it's too col-l-l-ld...!"
+    ],
+    "emaciated": [
+      "I'm all... sk-sk-skin and... and bone. Even my hair's shedding... ugh."
+    ],
+    "obese": [
+      "I didn't... I didn't even think I could get to this point, honestly."
+    ],
+    "opiated": [
+      "Ouhh... this is... this is... this is... weeeeird...","Am Iuhhh... fffhhhalling? Ohh... ohhhhhhg...","Mmmhhhhhhh... thisssssis wwwweird...","Feels... gooooodddd...? Weirrrrrd... rrreal wwwewweirddd?"
+    ],
+    "opiatedsad": [
+      "Mnhhh... that feels sooo nice... FUCK... fuck, why does thhhhhiss feel so good..."
+    ],
+    "opiatewithdrawal": [
+      "I need more of those dr-drugs... just a little more, I think...","I'm- I'm... itchy? I'm itching... More opiates would- would help...","I really, really want more... Wait. Shit, am I- is this an addiction? Am I addicted? THIS easily...?","I feel p-pathetic. I think there's- there might be something... wrong... with me.","Ugh... something's crawled int-t-to my brain and DIED there...","I'm... I have a craving. I really, really want more... m-more...","Mmmng... I want more of those painkillers... I really- r-really do.","I should have paced my painkiller d-doses better...","I don't even like how they make me feel! They're weird and it feels so- so... FAKE! But I want more? Why do I want more?!","I shouldn't have more of those painkillers- I-I-I know what they do t-to people. I REALLY want more, though...","Mmmhh... even just a little bit COULD h-hurt... but it's also so... tempt-t-ting...","What's it say about life if- if something to release pain is... so... addictive?...","I really want more drugs... I r-really, really want more. S-stupid...","My head hurts... I'm- I'm having withdrawal?...","I'm such a fucking idiot for th-this. Ugh. UGH... I want more paink-k-killers...","Opiate withdrawal... huh. I never thought I'd- I never thought I'd ever do that much... um... drugs..."
+    ],
+    "cantBreathe": [
+      "Cho-! choking--!","H- hel- hel- help-!"
+    ],
+    "pain": [
+      "I'm n-not too worried about this, uh, <limb> pain- periods suuuure fucking hurt worse! Haha... ha...","Hrm, st-stings a little...","Oww, <limb> h-hurts... Ugh...","I'm not really enough of a- of a masochist for this. Just being, uh, honest...!","...Ow.","My <limb> hurts. Which is stupid. It should stop hurting. And, uh, not- n-not hurt."
+    ],
+    "hitgroundhard": [
+      "OW, F-FUCK... I HATE HEIGHTS...","SHIT... TH-THIS IS WHY I HATE HEIGHTS!"
+    ],
+    "fallscream": [
+      "NOPLEASENO!","PLEASEGODNO!","SHITSHITSHITSHIT!","HELP-!"
+    ],
+    "hitbycreature": [
+      "ACK-!","STOP!","STOPSTOPSTOP!","P-PLEASESTOP!"
+    ],
+    "wet": [
+      "Eugh... I'm- I'm way too wet for c-c-comfort.","This feels gross. I'm... gross."
+    ],
+    "dirty": [
+      "You know what I REALLY miss? Out of everything? Fucking. Shampoo.","I'm NOT licking all of this off of myself...","I smell awful. This... this fucking sucks.","I was a janitor. A JANITOR. I CLEANED THINGS. And now? Now I'm caked in fucking mud! Where did my life go wrong.","I HATE having my hair so gross... err-- my fur. I guess...","This is stupid. I'm so nasty. I hate th-this."
+    ],
+    "encumbered": [
+      "I must be out of my f-fucking mind, carrying all this...","Am I a goddamn pack rat or something?","I guess I'm gonna get stronger. But, u-um- I'm going to complain about it. Yes, the entire time..."
+    ],
+    "watchlike": [
+      "It's nice to have SOMEthing looking out for me."
+    ],
+    "drillend": [
+      "GET ME THE FUCK OUT OF THIS THING. OH MY GOD.","...OKAY. GET ME OUT.","I WANT OUT NOW. THANKS.","EW. EW. EW. NEVER AGAIN. HOLY FUCK.","...P-pear wiggler-ass... fucking... eughhh...","SOLID. GROUND. THANK. FUCK."
+    ],
+    "loud": [
+      "HNG--!! F-f-fuck... fuck, that was so... augh...","SHIT-!! Ahhggh, god, stop sh-sh-shaking like a leaf...","EEP-!! O-oh... oh god... hhhokay......","HSK-!! ...Ohhh, my fucking h-heart... my HEA-HEAD... ow..."
+    ],
+    "murderregret": [
+      "What... what did I just DO? I... that's... th-that's not... that can't... I couldn't have...","Fuck... FUCK. FUCK!","Snf... I'm... I'm a fucking... I'm a m-murderer, I...","I'm- I- why d-d-did I-?","What the fuck was I THINKING?! That's- this isn't- this wasn't OKAY!","Shit. Sh-shit, I'm such an idiot...","C-can I even count the casualties on one hand anymore?...","No... n-no... please, I didn't mean-...","Am I really n-no better than the... the... am I just... I... I...!!","........Oh...","...I sh-sh-should just make mys-self hollow again..."
+    ],
+    "tradeemeet": [
+      "U-uh... hi? Who are y-you?","S-sorry to intrude, uh...","Um. H-hiiii theeeere...?","Mmh. H-hello...","Uhm, h-hi? P-Polaris, here? I guess...?","Hi... s-sorry.","Uh... hi? Sorry...","I don't mean to intrude, uh...","Mmh, no one I recognize. I mean-- hello, uh..."
+    ],
+    "responsepos": [
+      "...Okay. Sure. Yeah...","Mm... yeah. Thanks, I, um. Appreciate it.","Thank you...","Oh... O-oh. Okay.","Th-thank... thank you.","Thankyouthankyouthank-- ahem. I mean, um. Thank you. Y-yeah.","For... for real? For... me? Thank you. I...","Oh. Okay. Um. Thanks.","If, uh, i-if you're sure."
+    ],
+    "responseneg": [
+      "Don't- don't look down on me. I don't need your- y-your handouts.","I can h-handle it on my own.","No. No, I'm- I'm gonna trade for it. If you even HAVE one...","I d-don't trust THAT easily.","Wh-who even asked?","Uh-!? I...!? No- no! Leave me alone...!","Uh-!! Leave me a-a-alone!!","Don't- don't... don't look down on me...!","Hisssssss...","I don't n-need your handouts.","Get aw- g-get away from me..."
+    ],
+    "swingresponse": [
+      "HISS!!","OW!!","OWOWOW, STOP!!","S-STOP IT!!","FUCK!!","FUCK YOU!!","RRRRRH!!","AURHHH!!"
+    ],
+    "braindamaged": [
+      "Navi ?","Nnn n nngh N nnn n...","idontwannagotoschool","ihate school","Hurts... hurts... s-so... so...","St-t-t-top lau-lau-l-l-laughing... at... m-mmme...","Helpme...","Navi... plea... pl... pleas... please...","Repeating... repeating... repeating...","Like a br-br-br-broken... a broken... a broken rec-c-cord...","St... st-st-st-st... stop... stop...","Idh... I d... I don't... Idhhh... Hhhhh...","I'm ill, I'm... ill...","Let-me... sssp-p-peak...","Stop... stop s-s-s-stutt-t-t-teri-ing...","Stars...","S-stars...","Knock knock            ","lets watch ththhthhe stars    oncemore","Naviare y-y-y-you wattching?","Navvvvvi are you   p- p- pr-  proud ?","Cass... cassio...","Cassiop... Ca... Cass... Cas...","Bad... baddd...","im scared of   ","our supurrnova...","So many... stars...","Smiley?","S-s-s-","Smile... sm-m-miiiile...","Sssix... Th-th-three...","Naus-s-seous...","The number you have c-currently dialed is","my ccccccounterp-p-part...","Who's th thth th thhth there ?!","Friends ? Nooo... no... we tr-r-ried th... that... now I'm hhhheheh... here!","My h-hhh-h-headdd...","I'm s-s-sick... I'm sick ag-g-g-gain and...","Blood in mmmm-m-m-my mouth-th-th...","Ivy...?","sk ip","skip","I shh-sh-should rip off this tai-tai-tai-tail-t-tail.","Claws? Since... when did I       oh.","skkkk","Br-br-br... brain... brain dama-a-age...","Ivy where are you...","Ivy I'm scared","p please iwanna go hhome","Hhn... hnnnnnnh... nnnnnnhhhh.","Mrrr... mrrrrow... mrwwww...","Vvvv.vy yyy","Since when d-d-did ","just smile yea ok grea t","flashe sof lightning","behind mmy eyes","flashing","lightning","sparks of","Sss","im    ki-ki-ki-cat ?","where    am I anyw   ?","Where'd my... g-g-guit... ah?...","My guitar... my...","Guilty! Guilty! Guilty!","Dancing... dancing lights...","Wind blows the... the rope, and... and then...","For the sun...","Get up, get up, keep going, for the sun...","For the moon...","He h-hung the moon and...","Execute me, for I am innocent of treason against the very hanging, swaying in the rafters!","Wh...? Uh...","Minor... Minor Ch-Ch-Chandran...","An appointment i-i-in eight-oh-eight-oh-c-c-clock.","Power is... low...","Should have used the... the toaster and... and... woosh!!...","Haha... hahahahaha!! Help me!!","Going thr...","Please help me.","Sob... sob...","Can you r-repeat that?","There's... th-the taste of copper...","I have    brain        soup   .","My head... my hhhhead.....","like a bbbroken    ","im broken","Through the...","Is th-th-there is there a h-hole in my skull agggggain again again again ?","iwas a ki   d th e        n","iwa   ... kit         dh en     ?","What was I saying what was I saying what was I saying...","For the of.","You're no king of mine...","Off with my head!","My head h-h-hurts like a m-motherf-f-fucker...!!","Off with","Ppplease let me work right I'm sssoscared.","Heart hurts head hurts life hurts","Unto the is wa-waw- w-was is!","Twelve point font bullets","Smell of blood...","I can... I can sm-smell my brain? What?...","What was I s...","Bbbut whata bout the rest of it ?","I dont't't't't","I don't wanna be here anymore","No... noooo.","G-guh...","Hello, little Sawian... hello, hello...","Do re mi fa so so so so soo soscared","Calluses... gone? Noooo...","Nghhhot all of us can gghhtt-t-t-tthere for a reason","Smarter than me always all the timeshould kick thhh...","Hhhh-ha-ated that g-guy...","What??","Who's... who's th-there...?","Shadow moved. Is some-th ?","I cute even ?","Is  I cold is that why  mshake ?","Ivvvvvvvv     yple asettt-take meb-back tell themto pleasss","I'm path-th-th...","Whimper...","Whine...","Muh... muh? Muhh...","Tongue is... wrong. Wrong ...","Wha... what am I.... What...","What am I looking   at aga in?","What was Idoihing","Juswanaplayuitarahain","Do re mi... me? Mmmh. Hhhate me.","Stupid fffucking... c-can't even s-s-screw hhhhisown hea hehead on righ-t...","Taste... bblood?","Tasteblood","Muenos...","Flicker...","Anyone?...","Idunno if hhhe even liked me an-nyways and the... the...","helpme...","Inside thoughts... stay in-siiii- insi- ins- in...","Shh... shhsh...","I think I'm   ","Stars I'm seeing stars","Which... which star... which...","Star... a star, a st-st-star...","Stars...","Dizzy? Uh...","Stars swirl...","Stars are... dancing in m-my... vision...","Whhhy amI so... c-confused...?","Ugh... world spins... and...","Hhhh-h-harder than... than usual to... to... to tah-t-t-t-talk...","Should've when had chance is to","To is the was in Friday b-breezes.","Waltz... w-w-world is w-w-waltz... ing","Around me...","Don't feel gggood...","dddont","d-d-d-d-","I don't... I don't... I don't...","Chip say ignlots and lots...","Brain      damag","Pplea....I dddon'tlike... thh-th-th-th-th-this......","Gom... sssseh...?","Stttt... hot... and...","And the... Has Is  and","Wanna go hhhhh h hhhome...","Urf-...","Hrk-!...","'Mokay... I'm oooooka-ay...","Onestep in fr-ront of oth-th-the r...","Wanna see my bihhgiblmh aghhhhh-nn.....","My head's... s-scream-ing...","Wanna move... b-but body says. Nnnnnhh...","Myhead's vee-e-e-eeeery wr-rong...","Taste p-p-penny... pennies?...","Mouth won't... won't... do... wh-what I wan...","Mmh... least blood... hears good an...d......","Weird...","Weirdweird... things...","Nooooo... brain come b-baccckkkkkkk..."
+    ],
+    "lastmoments":[
+      "Snff... hah... Hahaaah... Just look at me... A p-pathetic... whimpering... mess...","No... N-Navi, I... I'm... I... Sorry I f-failed...","I... feel... p-pretty... bad...","Shoulda... t-t-told em... th-that... I love... th-them...","Please let... me... wake up, now... please... please...","Don't... d-don't like... this... dream...","Don't let me... die again... I c-c-can't... I can't d-die again... Please...","I'm n-not... even scared?... Haha...","Wake me up... wake me up now... please... PLEASE.....","But what about th-the rest of it?...","Please... w-wake me up... Flicker... M-Muenos..."
+    ],
+    "magicheal": [
+      "I'm... healed? Uhm... suuuuure... Don't look a gi-gift horse in the m-mouth, I guess...","I feel... better. Uh... weird.","Th... thaaaaanks...?"
+    ],
+    "selfdestruct": [
+      "Uh-!? S-stop beeping, I-! You're scaring me! Please, just stop...!",". . . . . . Sigh...","No... No. No no no NO I'M NOT DONE YET, NO, PLEASE! NAVI, PLEASE, DO SOMETHING, HELP ME!","I- I know what this is. I know exactly what this is... pl-please make it quick...","...Well, shit. That's- th-that's not great.","Um. Thaaaat b-better not be what I- what I think it is.","...Ugh... Just let me die i-i-instantly, PLEASE...","B-beeping?! H-h-hey, uh, hey, can- hey, can, uh- c-can you maybe not?!"
+  ]},
+  "pauseQuotes": {
+    "normal": [
+      "Cut this from the record."
+    ],
+    "dying": [
+      "Twinkle, twinkle little star..."
+    ],
+    "happy": [
+      ""
+    ],
+    "depressed": [
+      "You might be the north star back on earth, but you certainly aren't here.","Who do you think you're guiding?","You've been discarded.","Where's your guitar now?","What, are you running away again?","Just think of how far you'd drop if you were to fall...","Go on. Step off the edge.","You're a coward. A coward and a liar.","Surely it's not too far a drop, so step off the edge!"
+    ],
+    "cargoembedded": [
+      ""
+    ],
+    "labescape": [
+      ""
+    ],
+    "combat": [
+      ""
+    ],
+    "combatelder": [
+      ""
+    ]
+  },
+  "pauseThoughts": {
+    "normal": [
+      "This is fucking stupid. Whatever..."
+    ],
+    "dying": [
+      "Stupid cave. Stupid, stupid cave, stupid fucking...","Sh-shit... I'm glad <i>they</i> can't see me...","If this is the end of me, just don't watch me die..."
+    ],
+    "happy": [
+      "At least I can purr. That's an upside of this body. That, and no more period cramps...","I wanna play music again."
+    ],
+    "depressed": [
+      "Navi...","I miss my guitar...","Ugh. I miss sleeping in real beds.","I want... uh... m-mac and cheese. Is that too much to ask for?","<color=#5681A7>Polaris?","<color=#5681A7>This is for you. This is all for you...","<color=#5681A7>Hey, why don't you play music for me anymore?","<color=#5681A7>Come here. I'll keep you safe.","<color=#5681A7>It's okay, it's okay... You don't have to think about it.","<color=#5681A7>Rolly-Pol-y!","<color=#5681A7>You're my favourite little brother! Heheh.","<color=#5681A7>This has always been for you.","<color=#5681A7>I'm going to kill them. I'm going to fucking <i>KILL</i> THEM!"
+    ],
+    "cargoembedded": [
+      "Is... i-i-is it... beating...?","I'm scared, but... but some part of me is also... a little excited...?"
+    ],
+    "labescape": [
+      "THIS IS IT. I'M <i>THROUGH</i> BEING A GOOD LITTLE <i>TOOL."
+    ],
+    "combat": [
+      "I-I can't choke now! I've gotta k-k-keep my h-head in the- in the game...!"
+    ],
+    "combatelder": [
+      "CAN'T THINK- ACT FAST!","NONONO, HATE THAT HATE THAT HATE THAT!!"
+    ]
+  }
+}

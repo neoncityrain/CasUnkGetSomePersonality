@@ -1,0 +1,42 @@
+{
+  "name": "selfdestructive",
+  "desc": "Sometimes, it becomes hard to resist simply tearing yourself apart, peice by bloody peice.",
+  "dialogue": {
+    "sad": [
+      "It begins again...","A familiar feeling.","I have that... mmh... itch again.","It's only a matter of time. But not now..."
+    ],
+    "gloomy": [
+      "This is the beginning of a spiral. I must be careful...","I should stock up on bandages. I need to be prepared.","I know how this sickness ends... how it always ends."
+    ],
+    "depressed": [
+      "I must relieve this stress. There is no other choice. It's how I live this life. It's incurable.","Everyone has their vices... why do I deny myself of mine?...","Surely I could afford to shed a few drops of blood. It would calm me. It would help...","I think there may be something wrong with me. But I have no way to escape it."
+    ],
+    "miserable": [
+      "There's simply no reason to continue.","No one to care. No one to stop me.","Death is only a breath away. All I need to do is reach out...","I need to die. I need to die...","I cannot be free. I was a fool to think otherwise..."
+    ],
+    "selfharm-regulated": [
+      "Mmh... yes... yes, that's much better...","...Sigh. And now, the more irritating part: cleaning this up.","Old habits die hard, I suppose...","This is how I continue this life. This is how I keep going.","Ahh, it all fades... All of the emotions fade away.","Haaa... haaa... haaa... I didn't mean to tear as deeply as I did.","How ironic... keeping myself alive by tearing myself apart...","So much weight is lifted...","I should not have done that... but I am so... relieved.","Yes... good. I feel nothing again. Very, very good...","Sigh... alright. I'm okay again.","A-ah... ahhh... I did not mean to... w-well, that's a lie, I did, but- I should clean this up.","Mmhhhhh... I truly wish I could have a more normal way of handling my own emotions...","...Well, then. I suppose I'd better clean this up..."
+    ],
+    "selfharm": [
+      "I pay the price of my sins in blood...","See? Was that so difficult?","I wear my own blood on my fur like it was a badge of honor. How miserable. Hah.","Mmh... there isn't much more satisfying than the feeling of my own freshly-drawn blood dripping down the arm...","I wear my own blood on my fur like it was a badge of honor. How miserable. Hah.","This is art. This is my masterpiece.","Haaaah... so again I put off my inevitable demise... Or do I?... H-hahhh...","Hehe... hehehe... satisfyingly easy as always."
+    ],
+    "angeronitem": [
+      "This is not as good as if I did such things to myself... but it will do.","Mmmh... cutting you open... how does it feel? Does it feel bad? ...No?","Every stitch, undone... every inch, torn...","I've made you like me. Torn apart, broken, beyond repair..."
+    ]
+  },
+  "pauseQuotes": {
+    "depressed":
+    [
+    "What, bored of slicing your own arteries open already?","It'll happen again. It always does."
+  ]},
+  "pauseThoughts": {
+    "depressed":
+    [
+      "If my allies are in danger, surely I should be there to take blows in their stead?","Slow slicing...","Something to numb the pain...","...I remain contaminated, tainted, unholy. But I continue anyway...","There is something so very wrong with me. Hahah... Haaa...","I cannot help but doubt my use in these situations."
+    ],
+    "happy":
+    [
+      "If death is the worst this place has to offer, I'm not afraid. I've tried that already."
+    ]
+  }
+}

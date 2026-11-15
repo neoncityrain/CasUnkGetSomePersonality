@@ -1,0 +1,7 @@
+{
+  "name": "mute",
+  "desc": "You cannot speak. When you try, sound doesn't properly leave your lungs.",
+  "isDisability": true,
+  "impliesTraits": [],
+  "dialogue": {}
+}

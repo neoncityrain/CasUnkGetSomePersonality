@@ -1,0 +1,123 @@
+{
+  "name": "cocky",
+  "moodles":{},
+  "dialogue": {
+    "seeGravel": [
+      "I won't be scraping by. I will THRIVE.","So, I just climb down? Tch. This'll be easy.","I've never seen such a dingy flooring...","I don't follow orders that are completely idiotic.","This isn't so bad. I'll hop down and be back before lunch.","Fascinatingly dreadful.","Frankly unacceptable. Who thought this would be the ideal mission location?","Whoever sent the cargo here must be fired posthaste. No, no- executed.","Why the fuck am I here? This is a grunt's mission.","I am only here because some of these fools couldn't manage to do their job properly."
+    ],
+    "eatGood": [
+      "Acceptable.","Adequate.","This is of acceptable quality.","Good enough.","Actually decent food.","I appreciate this.","Fine.","There have been better.","I do not mind this.","I suppose it's alright.","It's food. That is enough."
+    ],
+    "eatMediocre": [
+      "Not high-quality.","Disgusting.","Not acceptable.","Unacceptable.","I do not wish so much as to ATTEMPT to eat this again."
+    ],
+    "eatBad":[
+      "I don't deserve such cruelty.","This is an assault on the senses.","Disgusting. Frankly abbhorent.","Who the fuck would ever classify this as 'food' in the first place?!","Horrid thing. I should not have even attempted that."
+    ],
+    "refuseEat": [
+      "Don't test me.","Don't try my patience.","No. I am not a fool.","Foolish. I will not do such a thing."
+    ],
+    "wakeup": [
+      "... Let's tuck and roll.","To attention...","Come on, wake up faster, you stupid body..."
+    ],
+    "sick": [
+      "I'm not scared. I've handled this before.","I'm not scared. I've been through worse.","Oh, please. I'm not a baby who needs coddling, this is nothing."
+    ],
+    "thirsty":[
+      "Where is my water? Did someone attempt to steal from me?","I must drink something."
+    ],
+    "sad": [
+      "I am too strong to bend to this.","I am brave!","I am strong!","I'm... brave.","I'm... strong.",
+      "Stronger. Stronger. B-be stronger.","I'm strong. I'll stay strong.","I'm brave. So very brave."
+    ],
+    "bleeding": [
+      "Blood? Eh. Not a problem.","I-it takes a lot of effort to make someone as tough as me bleed...!",
+      "You're tainting my blood, you stupid floor."
+    ],
+    "bleedingheavy": [
+      "N-not... too much of an... i-issue...","Someone... someone please h-..."
+    ],
+    "seecorpse":[
+      "...Hm. Not ideal.","Oh, boo-hoo. Who gives a shit? I'm not going to go crying over a damn stranger."
+    ],
+    "seecorpsedesensitized": [
+      "I'm stronger than that.","Skill issue.","Boring. Next.","I'm certain I will see more.","Words do not properly articulate just how much I do not give a shit.","Just don't trip me.","A fate that was, most likely, entirely avoidable."
+    ],
+    "warm": [
+      "I'm hot. In the worst way...","I admit, I typically AM hot. But this time, it's the temperature.","Are there not layers of clothing I can remove?","What, is the world is trying to drown me in sweat droplets? Foolish and pathetic."
+    ],
+    "hot": [
+      "This heat's making me itch for a fight...","I must cool down. Immediately."
+    ],
+    "cold": [
+      "I cannot appreciate this frigid air."
+    ],
+    "pain": [
+      "I'm too tough for pain to take me down.","I'm too strong for pain to take me down.","I am in pain. No matter...","I must press on. This ache is nothing to me."
+    ],
+    "dirty": [
+      "I HATE feeling like a filthy ANIMAL.","Disgusting. I must bathe at once."
+    ],
+    "encumbered": [
+      "This load is... NOT troublesome. AT ALL!","I'm strong. This is proof I'm strong! Just you watch me.","I do not struggle. Not even under the heaviest of supplies... n-never."
+    ],
+    "watchlike": [
+      "If anything happens to this watch, I'm killing everyone and myself."
+    ],
+    "braindamaged": [
+      "The best the best the best the best the best the best?","Don't pppppppu shme"
+    ],
+    "lastmoments": [
+      "I've been through... through... I've been through worse...","Disgusting... awful place... C-can't believe THIS is where I will die. It doesn't des- deserve me...","...Ah. Perhaps this cave is lovely after all......","No... I cannot die... Not here, not now...","I... will not die..."
+    ],
+
+
+    "tradermeetnormal": [
+      "Hmph. Hello to you too, I suppose.","What? What is it that you want?","Trading? Yes, yes, fine. Just be quick about it."
+    ],
+    "tradermeetgood": [
+      "Yes, hello to you, too.","You are here to trade? Very well. Come in.","Let's skip the niceties and get to business."
+    ],
+    "tradermeetbad": [
+      "Behave, or I'll knock you upside the head.","Tch. As long as you can accept that I'm stronger.","What? Think you're tough shit?","Make it brief, I do not want you here.","I did not give you permission to bask in my presence.","Frankly, I don't care who you think you are.","Skip the bullshit. I don't care for empty words."
+    ],
+    "traderhugsuccess": [
+      "...","Fine. Whatever.","Fine. Great.","There, there, or whatever."
+    ],
+    "traderhugfail": [
+      "What? Do you WANT me to kill you?!","Do not touch me, filthy thing.","I did not give you permission to touch me. Back the FUCK off."
+    ],
+    "traderhagglesuccess": [
+      "Fine. Now quit drooling over my belongings and buy them.","I could not care less.","Whatever you say.","Fine. Have at it."
+    ],
+    "traderhagglefail": [
+      "What? Don't think I'm strong enough to back that price up?","That was pathetic. Perhaps consider groveling more next time.","Pick your jaw up off the floor. You look like a fool."
+    ],
+    "tradergiveitem": [
+      "Do as you wish.","Fine, it's yours, then.","Don't be foolish with it.","Whatever. Sure.","Take it. I don't care.","Yes, yes, shut up and take it already."
+    ],
+    "tradergiveitemrefuse": [
+      "Don't fucking patronize me.","Do you think I am throwing myself a pity party or something? Keep it to your-fucking-self.","I don't want your garbage.","Stop. I am through trading.","Enough. I am not taking your handouts and used bullshit.","I will not be taking that."
+    ],
+    "traderbuyfailmaxvalue": [
+      "Even a stunning beast such as myself has its limits.","That is enough. We both have places to be, do we not?","Knock it off. I am tired of this."
+    ],
+    "traderwarning": [
+      "I'm strong, are you truly sure you wanna pick this fight?","You're grating on my patience, and I don't have much to spare.","Leave. Or else I will kill you."
+    ],
+    "tradercombat": [
+      "I'll SNAP you in HALF!","I'M STRONGER! BETTER!","I'M BETTER THAN YOU! I'LL WIN!","I'M THE BETTER ONE."
+    ],
+    "hungryresponse": [
+      "Then why are you sticking around here? You just like me? Think I'm pretty?"
+    ],
+    "encumberedresponse": [
+      "I could carry that. Doesn't look too bad.","You look good with all that. Snrk.","... Tch. Show-off..."
+    ]},
+  "pauseThoughts": {
+    "normal":
+    [
+    "Your honor, my client is guilty. Get me a new one.","I didn't give you permission to do that.","Whose BRILLIANT fucking plan was it to send a million lab-grown beasts to do the work of a machine?","I am not like the rest. I am better. I am GOD."
+  ]
+}
+}

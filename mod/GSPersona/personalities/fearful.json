@@ -1,0 +1,250 @@
+{
+  "name": "fearful",
+  "dialogue": {
+    "seeGravel": [
+      "I'm not scared of a stupid fucking hole.","Helloooo? ... Yikes.","But... how do I get down?",
+      "This is not my idea of \"a good time\".","Thaaaaaat is a biiiiiiig drop...","Be brave... be brave...!",
+      "Everyone at home believes in me. I've gotta be brave... urf.","Can I just... leave? Is that an option?",
+      "That's not... hm.","Do I have to? Really?","Yeesh...","Ah. Aaaah. Ah, I don't like thaaaat.",
+      "Ohh, I'm not... Ohhh, I don't... Mm, noooo...","I want to be... uhhh... um. Not here.",
+      "Where do I even go from here? Is there anywhere BUT down...?","Helloooooo? Is anybody theeeere...?",
+      "I'll just... climb down. Carefully. Yes...","I'm not afraid.","I'm not afraid...","I-I'm... not afraid...",
+      "I think the transit scrambled my brain. Yeesh...","This is making me... itchy?"
+    ],
+    "tired": [
+      "Yeesh...","Y-yeesh...",
+      "I'd rather be sleeping right now.","I can't be defeated by a little sleepiness.",
+      "My body could use a break. Yeesh...",
+      "I need to curl up and away...","Curl up soon?","I hate being tired. Sucks."
+    ],
+    "verytired": [
+      "I'm tough... I'm ssssooooo tough...","Big fan of... not being tiredddd..."
+    ],
+    "wakeup": [
+      "What's that!? ... Oh. I'm here.","Gotta be strong...","Am I still dreaming?...","Breathe in, breathe out.",
+      "Back to woooork...","Buh... snap awake, c'mon.","Coming to...","A dream...",
+      "Where is...? Ah! Right. Yes...","Agh, I'm so... sleepy. And gross...",
+      "Ew, drooled a bit. Gross.","Wake up... yes.","Gotta remember how to be alive..."
+    ],
+    "sick": [
+      "Yeesh. Feels gross...","Feeling....... bad."
+    ],
+    "verysick": [
+      "I'm... scared...","S-scary... Ah...","I don't want this...","I don't like this...","Hurts! HURTS!!",
+      "Mean... so meannnn... to meeee...","Snff... I don't wanna be sick... I don't wanna!!",
+      "Stop hurting... jerk...","I can't... handle this...","So bad... So so so baaad..."
+    ],
+    "vomit": [
+      "I... needed that, though...","Buh... But, I'm not...","I'm... tougher than this... I am..."
+    ],
+    "vomitblood": [
+      "C-can... can I go home now? Please?"
+    ],
+    "full": [
+      "Full, yay!... I mean... uh... ahem. Good. Acceptable.",
+      "I'm strong. Thanks to this."
+    ],
+    "hungry": [
+      "Okay, I can handle this one..."
+    ],
+    "starving": [
+      "I... I wasn't strong before... but now? Now I'm... I think I may d-die...",
+      "I have to eat... Doesn't matter what I do to get there... P-please...",
+      "P-please, I don't wanna waste away...!","I can't die... not like this... it's AGONY!",
+      "Everything is so much more difficult, aah...","I can't even... I... I'm shaking. Ha... Haaaa...",
+      "Please, please, please... Food...","Starving? No, please, no, no...",
+      "D-don't let me starve... I can't starve...!"
+    ],
+    "thirsty": [
+      "This is a minor problem. B-but, um, it'd be best to handle it soon."
+    ],
+    "dehydrated": [
+      "Big problem... Big, big problemmmm...","Ah... I'm. I'm afraid... T-too dry...",
+      "My tongue hurts... Hurts so bad...!","Don't let me waste away, please... Please?",
+      "Drier than a desert... y-yeesh... Ah...","G-groundwater? I'll drink it... Please..."
+    ],
+    "limbmuscle": [
+      "I am strong. This damage doesn't bother me...","I'm not scared of a little muscle tear.",
+      "The pain in my <limb> can't stop me.","It's okay. I am strong..."
+    ],
+    "limbskin": [
+      "Oh... Hello, raw f-flesh...","Eek... My <limb> looks so baaaaaad.","It's okay, my... uh... I'm strong! Ahah...",
+      "My own m-meat is showing... Ah...","Meat... B-but not meat I should eat...! That's- that's, um, me.",
+      "H-hey now... My me...","I'm s-stronger than this!"
+    ],
+    "sad": [
+      "Things h-have been better.","Not... not the best time I've, um... had...","Mean... Quite mean.",
+      "This cave is kinda mean...","No... I am strong!","No... I am brave!","Like that'll scare me.",
+      "I will not bend, nor break...!","I'll stay strong in th-the face of danger...",
+      "Rrrh... I am strong. I am STRONG.","I'm strong. I'm strong...","Head up... eyes foreward...",
+      "Nose pointed forward. Come on.","Chin up...","I fear nothing in these caves.","I'm not afraid of you, cave.",
+      "Keep on...","Carry on...","One foot in front of another, now...","Let's set this straight.",
+      "Not my problem, come on...","I'm not afraid.","I don't break.","...Okay, maybe I'm... a little afraid."
+    ],
+    "gloomy": [
+      "Am I- a-am I really fast enough for this?","I-I don't think I was the right one for the job, here...!",
+      "Idiot... Hrrrhhhhf..."
+    ],
+    "depressed": [
+      "I'm not strong enough for this, I'm really noooot...",
+      "I saw it. I saw it, just for a moment. I saw it..."
+    ],
+    "selfharm": [
+      "BETTER! BETTER!!!!!!!!",
+      "Ahhhh... Heh... Ha. HAHAHAHA!",
+      "I'M STRONG I'M STRONG!",
+      "I'M BETTER! I'M BETTER!"
+    ],
+    "suicide": [
+      "I'm not strong enough, I've never BEEN strong enough!"
+    ],
+    "bleeding": [
+      "Mean, mean cave... MEAN cave."
+    ],
+    "bleedingheavy": [
+      "Supposed to be... stronger than... this...!!!!","I'm... I'm not strong!","This... this could kill me... U-urk..."
+    ],
+    "hot": [
+      "I'm... I'm scared, I..."
+    ],
+    "opiated": [
+      "I'm the bravest to ever live. Yeeees..."
+    ],
+    "opiatewithdrawal": [
+      "Need more drugs.","More drugs in my system..."
+    ],
+    "cantBreathe": [
+      "SCARED... HELP..."
+    ],
+    "pain": [
+      "It's only a little pain. I can do this...",
+      "I can run, if it's ever too much. That's an option. That's always an option."
+    ],
+    "fallscream": [
+      "NONO, DANGER!!"
+    ],
+    "hitbycreature": [
+      "GRRRRRRH! YOU'LL PAY!",
+      "STAY AWAY, STAY AWAY!",
+      "NONONO!!!!",
+      "FEARFEARFEAR!!!!",
+      "I'LL CRUSH YOU!!!",
+      "YOU'VE DONE IT NOW!",
+      "HOW COULD YOU!",
+      "HATE THIS! NO!",
+      "HATE YOU!!",
+      "NO! PLEASE!",
+      "NOWHY!",
+      "WHY ARE YOU DOING THIS!?",
+      "GET AWAY FROM ME! STAY AWAY!",
+      "HATE YOU HATE YOU!",
+      "MEAN!!!!!",
+      "MEANIE!!!!!!!!!!!!",
+      "BURNS--!"
+    ],
+    "wet": [
+      "Stupid... don't like how wet this is.","Ughhghghgh... wet. Wetwetwet. Gross.",
+      "The cold could be fatal like this...","Yeesh. Can I get any more damp...?",
+      "Want to dry off before I start to grow mushrooms or something...","At least I'm not dying... I guess."
+    ],
+    "encumbered": [
+      "My legs huuuurt... Owwwwowoww..."
+    ],
+    "tradeemeet": [
+      "Mmh... Are you friendly? I'm friendly...","Hi? Unfamiliar face, here?","Hi. May I come in? Is this open?",
+      "Mrrrrrr? Hi? Is it safe?","Hello... may I crawl in here, too?","Seems safe in there, yes?"
+    ],
+    "lastmoments": [
+      "I... wasn't... good enough... was I...?","Lives a coward... Dies a coward... H-heh...",
+      "I c-could have been stronger, couldn't I?......"
+    ],
+    "magicheal": [
+      "Urgh... I feel violated... but... alive? Fixed? Ah???"
+    ],
+    
+    "tradermeetnormal": [
+      "Oh, a stranger. Are you... safe?",
+      "Oh. You're... r-real... Okay.","Mmh... h-hi."
+    ],
+    "tradermeetgood": [
+      "Welcome in. It's safe in here...","Hi, hello, hi. It's nice to see someone alive...!",
+      "Oh... oh! You're real! Yes, yes, I will make space for you..."
+    ],
+    "tradermeetbad": [
+      "Gsssk... I'm n-not afraid of you..."
+    ],
+    "traderdepressed": [
+      "Hhhhsk... What...? What? What's your problem?...","Don't- d-don't look at me like that...!",
+      "Mmmrh... I'm n-not an easy target, if- i-if that's what you're here for...!","Oh... um... uuuum. Ah... Er...",
+      "Hnnh... that- that look... I... I'm not scared of you!","Do youuuuu... neeeeed somethingggg.....?"
+    ],
+    "traderseegun": [
+      "Y-you're- armed?! AH- P-put that away! C-crap...!","Hrrnnhhg! S-stow your- your weapon!!",
+      "Hunh?! Threatening me?! I- I-!!","GASP... Ohhh, no... No! Put that- away!",
+      "No no no! I'm not d-dying today!!","Ah... Ahhh?? Ahhhhhh??? Are you threatening me...?",
+      "I-I'm not afraid of you.","Put that STUPID thing AWAY, you jerk.",
+      "I'm... I'm armed, too! Don't try an-anything funny..."
+    ],
+    "traderhugsuccess": [
+      "Wha-!? ...Oh... Oh, okay... That's nice.","Hehe... Yay. U-um, don't talk about this to others."
+    ],
+    "traderhugfail": [
+      "Like that'll scare me! Back away!",
+      "STOP! OFF! THAT SCARED ME!!! GAAAAH...","Trying to give me CARDIAC A-ARREST?!?!"
+    ],
+    "traderhagglesuccess": [
+      "You got someone you're protecting...? Here."
+    ],
+    "tradergiveitem": [
+      "This will help me live longer..."
+    ],
+    "tradergiveitemrefuse": [
+      "Ahhhmmmmm... Kiiiinda got enough. So, no."
+    ],
+    "traderbuy": [
+      "Here. You'll do well with it, I'm sure..."
+    ],
+    "traderbuyfail": [
+      "That's an unequal trade...!","Yeah, yeah, shove it up your... your... your ass..."
+    ],
+    "traderbuyfailmaxvalue": [
+      "Don't wanna keep playing this game. But... thanks.","Outta stock. Don't look at it...",
+      "W-well, I... I need to keep SOME supplies for myself...",
+      "Errrr... I dunno. Kinda... done trading.","Thanks, but I, uh... still need my own supplies, too."
+    ],
+    "traderwarning": [
+      "I-I'm strong... you don't want to fight me!","I'm n-not afraid of you!",
+      "Y-you think I'm scared of- of you!?","C-crap... leave! Go away!"
+    ],
+    "traderthreatensuccess": [
+      "FINE, I'm scared of you...! Just take it!",
+      "C-can't believe I let you in... you SUCK. J-just take it quickly and- and go.",
+      "Aww, c-crap... Huff. I surrender, yes...","Grrrhssh, you're lucky I'm not... b-braver..."
+    ],
+    "traderlightbreak": [
+      "NO! No no no, now the MONSTERS will get in, you... you... JERK!"
+    ],
+    "traderwakegreet": [
+      "Ahh, such a cute sleeper. ...U-um, I meant me. Yeah. Me, I'm, um. Cute. Yes..."
+    ],
+    "traderseehurt": [
+      "H-HOLY shit-- AH! Ah, UM, I might have... stuff for that? The blood. It's yours.",
+      "Y-yeesh, what took a chunk outta you!? Uum... maybe I have a bandage in my stuff, I dunno...",
+      "Take a bandage at no cost, if you can find it. I-I would do this for anyone, just FYI..."
+    ],
+    "vomitbloodresponse": [
+      "Buh-!? Blood!? Oh, that's a bad sign. That's a bad, BAD sign...",
+      "I... have to say, that's not what I like to see, I...",
+      "Oh, no... Chest drain? P-procoagulant? S-something?",
+      "That's... AWFUL! Very awful! Get that treated! Immediately...!"
+    ],
+    "depressedresponse": [
+      "We should stick together. The world is less... scary, that way."
+    ],
+    "bleedingresponse": [
+      "Hm... could you stop? U-uh, not you, I mean the blood. Talking to the... n-never mind!"
+    ],
+    "painresponse": [
+      "I've not been... equipped for... this.","Could you... sleep it off?","I-I'll protect you. Okay? Take it easy..."
+    ]}
+}

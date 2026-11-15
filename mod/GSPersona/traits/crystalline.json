@@ -1,0 +1,12 @@
+{
+  "name": "crystalline",
+  "desc": "Your body comprises of living crystals as a part of your tissue.",
+  "impliesTraits": [ "livingmineral" ],
+  "dialogue": {
+    "seeGravel": [
+      "Gotta be cautious. A fall too far, and I'll shatter."
+    ],
+    "selfharm": [
+      "SHATTER... BREAK APART..."
+  ]}
+}

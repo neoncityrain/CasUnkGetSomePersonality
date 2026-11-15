@@ -1,0 +1,504 @@
+{
+  "codeName": "your name to be used in the code.",
+  "name": "what you character calls yourself",
+  "displayName": "the name to display on the woundview screen",
+  "calloutQuote": "your ID number was called. you arent coming back from this. how do you respond?",
+  "personality": "personality type. 'template' if you want it to NEVER pull from a personality, blank to have it randomize.",
+  "personalitySubtypes": { "not implimented": "ignore this for now!" },
+  "bodyTraits": ["traits that should be auto-added"],
+  "id": 0,
+  "age": 0,
+  "versionNumber": 0,
+  "heightCm": 0,
+
+  "woundviewVersionText": "in case you want even more control. usually this is 'UNI-HEALTH v2.0' + ownerVersion",
+
+  "moodles": {
+"moodlecodename": "moodle readable name",
+"moodlecodedesc": "moodle description",
+"still trying to upkeep these!": "ideally, you could copy the vanilla moodles, edit the second fields, and it will update itself."
+},
+  "dialogue":
+  {
+    "seeGravel": [
+      "youve just landed on the planet for the first time! what are your thoughts?",
+      "to note, if pause quotes are set to 'thoughts' and not enough dialogue is present,",
+      "thoughts will ALSO pull from this pool (in addition to 'trader_depressedresponse')"
+    ],
+    "eatGood": [
+      "something tastes delicious!",
+      "despite the name of this dialogue, it also is used for drinks."
+    ],
+    "eatMediocre": [
+      "eh, it could be better.",
+      "too much of it is likely to make you queezy, but may not have lasting effects."
+    ],
+    "eatBad": [
+      "disgusting. youll probably be sick."
+    ],
+    "refuseEat": [
+      "someone suggested trying to eat shit or magma.",
+      "its a stupid idea that nobody should try."
+    ],
+    "tired":[
+      "youre a little sleepy. could use a lie-down."
+    ],
+    "verytired":[
+      "you are actively falling asleep while standing up.",
+      "exhaustion is setting in, and you may just collapse if you arent careful."
+    ],
+    "confused":[
+      "the world grows foggy and far away. something might be wrong, but you cant tell for sure."
+    ],
+    "wakeup": [
+      "youve just woken up! youre still groggy.",
+      "'confused' lines often come after this one if you havent slept well."
+    ],
+    "sick": [
+      "queezy, feeling bloated. maybe you ate something, or maybe you saw one too many dead bodies."
+    ],
+    "verysick": [
+      "in a world of hurt. your stomach hurts, you may throw up, and youre exhausted easier.",
+      "feels pretty similar to getting stabbed."
+    ],
+    "vomit": [
+      "you just threw up. this is generally not recommended to do."
+    ],
+    "vomitblood": [
+      "blood has ejected from your body through your mouth.",
+      "also pretty much not recommended?"
+    ],
+    "full": [
+      "youve eaten more than enough food to sate you.","a little uncomfortable, but not awful.",
+      "unless you throw up, i guess."
+    ],
+    "hungry": [
+      "you need a snack. probably a little grumpy and emotional."
+    ],
+    "starving": [
+      "shaking uncontrollably with hunger. your gut burns as it tries to eat itself"
+    ],
+    "thirsty": [
+      "your mouth is dry. probably a little dazed and slow."
+    ],
+    "dehydrated": [
+      "your body is SUPPOSED to be mostly water. it probably isnt anymore"
+    ],
+    "limbmuscle": [
+      "the muscles in your limb have seriously deteriorated.", "can use <limb> to reference the name of the limb"
+    ],
+    "limbinfected": [
+      "bacteria is attempting to consume your body.", "it feels as if its been set on fire.", "can use <limb>"
+    ],
+    "limbskin": [
+      "your skin is damaged, revealing the flesh beneath.", "can use <limb>"
+    ],
+    "sad": [
+      ""
+    ],
+    "gloomy": [
+      ""
+    ],
+    "depressed": [
+      ""
+    ],
+    "miserable": [
+      ""
+    ],
+    "selfharm": [
+      ""
+    ],
+    "angeronitem": [
+      ""
+    ],
+    "suicide": [
+      ""
+    ],
+    "refuse": [
+      ""
+    ],
+    "bleeding": [
+      ""
+    ],
+    "bleedingheavy": [
+      ""
+    ],
+    "steponglass": [
+      ""
+    ],
+    "seecorpse": [
+      "for the first few times a corpse is seen."
+    ],
+    "seecorpsedesensitized": [
+      ""
+    ],
+    "seecorpsesuicidal": [
+      ""
+    ],
+    "breakcorpse": [
+      "breaking a corpse, which lowers happiness quite a bit."
+    ],
+    "breakcorpseCannibalistic": [
+      "for those who have no qualms with eating the flesh of their own kind.",
+      "not everyone thinks of cannibalism as tabboo- its up to you if they do or not!"
+    ],
+    "cold": [
+      ""
+    ],
+    "warm": [
+      ""
+    ],
+    "hot": [
+      ""
+    ],
+    "exerted": [
+      ""
+    ],
+    "exhausted": [
+    ""
+    ],
+    "freezing": [
+    ""
+    ],
+    "emaciated": [
+    ""
+    ],
+    "obese": [
+      ""
+    ],
+    "opiated": [
+      ""
+    ],
+    "opiatedsad": [
+      ""
+    ],
+    "opiatewithdrawal": [
+      ""
+    ],
+    "cantBreathe": [
+      ""
+    ],
+    "pain": [
+      ""
+    ],
+    "hitgroundhard": [
+      ""
+    ],
+    "bigpain": [
+      ""
+    ],
+    "fallscream": [
+      ""
+    ],
+    "hitbycreature": [
+      ""
+    ],
+    "wet": [
+      ""
+    ],
+    "dirty": [
+      ""
+    ],
+    "encumbered": [
+      ""
+    ],
+    "watchlike": [
+      ""
+    ],
+    "drillend": [
+      ""
+    ],
+    "deafloud": [
+      ""
+    ],
+    "loud": [
+      ""
+    ],
+    "murderregret": [
+      ""
+    ],
+    "murdercalmregret": [
+      ""
+    ],
+    "murderdesensitized": [
+      ""
+    ],
+    "murderglee": [
+      ""
+    ],
+    "tradeemeet": [
+      ""
+    ],
+    "swingresponse": [
+      ""
+    ],
+    "braindamaged": [
+      "something happened, and now you cant form thoughts or words quite like before.",
+      "when writing this dialogue, please do keep in mind: this is an injury, and a terrifying one at that.",
+      "you KNOW you arent operating correctly, but you cant think clearly enough to do much.",
+      "you are having seizures, flashes of fear, hearing things that arent there... ect.",
+      "this is a relatively common thing to have happen for some disabilities, so remain respectful!"
+    ],
+    "lastmoments": [
+      "youre pretty sure youre dying.",
+      "you still may not die- but something has gone horribly wrong, regardless."
+    ],
+    "magicheal": [
+      "a crystal has caused you to recover. the freak."
+    ],
+    "selfdestruct": [
+      "something inside your body has started to beep.", "you are about to die."
+    ],
+
+    "wwmr": [
+      "wwmr, aka: where we must reach.", "you actually made it! so few do...",
+      "youre at the planets mantle. youre so close to the cargo, you can start to feel its pulse."
+    ],
+    "cargo1": [
+      "youve found what youre here for. you actually, genuinely made it. this is your destination.",
+      "you have won."
+    ],
+    "cargo2": [
+      "hey wait. whats it doing.",
+      "for one, its not a battery, but also... it kinda looks like its about to explode?",
+      "probably not ideal."
+    ],
+    "cargoimpale": [
+      "knee-jerk reaction.",
+      "that was kinda rude, after all."
+    ],
+    "cargoimpale2": [
+      "...but maybe its okay...?", "honestly, youre in a shockingly little amount of pain.",
+      "you really shouldnt go trying to touch it though.",
+      "the cargo seems to have given you strength. how strange is that?"
+    ],
+    "cargoimpale3": [
+      "youre pretty sure the pod above is working now.",
+      "or something. im not your mom"
+    ],
+    "endlessloop0": [
+      "you had the cargo in front of you, but now youre back here. somethings a little fishy."
+    ], 
+    "endlessloop1": [
+      "again?"
+    ],
+    "endlessloop2": [
+      "AGAIN????"
+    ], 
+    "endlessloop3": [
+      "FOR REAL BRO A FOURTH TIME?"
+    ],
+    "endlessloopdefault": [
+      "it never ends."
+    ],  
+    "endpodexamine": [
+      "examining the pod prior to actually being able to use it.",
+      "whys it suck tho. like whats wrong with it"
+    ],
+    "ascententer": [
+      "the pod has been pushed past its limits and wont bring you farther.",
+      "and NOW where are you?"
+    ],
+    "labenter": [
+      "you step into a place you know very, very well."
+    ],
+    "labresponse": [
+      "youve been asked to explain.",
+      "this is one of the ones who was abusing you and yours."
+    ],
+    "labthink1": [
+      "youve been asked if you have any questions.",
+      "this hadnt been part of their plan.",
+      "now may be the time."
+    ],
+    "labthink2": [
+      "considering your options."
+    ],
+    "labthink2chip": [
+      "you cannot escape. your own mind wont allow it."
+    ],
+    "labshoot": [
+      "go on. do a crime"
+    ],
+    "labcommentcalm": [
+      "muttering to yourself..."
+    ],
+    "labcommentcombat": [
+      "slaughter them all."
+    ],
+
+    
+
+    "tradermeetnormal": [
+      ""
+    ],
+    "tradermeetgood": [
+      ""
+    ],
+    "tradermeetbad": [
+      ""
+    ],
+    "traderhugsuccess": [
+      ""
+    ],
+    "traderhugfail": [
+      ""
+    ],
+    "traderhagglesuccess": [
+      ""
+    ],
+    "traderhagglefail": [
+      ""
+    ],
+    "traderdepressed": [
+      "pretty sure this dialogue is never called.",
+      "if i recall correctly, it WAS once used for hollow characters...? unsure."
+    ],
+    "tradergiveitem": [
+      ""
+    ],
+    "tradergiveitemrefuse": [
+      ""
+    ],
+    "traderbuy": [
+      ""
+    ],
+    "traderbuyfail": [
+      ""
+    ],
+    "traderbuyfailmaxvalue": [
+      ""
+    ],
+    "traderwarning": [
+      ""
+    ],
+    "tradercombat": [
+      ""
+    ],
+    "traderthreatensuccess": [
+      ""
+    ],
+    "traderlightbreak": [
+      ""
+    ],
+    "traderwakegreet": [
+      ""
+    ],
+    "traderseegun": [
+      ""
+    ],
+    "tradermeetimpairedspeech": [
+      ""
+    ],
+    "traderseehurt": [
+      ""
+    ],
+    "tradermove": [
+      ""
+    ],
+    "tradermovefail": [
+      ""
+    ],
+    "vomitresponse": [
+      ""
+    ],
+    "vomitbloodresponse": [
+      ""
+    ],
+    "hungryresponse": [
+      ""
+    ],
+    "thirstyresponse": [
+      ""
+    ],
+    "sadresponse": [
+      ""
+    ],
+    "depressedresponse": [
+      ""
+    ],
+    "selfharmresponse": [
+      ""
+    ],
+    "braindamagedresponse": [
+      ""
+    ],
+    "hotresponse": [
+      ""
+    ],
+    "coldresponse": [
+      ""
+    ],
+    "bleedingresponse": [
+      ""
+    ],
+    "painresponse": [
+      ""
+    ],
+    "dirtyresponse": [
+      ""
+    ],
+    "encumberedresponse": [
+      ""
+    ],
+    "dyingresponse": [
+      ""
+    ]
+  },
+  "pauseQuotes": {
+    "normal": [
+      "these quotes are from the observer.",
+      "it seems as if they do not want the mission to succeed, but also dont bear ill will.",
+      "that may sound contradictory, but really, they are as the name suggests- an observer!"
+    ],
+    "dying": [
+      ""
+    ],
+    "happy": [
+      ""
+    ],
+    "depressed": [
+      ""
+    ],
+    "cargoembedded": [
+      ""
+    ],
+    "labescape": [
+      ""
+    ],
+    "combat": [
+      ""
+    ],
+    "combatelder": [
+      ""
+    ]
+  },
+  "pauseThoughts": {
+    "normal": [
+      ""
+    ],
+    "dying": [
+      ""
+    ],
+    "happy": [
+      ""
+    ],
+    "depressed": [
+      ""
+    ],
+    "cargoembedded": [
+      ""
+    ],
+    "labescape": [
+      ""
+    ],
+    "combat": [
+      ""
+    ],
+    "combatelder": [
+      ""
+    ]
+  }
+}
+
+

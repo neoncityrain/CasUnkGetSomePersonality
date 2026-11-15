@@ -1,0 +1,9 @@
+{
+  "name": "livingmineral",
+  "desc": "Your body is comprised of material that's usually just considered to be terrain.",
+  "dialogue": {
+    "selfharm": [
+      "B-blood from a stone..."
+    ]
+  }
+}
