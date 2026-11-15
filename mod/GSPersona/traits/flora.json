@@ -1,8 +1,0 @@
-{
-  "name": "flora",
-  "desc": "You are some kind of plant, or at least spliced with one.",
-  "dialogue": {
-    "seeGravel": [
-      "Mmh. There's not much growth out here, is there...?","Not too good a place to put my roots down."
-  ]}
-}

@@ -1,6 +1,0 @@
-{
-  "name": "blind",
-  "desc": "You lack most, if not all, of your vision. The world is a complete blur at the best of times.",
-  "impliesTraits": ["colorblind"],
-  "isDisability": true
-}
