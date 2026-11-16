@@ -1,0 +1,6 @@
+{
+  "name": "voyager",
+  "impliesTraits": [
+    "feline"
+  ]
+}

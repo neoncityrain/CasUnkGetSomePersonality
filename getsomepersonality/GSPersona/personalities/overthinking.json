@@ -1,0 +1,103 @@
+{
+  "name": "overthinking",
+  "moodles":{},
+  "dialogue": {
+    "seeGravel": [
+      "...This place looks like a big array of intestines.","The maw of a giant creature waits to swallow me whole...",
+      "Gravel? Gravel. Maybe limestone deposits above. Must be careful. Must tread carefully.",
+      "What a place that waits for me! How long has it waited? What has it seen?",
+      "Oh? Oh, oh, oh? What sort of place are you, that I now walk upon?","Out of the cooking pot, into the fire.",
+      "I was a simple little labrat, and now I've escaped my cage..."
+    ],
+    "eatGood": [
+      "Very good eating!","Good food, yes yes!","Very tasty. But is it good for me? That may be a different answer...",
+      "Tastes good, so very good! Perhaps even excellent!","This food brings joy and ease to my life.",
+      "I wonder, was food like this intended to be eaten, in the grand scheme of things?",
+      "What's this thing's nutritional value, I wonder?"
+    ],
+    "eatMediocre": [
+      "Hmm, the taste wasn't bad, but the scent... there was definitely something odd about that.",
+      "Not-so-sure that was good for me.",
+      "It's probably good for me, given how it tastes. I still do not appreciate it, however."
+    ],
+    "eatBad": [
+      "Poison? Did I eat poison?!","Eugh! Quick, get it out, get it out! Urf, it might be too late..."
+    ],
+    "refuseEat": [
+      "Bad plan, there!","I don't imagine that's the best menu option available.","Not the best of plans.",
+      "But think of what would happen if I WERE to do so...!","No, no, even someone like me has limits."
+    ],
+    "tired":[
+      "I feel as if I am trying to solve complex math problems simply by walking...","Hmm. I'm tired, but do I go on? SHOULD I go on? Much to think about, much to consider...","Oof. I'm getting sleepy... Very sleepy. But I'll be alright to keep going for a bit longer. I think I can handle that!"
+    ],
+    "verytired":[
+      "Can't... think... must sleep... no more thinking... nghhhh...","Buh... guh... wha... what...?"
+    ],
+    "confused":[
+      "Wheels in my head are...","Slows the mind...?","Ah...? Ahhh? What is it...? What is it, now...?","Wading through... mud..."
+    ],
+    "wakeup": [
+      "What's today's agenda, I wonder? Where to next? What is the next step?","Good morning- let's get going, shall we?","Wake up and smell the glowplantss...!"
+    ],
+    "sad": [
+      "I should not dwell. That would be counter-productive, yes...?","I believe the cogs of my brain may be rusted...","Certainly, I've felt worse. But I've also felt better.","This is not my most peak, ideal form... It could be worse, though."
+    ],
+    "gloomy": [
+      "I would not say that this has all been worth it.","What is the issue? Where does it begin? Can it be cured?"
+    ],
+    "bleeding": [
+      "I do appear to be bleeding. It may be obvious, but of course, it may not, so I'd rather point it out to be sure.","Hello, my blood. We meet again. I must say, I appreciate you, but I'd rather see you less!"
+    ],
+    "seecorpse": [
+      "Oh, no... Are you dead? Why? Why are you dead? Can't you stop being dead, please? ...No?","Eek! A dead person!","A corpse! Here! But that's strange, I'M here TOO. Why am I in a place that corpses are in?","A dead body... How did you die? Did it hurt? Did you suffer? Or was it peaceful, like curling in someone's arms?",""
+    ],
+    "seecorpsedesensitized": [
+      "I don't suppose I could bother you for a conversation on the current weather, now, can I?","You make up the residents of my little ghost town.","Excuse and pardon me for passing through!"
+    ],
+    "watchlike": [
+      "This watch is quite interesting! It tells me many details that I would struggle to contain otherwise. Very kind."
+    ],
+    "drillend": [
+      "What a strange device I had activated. I do suppose the shortcut it's given me is priceless."
+    ],
+
+
+    "tradermeetnormal": [
+      "Hello, hello, yes, I am here and I am present. Do you wish to trade?",
+      "Hello, friend. Make yourself at home, if you wish.","Hello, traveler. Make yourself at home, if you wish.",
+      "My my, I thought waiting for someone would be a waste of time when I started, and look at me now!",
+      "Hello to you, too, traveler. Whatever has carried you to my side?","Well met. Let us do business, yes?",
+      "Welcome to my pod. It is quite like other pods, except it is mine."
+    ],
+    "tradermeetgood": [
+      "Hello, hello, hello! Friend, friend, welcome in, friend! Do you wish to trade, perhaps?",
+      "Oh? Is that a potential customer I see? Come in, come in, come in!",
+      "Hi! Welcome, welcome, I would love your company.","So, the world has brought me companionship after all!",
+      "Welcome to my corner of this drab little world! I am simply delighted to have you here."
+    ],
+    "tradermeetbad": [
+      "Mmm... I don't know about this. I have a strange feeling about you, my sincerest apologies.",
+      "This mustn't be an eventful meeting, I'm afraid, there is an air of... unease about here.",
+      "Hello and all that, I suppose...","Please understand, I am not interested in conversing too terribly much."
+    ],
+    "traderseegun": [
+      "And... do you greet everyone you meet with a barrel waggling toward their face? Come, now.",
+      "Behave, behave, stow your weapon. I will not be doing business if you act a fool."
+    ],
+    "traderhugsuccess": [
+      "What a nice embrace! Thank you, friend. Let's hug again sometime.","Soft and kind...! Thank you very much."
+    ],
+    "traderhugfail": [
+      "I do not wish to be touched at the moment, and I must insist you respect that.",
+      "Do not approach without warning! You will not gain my allyship in such a way!"
+    ],
+    "traderwarning": [
+      "Leave this place- I will not be saying so again, so hurry up and head out.",
+      "I do not appreciate your presence, so I must insist you make yourself scarce."
+    ]},
+    "thoughtQuotes": {
+      "normal":
+      [
+      "There remains a world that saw us together for the last time...","Yup. That's me. I bet you're wondering how I got in this situation.","An unblinking, ever-wavering eye watches with great interest...","Do I talk to much? Be honest."
+    ]}
+}

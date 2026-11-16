@@ -1,0 +1,13 @@
+{
+  "name": "arthropod",
+  "desc": "You have an exoskeleton to protect your organs.",
+  "impliesTraits": [],
+  "dialogue":{
+    "limbskin": [
+      "There's a crack in my armor...!","My exoskeleton's been compromised."
+    ],
+    "steponglass": [
+      "My exoskeleton's tough, but it's DEFINITELY not THAT tough... ow."
+    ]
+  }
+}

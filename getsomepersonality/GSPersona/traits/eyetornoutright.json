@@ -1,0 +1,7 @@
+{
+  "name": "eyetornoutright",
+  "desc": "You have survived the horrifying ordeal of losing an eye in a violent manner.",
+  "isDisability": true,
+  "impliesTraits": ["missingeyeright"],
+  "dialogue": {}
+}

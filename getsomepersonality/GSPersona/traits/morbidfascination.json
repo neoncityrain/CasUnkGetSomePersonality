@@ -1,0 +1,36 @@
+{
+  "name": "morbidfascination",
+  "desc": "Gore, death, and viscera don't bother you as much as it does others.",
+  "dialogue": {
+    "limbskin": [
+      "Cuts across skin, shaped as rivers are... Hm.","I feel every little movement of my body through the broken flesh of my <limb>...","My <limb> is... kind of pretty, in a strange way."
+    ],
+    "bleeding": [
+      "Oh, hello, blood. It's been a minute since we last met."
+    ],
+    "bleedingheavy": [
+      "Wonder who all's died because of this... wonder what it feels like. Ah..."
+    ],
+    "miserable":[
+      "A parasite has crawled in through the gaps of my ribcage and made a nest of my heart. It claws and claws..."
+    ],
+    "selfharm-regulated": [
+      "Oh, to vivisect myself...! But for now... this will do..."
+    ],
+    "selfharm": [
+      "So beautiful. It is so beautiful."
+    ],
+    "angeronitem": [
+      "Hhhhhello, little friend. Your lobotomy went quite well. How do you feel?","Mmh... Your insides are soft, little friend.","With surgical precision, I tear you limb from limb...","It's only a liiiiittle cut across the throat... Oops. Seems I've hit every possible artery.","...How about that for a tattoo? Haa... cut through every layer of fabric...","I don't do this because I hate you... no, not at all.","Your guts are spilling out... spilling, spilling... Heh...","Mmmh... cutting you open... how does it feel? Does it feel bad? ...No?","Every stitch, undone... every inch, torn..."
+    ],
+
+    "bleedingresponse": [
+      "You look good in yellow... UM. Small victories, I mean?"
+    ]
+  },
+  "pauseThoughts": {
+    "normal":
+  [
+    "Is it bad to wish for a vivisection? ...Asking for a friend.","Lungs, torn out of the body through... A-ah. Oh, don't mind me. That was... let's not dwell."
+  ]}
+}

@@ -1,0 +1,57 @@
+{
+  "name": "energetic",
+  "moodles":{},
+  "dialogue": {
+    "seeGravel": [
+      "Adventure awaits! Time to jump on in, eh? ...Haha, whoaaa, that's... far. Oh, that's really far, actually- um...","This is kinda exciting, right...? Like, yeah, it's grim and all, but- it's also really COOL, right?","Let's jump right in!","Whoa! What's all this? And this, and this?","WOW, what a neat place!","Oh, so awesome! And I'm supposed to go to the bottom? Well, okay!","Ready for action!","Kinda a rough landing, but this place is WAY too cool to be upset about that...!"
+    ],
+    "eatGood": [
+      "YumyumyumyumYUM!","Ohmygosh this is so GOOD!"
+    ],
+    "eatMediocre": [
+      "Blehhhh... this is SUPER not my favourite.","Bland, bland, BLAND! So bland!!"
+    ],
+    "eatBad": [
+      "EWW, this might just be the worst thing I've ever tasted!","HORRIBLE.","Ew!! Don't eat that again, me!"
+    ],
+    "refuseEat": [
+      "I tried that once. Never again.","Hey. I'm excitable and fun, but I'm not STUPID."
+    ],
+    "bleeding": [
+      "Nooo, my blood- come baaaack! Nooooooo!!","Even my blood's leaving me. So rude..."
+    ],
+    "bleedingheavy": [
+      "Ohhh, this isn't very good. It could even be........ pretty bad..."
+    ],
+    "steponglass": [
+      "Let me be clear, cause this glass sure isn't anymore- this? This SUCKS!"
+    ],
+    "limbinfected": [
+      "Something sick got into my body- something REALLY sick.","I'm seeping something gross from my <limb>...","Yuck, is that pus? Ough...","Oh shit! I've got an infection! Well, that sucks!"
+    ],
+    "warm": [
+      "Wow, I'm kinda overheating... what an adventure this is, huh?"
+    ],
+    "encumbered": [
+      "I've gotta get stronger to carry all this stuff! ...Or maybe carrying it all will make me stronger?","Look at me, I'm so strong, carrying all these things!","I'm gonna be so BUFF by the end of this journey! Heheheh."
+    ],
+    "magicheal": [
+      "Oh...? I feel better all the sudden? Well, time to leap into the unknown, then!"
+    ]},
+    "pauseQuotes":{
+      "depressed":
+      [
+      "Run, rabbit, run, rabbit, run, run, run."
+    ],
+    "happy":
+    [ "You are just BEGGING for an accident to happen at THIS point." ]
+  },
+    "pauseThoughts": {
+      "normal": [
+      "Let's pick up the pace, ha!","Hey, what's over there? What's that?","Onward, to adventure!","What lies ahead might be scary, but I can handle it! ...Probably.","Oh, a quick pause? That's a smart idea!","Every dark cloud has a silver lining. That's what I've been told.","One day, I'll be able to stop and relax for as long as I want.","Run, run, run, as fast as your little legs can carry you..."
+      ],
+      "dying": [
+        "But... but... I want to keep going..."
+      ]
+  }
+}

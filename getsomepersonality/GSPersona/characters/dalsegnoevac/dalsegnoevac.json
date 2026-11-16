@@ -1,0 +1,21 @@
+{
+  "codeName": "dalsegnoevac",
+  "name": "Evac",
+  "displayName": "SEGNO",
+  "personality": "overthinking",
+  "bodyTraits": [ "velvet", "morbidfascination" ],
+  "id": 0,
+  "age": 27,
+  "versionNumber": 0,
+  "heightCm": 161,
+  "woundviewVersionText": "VLVT-[0x0000b]v2147483648",
+  "woundviewBodystatText": "255255255255255255255256",
+
+  "endStatsID": "#2147483648255255255255256",
+
+  "cutsceneTexts":
+  {
+    "endscreenstatus": "<corrupt:0xFA00FF>US REPORT",
+    "endscreenunresolved": "NULLEXCEPTIONERROR"
+  }
+}

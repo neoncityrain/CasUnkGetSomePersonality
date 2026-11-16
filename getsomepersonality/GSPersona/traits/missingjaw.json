@@ -1,0 +1,7 @@
+{
+  "name": "missingjaw",
+  "desc": "Your lower jaw is no longer present. You struggle to speak or eat.",
+  "isDisability": true,
+  "impliesTraits": ["disorderedspeech"],
+  "dialogue": {}
+}

@@ -10,6 +10,27 @@ internal class PreRunFix
             if (ConsoleScript.instance != null)
             {
                 ConsoleScript.Commands.Add(
+                    new Command("gsp-egg", "Changes the player to a specific codename.",
+                    args =>
+                    {
+                        var body = thisPlayer(PlayerCamera.main?.body);
+                        if (args[1] != null && body != null)
+                        {
+                            body.PlayerSelf().resetCWTs();
+                            body.PlayerSelf().returnToVanillaSprites();
+                            body.PlayerSelf().codeName = args[1].ToString();
+                            body.PlayerSelf().reviseStats(body);
+
+                            LogToConsole(__instance, "Player's egg is now: " +
+                                body.PlayerSelf().codeName);
+                        }
+                        else
+                        {
+                            LogToConsole(__instance, "Can't apply egg.");
+                        }
+
+                    }, null, ("string egg", "Egg value to apply."))); // eggs
+                ConsoleScript.Commands.Add(
                     new Command("gsp-getpersona", "Returns the player's current personality.",
                     args =>
                     {
@@ -115,27 +136,6 @@ internal class PreRunFix
                         }
 
                     }, null, ("string trait", "Trait to remove."))); // remove trait
-                ConsoleScript.Commands.Add(
-                    new Command("gsp-egg", "Changes the player to a specific codename.",
-                    args =>
-                    {
-                        var body = thisPlayer(PlayerCamera.main?.body);
-                        if (args[1] != null && body != null)
-                        {
-                            body.PlayerSelf().resetCWTs();
-                            body.PlayerSelf().returnToVanillaSprites();
-                            body.PlayerSelf().codeName = args[1].ToString();
-                            body.PlayerSelf().reviseStats(body);
-
-                            LogToConsole(__instance, "Player's egg is now: " +
-                                body.PlayerSelf().codeName);
-                        }
-                        else
-                        {
-                            LogToConsole(__instance, "Can't apply egg.");
-                        }
-
-                    }, null, ("string egg", "Egg value to apply."))); // eggs
                 ConsoleScript.Commands.Add(
                     new Command("gsp-changeid", "Changes the player's ID number.", args =>
                     {

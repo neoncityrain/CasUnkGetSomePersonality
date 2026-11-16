@@ -7,7 +7,6 @@ public class characterFile
     public string displayName;
     public string description;
     public string personality;
-    public string calloutQuote;
     public Dictionary<string, string> personalitySubtypes;
     public string[] bodyTraits;
     public int id;

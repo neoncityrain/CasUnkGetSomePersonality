@@ -1,0 +1,150 @@
+{
+  "name": "sassy",
+  "moodles":{
+      "braindamage1dsc": "You've sustained brain damage. Generally, it's recommended to avoid this."
+    },
+  "dialogue": {
+    "seeGravel": [
+      "Ugh. Do I have to? Really?","How unnecessarily dramatic...","So many dramatics...","Riiight... Suuuuuure....",
+      "What the fuck? Put me back.","I didn't sign up for this shit...","Cool... aaaawesome...",
+      "This is gonna go just fucking fantastic, huh?...","They must be trying to get rid of me.",
+      "Hmph. Stupid scientists and their stupid... science... things.",
+      "Couldn't have made that trip any less horrid, huh?",
+      "Not like I have a choice.","Oh, yes, I'm SUUUUURE this is ethical.",
+      "Riiiiiight... So, those are some really stupid orders."
+    ],
+    "eatGood": [
+      "Mmh... at least there's something GOOD down here...",
+      "Holy shit, delicious... Actually delicious...!",
+      "Wait, wait, more-! I want more of this...!",
+      "The worst part about that is the fact that it ENDS..."
+    ],
+    "eatMediocre": [
+      "As long as it keeps me fed, I guess...","This kinda sucks.",
+      "It's nothing to write home about.",
+      "Fine. Whatever...",
+      "I'm too much of a picky eater to like this."
+    ],
+    "eatBad": [
+      "That's just revolting...!","This better not be a problem.","Urf-! I'm gonna be sick...",
+      "I HAVE to stop putting random things in my mouth, holy fuck..."
+    ],
+    "refuseEat": [
+      "Actually, I'm in my diva arc. So. No.","Or... I could play trampoline on the nearest landmine.",
+      "I could also try to eat glass shards. Just an idea!","I'm NOT giving myself the runs, THANKS.",
+      "You want to see vomit? Cause that's how you do it.","Sooo... how about eating ACTUAL food instead, hm?",
+      "Never eating ever again if that so much as TOUCHES my mouth."
+    ],
+    "tired":[
+      "Yawwwn... S-sorry, I, uh- th-that was nothing.","I'm not yawning! Just stretching my jaw!"
+    ],
+    "verytired":[
+      "I... can't do... this any... more... l-leave me...","Not tired... just resting my... eyes...","I... think I'm... dying? Uh... Huh...","Nothing's... real... anymore...? Fuck's going onnn...","Just leave me... to die... I don't even... care anymore... too tired... Hhhhnh..."
+    ],
+    "sick": [
+      "Hey, stomach. Can you knock it off? Thanks.","My immune system needs to lock the fuck in...","Buh. Ggguh. I don't feel too good."
+    ],
+    "verysick": [
+      "I want to curl up and die...","This shit's SO ass...","Are these fucking period cramps? What the fuck????","If this pain... doesn't let up soon... I'm killing myself."
+    ],
+    "bleeding": [
+      "Maybe some bandages to get this cut to shut up...?","Stupid cave. Making me bleed."
+    ],
+    "bleedingheavy": [
+      "Awwh, I'm gonna have to do soooo much work to fiiiiix thaaat..."
+    ],
+    "seecorpse": [
+      "Wh-when I get back to the lab... I'll kill whoever did this... I'll KILL..."
+    ],
+    "opiatewithdrawal": [
+      "Don't you know who I am?","You can't keep this away from me. Hrh...","Jerk...","Unfair...","Jackass...","Mmmnghhhh... mean... keeping it away from me...!","Need more of that. Need it. I need...","Jerk. Another shot. Now.","I'll get reaaaal cranky if I don't get another hit...","Opiates. Now.","Don't push me...","Don't p-push me...","I'll snap if you don't watch out... I'll do it...!"
+    ],
+    "pain": [
+      "I'd like to file a return on this <limb>...","Stupid <limb>, hurting me...","Fuckkkk... ow... Ghh... This sucks...!","Owwww... I don't like pain- nobody does, sure, but..."
+    ],
+    "dirty": [
+      "Ah! My immune system can't appreciate this!","I'm going to get sick. And DIE.",
+      "I'm DROWNING in DIRT here.","Dust and soot are clinging to me... Ugh.",
+      "I'm contaminated. Perhaps forever...","I'm beyond saving. Too dirty. Leave me to die here.",
+      "Too much dirt is on me. This is IT. Leave me. I'll simply curl up and die here."
+    ],
+    "encumbered": [
+      "Stupid supplies! How could you do this to me, when I've been carrying you around?! Urf...","My muscles are crying for me to put some of this down... ughh...","This is kinda miserable. I don't like carrying so much at once. Some of it NEEDS to go."
+    ],
+    "drillend": [
+      "Gross. Disgusting. Vile. BAAAARF... that drill was fine, SURE.","What a restful nap... NOOOOT."
+    ],
+    "lastmoments": [
+      "I won't cry... I w-won't cry... Th-these aren't tears.......",
+      "No... n-no, I... I wasn't done, there's still s-so much to do...!!",
+      "This... can't be all there is... can it? I... I-I don't wanna die. I don't wanna die...",
+      "I... I love you. I love you, and... I... I'm sorry I didn't... say it... before I...",
+      "Oh... the... I didn't realize it... before... but this place, it's... kinda pretty, huh?...",
+      "I wanted to... to see more... Damn...","Will I... see my family again... wh-when my eyes close?...",
+      "I'm... I'm scared, but... for them, it's... worth it...",
+      "I... I can't stay awake any... longer than... this... I'm dozing off... Good night...",
+      "I didn't h-hate being alive... I just... I was just..."
+    ],
+    "magicheal": [
+      "Uh... That just happened.","It can just... do that? What?","...Okay, well. That's stupid."
+    ],
+    "selfdestruct": [
+      "Oh... oh, no. No nono, you can't do this to me! YOU CAN'T DO THIS TO ME!!","You... y-you want to get rid of me? Why?! What did I do wrong?!","Was I... was I too dramatic? I'm sorry, I just wanted to cheer myself up, I didn't mean it, I...!","SHIT- GET THIS THING OFF ME!! GET IT OFF OR TEAR IT OUT I DON'T CARE JUST- SHIT!!!!","COULD YOU HAVE DONE THIS THE ENTIRE FUCKING TIME?! ARE YOU FUCKING SERIOUS?!","FUCK YOU. FUCK ALL OF YOU.","Ooh... oh, hey, th-th-that's not great. Umm...","FINE, THEN! GET IT OVER WITH ALREADY!!!","...Oh, come on, man...","Are you serious?! M-man... did they HAVE to make it so LOUD, though?...","Um. Uh. UM. UH. UM? UH? UM?! UH?!","Hhhh... Okay, uh... okaaaay... Alright... Sure...","What is your fucking problem? God damn..."
+    ],
+
+
+    "tradermeetnormal": [
+      "You ever heard of something called a \"door\" before? No?","Oh, great, in comes the circus.","Wipe your paws before you come in, I don't know where you've been."
+    ],
+    "tradermeetgood": [
+      "Yeah, yeah, customary niceties and all that. Now take a look at my epic wares!","Huh?! Hi?! Hi. Yeah, come on in."
+    ],
+    "tradermeetbad": [
+      "Yeah, sure, just climb on in through the hole in the wall or whatever, I don't even care anymore.","What are YOU doing here? I... ugh. Fiiiine.","Who the hell are you? Why are you here?"
+    ],
+    "traderhugsuccess": [
+      "This will be our secret.","A hug is nice...! But don't tell anyone."
+    ],
+    "traderhugfail": [
+      "I don't want your disgusting touch contaminating me, thanks."
+    ],
+    "traderhagglesuccess": [
+      "Fine. Only because I don't want anything bad to happen to you.","Mmmmrrrrrrhhhhh... Fine! You're forcing my paw, here.","I gueeeeess that makes sense... I guess. Hmph."
+    ],
+    "traderhagglefail": [
+      "Hey! You can't just rip me off!"
+    ],
+    "tradergiveitem": [
+      "Yeah, yeah, whatever.","Sweet, new shit.","M'kay. Not like I'll need it, but sure.","I'll find a place to put this, uh... somewhere. Thanks, or something.","Great, more garbage."
+    ],
+    "tradergiveitemrefuse": [
+      "Oookay, slow the hell down. I'm not a charity case, and I don't want your entire life's collection."
+    ],
+    "traderbuy": [
+      "Sure. Whatever.","Just hurry up and take it already, before I change my mind."
+    ],
+    "traderbuyfail": [
+      "Whoa-whoa-whoa, are you trying to steal from me?!"
+    ],
+    "traderbuyfailmaxvalue": [
+      "Hey, look. I get it, but, uh... no? No thanks... Sorry.","Haven't we traded enough? Or do you want the whole pod while you're at it?"
+    ],
+    "sadresponse": [
+      "Umm... sh-shit, I'm not good at cheering people up, uh...","Hey. I, uh... never mind.","It's okay. You're okay. I... get that, too."
+    ],
+    "selfharmresponse": [
+      "Alright, quit that...! I'm not here to watch you tear yourself apart!"
+    ],
+    "hotresponse": [
+      "Being baked alive never hurt anybody, surely. Blehhhh...","Yeah, yeah, you're hot, whatever. Stop bragging.","I do NOT need to hear about how hot you think you are. Not everybody's as confident as you."
+    ],
+    "dirtyresponse": [
+      "Yeah, yeah, just track grime EVERYWHERE, why don't you...","I miss having clean floors, myself.","Ew? What the fuck? Go shower, then?? Freak????"
+    ],
+    "encumberedresponse": [
+      "You think of yourself as a beast of burden or something?","I can TELL it's heavy. No need to brag.","Well... carry it better?","Is there REEEALLY not a more efficient way to carry your things...?","Maybe get stronger, if your stuff's so cumbersome."
+    ],
+    "dyingresponse": [
+      "I... I'm sorry, I don't know what to do... I-I'm really sorry.","Shit- SHIT-- I-I don't know what to do, I'm sorry...!","Oh... oh. I... I don't think you're okay. I, um. I don't know if I can help..."
+    ]}
+}
