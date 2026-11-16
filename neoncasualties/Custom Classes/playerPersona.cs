@@ -177,6 +177,14 @@ internal static class playerPersona
 
                     Log.LogDebug("Player personality was randomized into: " +
                         personalityType);
+
+                    if (allowRandomColours.Value == true &&
+                        (savedVanillaEyeList == null || savedVanillaEyeList.Count <= 0))
+                    {
+                        var colour = new Color(Random.Range(0.2f, 0.8f), Random.Range(0.2f, 0.8f), Random.Range(0.2f, 0.8f));
+                        playerColours.Add("eyes", colour);
+                        playerColours.Add("text", colour);
+                    }
                 }
             }
             catch (Exception ex)
@@ -299,6 +307,7 @@ internal static class playerPersona
             playerTitle = null;
             lastDialogueKey = null;
             rightEyeHealed = 0f;
+            returnToVanillaSprites();
         }
 
         internal void verifyTitle()
@@ -329,15 +338,14 @@ internal static class playerPersona
                     owner.talker.text.color = textcol;
                     playerColours.Add("originaltextcolour", owner.talker.text.color);
                 }
-                else if (playerColours.TryGetValue("originaltextcolour", out var og) &&
-                    owner.talker.text.color != og && textcol == null)
+                else if (playerColours.TryGetValue("originaltextcolour", out var og) && owner.talker.text.color != og && textcol == null)
                 {
                     owner.talker.text.color = og;
                 }
 
                 if (playerColours.TryGetValue("eyes", out var eyecol) &&
                     allowRandomColours.Value == true &&
-                    (personalSprites == null || personalSprites.Count == 0))
+                    (savedVanillaEyeList == null || savedVanillaEyeList.Count <= 0))
                 {
                     RecolourEyes(eyecol);
                 }
@@ -419,8 +427,8 @@ internal static class playerPersona
 
                 if (!texture.isReadable)
                 { Log.LogError("Texture to recolour isn't readable: " + texture.name); }
-                SetHue(texture, hue);
-                SetHue(textwo, hue);
+                RecolourHue(texture, hue);
+                RecolourHue(textwo, hue);
 
                 myFace.eyeList[i] = eye;
             }

@@ -40,6 +40,34 @@ public class GSPUtils
         }
     }
 
+    public static void RecolourHue(Texture2D texture, float hue)
+    {
+        var colors = texture.GetPixels32();
+
+        for (var i = 0; i < colors.Length; i++)
+        {
+            Color.RGBToHSV(colors[i], out float h, out float s, out float v);
+            if (h != hue && s != 0f && v != 0f && v != 1f)
+            {
+                var a = colors[i].a;
+                var newhue = hue + h;
+                if (newhue > 1f) { newhue -= 1f; }
+                colors[i] = Color.HSVToRGB(newhue, s, v);
+                colors[i].a = a;
+            }
+        }
+
+        try
+        {
+            texture.SetPixels32(colors);
+            texture.Apply();
+        }
+        catch (Exception ex)
+        {
+            Log.LogDebug("Error setting texture to sprite: " + ex);
+        }
+    }
+
     public static Body thisPlayer(Body og)
     {
         if (playingMultiplayer)
