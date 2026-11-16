@@ -1,18 +1,18 @@
 {
-  "name": "",
+  "name": "Timid",
   "moodles": {},
   "dialogue": {
     "seeGravel": [
-      ""
+      "Mmh... I'm not so sure about all this.","Wasn't there anyone more, you know... qualified? To do this?","This is a brand-new world. A new world for everyone, even... Gulp.","Maybe I could just... stay here? Live by this pod...? Oh, but that seems like a bad idea..."
     ],
     "eatGood": [
-      ""
+      "O-oh... this is actually really nice.","Mmh... really, really good...","I want sooo much more of this. Uh! Please, I mean."
     ],
     "eatMediocre": [
-      ""
+      "This is, um... Well, I don't wanna hurt its feelings, but it's, you know... eh?","I'm, um, having something to eat.","This is... uh... not the best. B-but also, not the worst..."
     ],
     "eatBad": [
-      ""
+      "Yuck. I'm sorry, food, but that's just- that was gross. Yuck-yuck-yuck."
     ],
     "refuseEat": [
       ""
@@ -358,7 +358,7 @@
   },
   "pauseThoughts": {
     "normal": [
-      ""
+      "I shouldn't get too hasty...","Slow and steady wins the race. I, um, hope, anyway..."
     ],
     "dying": [
       ""
@@ -376,7 +376,7 @@
       ""
     ],
     "combat": [
-      ""
+      "I'm not brave OR strong enough for THIS!?"
     ],
     "combatelder": [
       ""
