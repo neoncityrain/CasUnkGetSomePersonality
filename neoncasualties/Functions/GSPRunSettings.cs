@@ -1,5 +1,5 @@
 ﻿namespace ncrGetSomePersonality;
-
+/*
 internal class gspRunSettings : MonoBehaviour
 {
     public List<gspInput> settings = [
@@ -45,3 +45,4 @@ public class gspInput
         this.name = name;
     }
 }
+*/

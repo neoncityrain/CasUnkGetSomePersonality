@@ -2,7 +2,7 @@
 	
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
-	<LangVersion>14</LangVersion>
+	<LangVersion>latest</LangVersion>
     <AssemblyName>neoncasualties</AssemblyName>
 	<PackageId>neoncityrain.neoncasualties</PackageId>
 	<Title>Neon Casualties</Title>

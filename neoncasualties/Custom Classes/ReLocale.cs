@@ -55,10 +55,10 @@ public static class ReLocale
                     baseText.Add(codeName, gsp);
                 }
             }
-            else if ((path.ToLower().Contains("personalities") ||
-                path.ToLower().Contains("personality")) &&
-                (!filename.ToLower().Contains("personalities") ||
-                !filename.ToLower().Contains("personality")))
+            else if (path.ToLower().Contains("\\personalities\\") ||
+                path.ToLower().Contains("\\personality\\") ||
+                path.ToLower().Contains("/personalities/") ||
+                path.ToLower().Contains("/personality/"))
             {
                 personalityFile gsp = JsonConvert.DeserializeObject<
                     personalityFile>(File.ReadAllText(path));
@@ -68,8 +68,10 @@ public static class ReLocale
                     personaText.Add(codeName, gsp);
                 }
             }
-            else if (path.ToLower().Contains("character") &&
-                !filename.ToLower().Contains("character"))
+            else if (path.ToLower().Contains("\\character\\") ||
+                    path.ToLower().Contains("\\characters\\") ||
+                    path.ToLower().Contains("/character/") ||
+                    path.ToLower().Contains("/characters/"))
             {
                 characterFile gsp = JsonConvert.DeserializeObject<
                     characterFile>(File.ReadAllText(path));
@@ -86,8 +88,10 @@ public static class ReLocale
                     characterText.Add(codeName, gsp);
                 }
             }
-            else if (path.ToLower().Contains("system") &&
-                !filename.ToLower().Contains("system"))
+            else if (path.ToLower().Contains("\\plural\\") ||
+                path.ToLower().Contains("\\plurality\\") ||
+                    path.ToLower().Contains("/plural/") ||
+                    path.ToLower().Contains("/plurality/"))
             {
                 systemFile gsp = JsonConvert.DeserializeObject<
                     systemFile>(File.ReadAllText(path));
@@ -97,8 +101,10 @@ public static class ReLocale
                     sysText.Add(codeName, gsp);
                 }
             }
-            else if (path.ToLower().Contains("worldstate") &&
-                !filename.ToLower().Contains("worldstate"))
+            else if (path.ToLower().Contains("\\worldstate\\") ||
+                path.ToLower().Contains("\\worldstates\\") ||
+                    path.ToLower().Contains("/worldstate/") ||
+                    path.ToLower().Contains("/worldstates/"))
             {
                 worldFile gsp = JsonConvert.DeserializeObject<
                     worldFile>(File.ReadAllText(path));
@@ -109,8 +115,10 @@ public static class ReLocale
                     worldText.Add(codeName, gsp);
                 }
             }
-            else if (path.ToLower().Contains("trait") &&
-                !filename.ToLower().Contains("trait"))
+            else if (path.ToLower().Contains("\\trait\\") ||
+                path.ToLower().Contains("\\traits\\") ||
+                path.ToLower().Contains("/trait/") ||
+                path.ToLower().Contains("/traits/"))
             {
                 traitFile gsp = JsonConvert.DeserializeObject<
                     traitFile>(File.ReadAllText(path));
@@ -121,8 +129,10 @@ public static class ReLocale
                     traitText.Add(codeName, gsp);
                 }
             }
-            else if (path.ToLower().Contains("torment") &&
-                !filename.ToLower().Contains("torment"))
+            else if (path.ToLower().Contains("\\torment\\") ||
+                path.ToLower().Contains("\\torments\\") ||
+                path.ToLower().Contains("/torment/") ||
+                path.ToLower().Contains("/torments/"))
             {
                 tormentFile gsp = JsonConvert.DeserializeObject<
                     tormentFile>(File.ReadAllText(path));
