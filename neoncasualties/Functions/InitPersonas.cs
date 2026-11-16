@@ -1,6 +1,4 @@
-﻿using static WorldGeneration;
-
-namespace ncrGetSomePersonality;
+﻿namespace ncrGetSomePersonality;
 
 internal class InitPersonas
 {
@@ -9,13 +7,19 @@ internal class InitPersonas
     {
         internal static void Postfix(PlayerCamera __instance)
         {
+            if (__instance == null) { return; }
             var body = thisPlayer(__instance.body);
+
             if (body != null && WoundView.view.cInfo != null &&
                 (WorldGeneration.world.totalTraveled <= 0 ||
                 string.IsNullOrEmpty(body.PlayerSelf().personalityType))
                 )
             {
                 body.PlayerSelf().resetCWTs();
+                if (!string.IsNullOrEmpty(forceSpecificEggValue.Value))
+                {
+                    body.PlayerSelf().codeName = forceSpecificEggValue.Value;
+                }
                 body.PlayerSelf().reviseStats(body);
 
                 #region Traits
@@ -39,8 +43,11 @@ internal class InitPersonas
                 characterText.TryGetValue(coden, out characterFile myFile);
 
                 body.skills.INT += myFile.startINToffset;
+                if (body.skills.INT < 0) { body.skills.INT = 0; }
                 body.skills.STR += myFile.startSTRoffset;
+                if (body.skills.STR < 0) { body.skills.STR = 0; }
                 body.skills.RES += myFile.startRESoffset;
+                if (body.skills.RES < 0) { body.skills.RES = 0; }
                 body.skills.UpdateExpBoundaries();
 
                 if (coden == ("polarischandran"))

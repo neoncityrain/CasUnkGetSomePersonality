@@ -8,6 +8,7 @@ internal class GSPConfig
     internal static ConfigEntry<bool> allowAutospriting;
     internal static ConfigEntry<bool> allowRandomColours;
     internal static ConfigEntry<bool> reloadSpritesOnPause;
+    internal static ConfigEntry<string> forceSpecificEggValue;
 
     public static void initConfigs()
     {
@@ -32,6 +33,9 @@ internal class GSPConfig
             "If new Expies should have randomized eye colour tints.");
         reloadSpritesOnPause = gspConfig.Bind(
             "Function", "reloadSpritesOnPause", false,
-            "If the autospriting functionality should reload upon pausing the game. Good for testing skins, but will likely cause a notable stutter.");
+            "If the autospriting functionality should reload upon pausing the game.\nGood for testing skins, but will likely cause a notable stutter.");
+        forceSpecificEggValue = gspConfig.Bind(
+            "Function", "forceSpecificEggValue", "",
+            "Prevent the player from loading as anything BUT the typed character.");
     }
 }

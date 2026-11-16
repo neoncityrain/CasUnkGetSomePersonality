@@ -30,7 +30,6 @@ internal static class playerPersona
         internal Dictionary<string, Color> playerColours = [];
         internal Dictionary<string, Sprite> personalSprites = [];
         internal FacialExpression myFace;
-        internal SpriteRenderer[] myRenders;
         internal WoundView myWV;
         #endregion
 
@@ -38,9 +37,7 @@ internal static class playerPersona
         {
             #region setInit
             owner = thisPlayer(body);
-            returnToVanillaSprites();
             myFace = owner.limbs[0].GetComponent<FacialExpression>();
-            myRenders = owner.gameObject.GetComponentsInChildren<SpriteRenderer>();
 
             if (myWV == null || myWV.CustomCall().owner == owner)
             {
@@ -184,6 +181,7 @@ internal static class playerPersona
                         var colour = new Color(Random.Range(0.2f, 0.8f), Random.Range(0.2f, 0.8f), Random.Range(0.2f, 0.8f));
                         playerColours.Add("eyes", colour);
                         playerColours.Add("text", colour);
+                        thoughtColour = colour;
                     }
                 }
             }
@@ -294,6 +292,18 @@ internal static class playerPersona
 
         internal void resetCWTs()
         {
+            if (personalSprites != null && personalSprites.Count > 0)
+            {
+                returnToVanillaSprites();
+            }
+            if (myWV != null && myWV.CustomCall().UISpriteCache != null && myWV.CustomCall().UISpriteCache.Count > 0)
+            {
+                myWV.CustomCall().returnToDefault();
+            }
+            idTag = -1;
+            ownerAge = -1;
+            ownerHeight = -1;
+            ownerVersion = -1;
             personalityType = null;
             personalitySubtypes.Clear();
             personalName = null;
@@ -307,7 +317,9 @@ internal static class playerPersona
             playerTitle = null;
             lastDialogueKey = null;
             rightEyeHealed = 0f;
-            returnToVanillaSprites();
+            myWV = null;
+            myFace = null;
+            owner = null;
         }
 
         internal void verifyTitle()
@@ -337,10 +349,6 @@ internal static class playerPersona
                 {
                     owner.talker.text.color = textcol;
                     playerColours.Add("originaltextcolour", owner.talker.text.color);
-                }
-                else if (playerColours.TryGetValue("originaltextcolour", out var og) && owner.talker.text.color != og && textcol == null)
-                {
-                    owner.talker.text.color = og;
                 }
 
                 if (playerColours.TryGetValue("eyes", out var eyecol) &&
@@ -402,7 +410,7 @@ internal static class playerPersona
                     owner.furColors.colorKeys[3].color = blood;
                 }
 
-                if (recolwv)
+                if (recolwv && myWV.CustomCall().UISpriteCache.Count <= 0)
                 {
                     myWV.CustomCall().recolourMeBaby();
                 }
@@ -412,7 +420,6 @@ internal static class playerPersona
         {
             Color.RGBToHSV(eyecol, out float hue, out float _, out float _);
 
-            Log.LogError("Considering possibly loading the colours for the eyes?!");
             if (savedVanillaEyeList == null || savedVanillaEyeList.Count <= 0 ||
                 !savedVanillaEyeList.ContainsKey("eyeList"))
             {
@@ -431,6 +438,15 @@ internal static class playerPersona
                 RecolourHue(textwo, hue);
 
                 myFace.eyeList[i] = eye;
+            }
+        }
+        public void DecolourEyes()
+        {
+            if (myFace != null && myFace.eyeList != null &&
+                savedVanillaEyeList != null && savedVanillaEyeList.Count > 0 &&
+                savedVanillaEyeList.TryGetValue("eyeList", out var list))
+            {
+                myFace.eyeList = list;
             }
         }
 
@@ -723,7 +739,7 @@ internal static class playerPersona
                         }
                         else
                         {
-                            foreach (SpriteRenderer spriteRenderer in myRenders)
+                            foreach (SpriteRenderer spriteRenderer in owner.gameObject.GetComponentsInChildren<SpriteRenderer>())
                             {
                                 if (savedVanillaSpriteSets != null &&
                                     !savedVanillaSpriteSets.ContainsKey(
@@ -895,9 +911,28 @@ internal static class playerPersona
         }
         internal void returnToVanillaSprites()
         {
+            DecolourEyes();
             if (personalSprites.Count <= 0 || personalSprites == null)
             {
                 return;
+            }
+
+            myWV.CustomCall().statHue = null;
+            myWV.CustomCall().backHue = null;
+            myWV.CustomCall().critHue = null;
+            myWV.CustomCall().isDirty = true;
+            if (playerColours.TryGetValue("originaltextcolour", out var og) && owner.talker.text.color != og)
+            {
+                owner.talker.text.color = og;
+            }
+
+            if (PauseHandler.main != null && PauseHandler.main.pauseText.color != null)
+            {
+                PauseHandler.main.pauseText.color = Color.white;
+            }
+            if (thoughtColour != null)
+            {
+                thoughtColour = new Color();
             }
 
             if (myFace != null)
@@ -952,16 +987,13 @@ internal static class playerPersona
                     myFace.disfiguredHeadHeal = dhead;
                 }
             }
-            if (myRenders != null)
+            foreach (SpriteRenderer spriteRenderer in owner.gameObject.GetComponentsInChildren<SpriteRenderer>())
             {
-                foreach (SpriteRenderer spriteRenderer in myRenders)
+                if (savedVanillaSpriteSets != null &&
+                    savedVanillaSpriteSets.TryGetValue(
+                        spriteRenderer.sprite.name, out var sprite))
                 {
-                    if (savedVanillaSpriteSets != null &&
-                        savedVanillaSpriteSets.TryGetValue(
-                            spriteRenderer.sprite.name, out var sprite))
-                    {
-                        spriteRenderer.sprite = sprite.First();
-                    }
+                    spriteRenderer.sprite = sprite.First();
                 }
             }
             if (myWV != null)
@@ -1012,6 +1044,7 @@ internal static class playerPersona
             savedVanillaEyeList.Clear();
             savedVanillaSpriteSets.Clear();
             savedVanillaImageSets.Clear();
+            personalSprites.Clear();
         }
         #endregion
 

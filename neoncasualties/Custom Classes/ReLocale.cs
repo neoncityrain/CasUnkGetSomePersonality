@@ -869,9 +869,7 @@ public static class ReLocale
                 {
                     __instance.pauseText.text = newpause;
 
-                    if (self.playerColours != null &&
-                        self.playerColours.Count > 0 &&
-                        self.thoughtColour != null &&
+                    if (self.thoughtColour != null &&
                         self.thoughtColour != new Color() &&
                         self.thoughtColour != __instance.pauseText.color)
                     {
@@ -1256,34 +1254,36 @@ public static class ReLocale
     {
         internal static void Prefix(ref string str)
         {
-            if (PlayerCamera.main?.body == null)
+            if (PlayerCamera.main == null ||
+                PlayerCamera.main.body == null ||
+                (!WorldGeneration.world.cutsceneActive &&
+                !(str.Contains("endscreen") || str.Contains("endsc")) ||
+                (characterText == null && personaText == null)))
             {
                 return;
             }
             var body = thisPlayer(PlayerCamera.main.body);
 
-            if ((!WorldGeneration.world.cutsceneActive &&
-                !str.Contains("endscreen")) ||
-                (characterText == null && personaText == null))
+            if (body == null)
             {
                 return;
             }
-
             try
             {
-                var title = body.PlayerSelf().playerTitle;
-                if (characterText != null && title == body.PlayerSelf().codeName && characterText.Keys.Contains(title) && characterText.TryGetValue(title, out var charfile))
+                if (body.PlayerSelf().personalityType != null && personaText != null && personaText.Count > 0 && personaText.TryGetValue(
+                    body.PlayerSelf().personalityType, out var persfile))
                 {
-                    if (charfile.cutsceneTexts != null &&
-                        charfile.cutsceneTexts.TryGetValue(str, out var newScene))
+                    if (persfile.cutsceneTexts != null &&
+                        persfile.cutsceneTexts.TryGetValue(str, out var newScene))
                     {
                         str = newScene;
                     }
                 }
-                if (personaText != null && title == body.PlayerSelf().personalityType && personaText.Keys.Contains(title) && personaText.TryGetValue(title, out var persfile))
+                if (body.PlayerSelf().codeName != null && characterText != null && characterText.Count > 0 && characterText.TryGetValue(
+                    body.PlayerSelf().codeName, out var charfile))
                 {
-                    if (persfile.cutsceneTexts != null &&
-                        persfile.cutsceneTexts.TryGetValue(str, out var newScene))
+                    if (charfile.cutsceneTexts != null &&
+                        charfile.cutsceneTexts.TryGetValue(str, out var newScene))
                     {
                         str = newScene;
                     }

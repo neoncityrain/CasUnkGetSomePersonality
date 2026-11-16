@@ -176,9 +176,9 @@ internal static class customWV
                     {
                         if (image != null)
                         {
-                            if (!UISpriteCache.ContainsKey("limbv" + image.name))
+                            if (!UISpriteCache.ContainsKey("limbvi" + image.name))
                             {
-                                UISpriteCache.Add("limbv" + image.name, image.sprite);
+                                UISpriteCache.Add("limbvi" + image.name, image.sprite);
                             }
                             SetHue(image.sprite.texture, (float)statHue);
                         }
@@ -187,9 +187,9 @@ internal static class customWV
                     {
                         if (sprite != null)
                         {
-                            if (!UISpriteCache.ContainsKey("limbv" + sprite.name))
+                            if (!UISpriteCache.ContainsKey("limbvs" + sprite.name))
                             {
-                                UISpriteCache.Add("limbv" + sprite.name, sprite);
+                                UISpriteCache.Add("limbvs" + sprite.name, sprite);
                             }
                             SetHue(sprite.texture, (float)statHue);
                         }
@@ -214,9 +214,9 @@ internal static class customWV
                             if (image != null && image.sprite != null &&
                                 image.sprite.texture != null)
                             {
-                                if (!UISpriteCache.ContainsKey("skillsb" + image.name))
+                                if (!UISpriteCache.ContainsKey("skillsbi" + image.name))
                                 {
-                                    UISpriteCache.Add("skillsb" + image.name, image.sprite);
+                                    UISpriteCache.Add("skillsbi" + image.name, image.sprite);
                                 }
                                 SetHue(image.sprite.texture, (float)statHue);
                             }
@@ -232,18 +232,24 @@ internal static class customWV
                         {
                             if (sprite != null && sprite.texture != null)
                             {
-                                if (!UISpriteCache.ContainsKey("skillsb" + sprite.name))
+                                if (!UISpriteCache.ContainsKey("skillsbs" + sprite.name))
                                 {
-                                    UISpriteCache.Add("skillsb" + sprite.name, sprite);
+                                    UISpriteCache.Add("skillsbs" + sprite.name, sprite);
                                 }
                                 SetHue(sprite.texture, (float)statHue);
                             }
                         }
                     }
 
+
                     if (backHue != null)
                     {
-                        SetHue(skillb.GetComponent<Image>().sprite.texture, (float)backHue);
+                        var back = skillb.GetComponent<Image>().sprite;
+                        if (!UISpriteCache.ContainsKey("skillsbg" + back.name))
+                        {
+                            UISpriteCache.Add("skillsbg" + back.name, back);
+                        }
+                        SetHue(back.texture, (float)backHue);
                     }
                 }
             }
@@ -262,9 +268,9 @@ internal static class customWV
                     {
                         foreach (Image image in timeb.GetComponentsInChildren<Image>())
                         {
-                            if (!UISpriteCache.ContainsKey("timeb" + image.name))
+                            if (!UISpriteCache.ContainsKey("timebi" + image.name))
                             {
-                                UISpriteCache.Add("timeb" + image.name, image.sprite);
+                                UISpriteCache.Add("timebi" + image.name, image.sprite);
                             }
                             SetHue(image.sprite.texture, (float)statHue);
                         }
@@ -275,9 +281,9 @@ internal static class customWV
                         }
                         foreach (Sprite sprite in timeb.GetComponentsInChildren<Sprite>())
                         {
-                            if (!UISpriteCache.ContainsKey("timeb" + sprite.name))
+                            if (!UISpriteCache.ContainsKey("timebs" + sprite.name))
                             {
-                                UISpriteCache.Add("timeb" + sprite.name, sprite);
+                                UISpriteCache.Add("timebs" + sprite.name, sprite);
                             }
                             SetHue(sprite.texture, (float)statHue);
                         }
@@ -321,9 +327,9 @@ internal static class customWV
                         if (img != null && img.sprite != null &&
                             img.sprite.texture != null)
                         {
-                            if (!UISpriteCache.ContainsKey("crit" + img.name))
+                            if (!UISpriteCache.ContainsKey("criti" + img.name))
                             {
-                                UISpriteCache.Add("crit" + img.name, img.sprite);
+                                UISpriteCache.Add("criti" + img.name, img.sprite);
                             }
                             SetHue(img.sprite.texture, (float)critHue);
                         }
@@ -359,9 +365,9 @@ internal static class customWV
                         if (image != null && image.sprite != null &&
                             image.sprite.texture != null)
                         {
-                            if (!UISpriteCache.ContainsKey("statm" + image.name))
+                            if (!UISpriteCache.ContainsKey("statmi" + image.name))
                             {
-                                UISpriteCache.Add("statm" + image.name, image.sprite);
+                                UISpriteCache.Add("statmi" + image.name, image.sprite);
                             }
                             SetHue(image.sprite.texture, (float)statHue);
                         }
@@ -371,9 +377,9 @@ internal static class customWV
                     {
                         if (sprite != null && sprite.texture != null)
                         {
-                            if (!UISpriteCache.ContainsKey("statm" + sprite.name))
+                            if (!UISpriteCache.ContainsKey("statms" + sprite.name))
                             {
-                                UISpriteCache.Add("statm" + sprite.name, sprite);
+                                UISpriteCache.Add("statms" + sprite.name, sprite);
                             }
                             SetHue(sprite.texture, (float)statHue);
                         }
@@ -390,6 +396,303 @@ internal static class customWV
                 Log.LogError("Issue with Statmenu colour tweaks: " + ex);
             }
             #endregion
+        }
+
+        internal void returnToDefault()
+        {
+            var trans = thisView.transform;
+            if (trans == null || UISpriteCache == null ||
+                UISpriteCache.Count <= 0)
+            {
+                return;
+            }
+
+            #region General Text
+            if (UITextColourCache.ContainsKey("critText") &&
+                UITextColourCache.TryGetValue("critText", out var crit))
+            {
+                thisView.critTextColor = crit;
+            }
+
+            if (!UITextColourCache.ContainsKey("normText") &&
+                UITextColourCache.TryGetValue("normText", out var norm))
+            {
+                thisView.normalTextColor = norm;
+            }
+            #endregion
+            #region Background
+            if (UISpriteCache.ContainsKey("ComputerBack") &&
+                UISpriteCache.TryGetValue("ComputerBack", out var bg))
+            {
+                trans.Find("ComputerBack").GetComponent<Image>().sprite = bg;
+            }
+            #endregion
+            #region Exp Title
+            try
+            {
+                foreach (TextMeshProUGUI text in trans.Find(
+                    "ExperimentTitle").GetComponentsInChildren<TextMeshProUGUI>())
+                {
+                    text?.color = thisView.normalTextColor;
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.LogError("Issue with Title colour tweaks: " + ex);
+            }
+            #endregion
+            #region Mode Toggle
+            try
+            {
+                var mode = trans.Find("ModeToggle");
+                if (mode != null && statHue != null &&
+                    UITextColourCache.ContainsKey("ModeToggleHighlight") &&
+                    UITextColourCache.TryGetValue("ModeToggleHighlight", out var hl))
+                    {
+                        var col = mode.transform.GetComponent<Button>().colors;
+                        col.normalColor = thisView.normalTextColor;
+                        col.highlightedColor = hl;
+                        mode.transform.GetComponent<Button>().colors = col;
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.LogError("Issue with Mode Toggle colour tweaks: " + ex);
+            }
+            #endregion
+            #region Limbview
+            try
+            {
+                var limbv = trans.Find("LimbView");
+                if (limbv != null && statHue != null)
+                {
+                    foreach (TextMeshProUGUI text in limbv.GetComponentsInChildren<TextMeshProUGUI>())
+                    {
+                        text?.color = thisView.normalTextColor;
+                    }
+
+                    foreach (Image image in limbv.GetComponentsInChildren<Image>())
+                    {
+                        if (image != null &&
+                            UISpriteCache.ContainsKey("limbvi" + image.name) &&
+                            UISpriteCache.TryGetValue("limbvi" + image.name, out var limb))
+                        {
+                            image.sprite = limb;
+                        }
+                    }
+
+                    var sprites = limbv.GetComponentsInChildren<Sprite>();
+                    for (int i = 0; i < sprites.Count(); i++)
+                    {
+                        if (sprites != null &&
+                            UISpriteCache.ContainsKey("limbvs" + sprites[i].name) && UISpriteCache.TryGetValue("limbvs" + sprites[i].name, out var limb))
+                            {
+                                sprites[i] = limb;
+                            }
+                        }
+                    }
+            }
+            catch (Exception ex)
+            {
+                Log.LogError("Issue with Limbview colour tweaks: " + ex);
+            }
+            #endregion
+            #region Skill Back
+            try
+            {
+                var skillb = trans.Find("SkillsBack");
+                if (skillb != null)
+                {
+                    if (statHue != null)
+                    {
+                        foreach (Image image in skillb.GetComponentsInChildren<Image>())
+                        {
+                            if (image != null && image.sprite != null &&
+                                image.sprite.texture != null)
+                            {
+                                if (UISpriteCache.ContainsKey("skillsbi" + image.name) && UISpriteCache.TryGetValue("skillsbi" + image.name, out var im))
+                                {
+                                    image.sprite = im;
+                                }
+                            }
+                        }
+
+                        foreach (TextMeshProUGUI text in
+                            skillb.GetComponentsInChildren<TextMeshProUGUI>())
+                        {
+                            text?.color = thisView.normalTextColor;
+                        }
+
+                        var sprites = skillb.GetComponentsInChildren<Sprite>();
+                        for (int i = 0; i < sprites.Count(); i++)
+                        {
+                            if (sprites[i] != null && sprites[i].texture != null)
+                            {
+                                if (UISpriteCache.ContainsKey("skillsbs" + sprites[i].name) && UISpriteCache.TryGetValue("skillsbs" + sprites[i].name, out var spr))
+                                {
+                                    sprites[i] = spr;
+                                }
+                            }
+                        }
+                    }
+
+                    if (backHue != null)
+                    {
+                        var back = skillb.GetComponent<Image>().sprite;
+                        if (UISpriteCache.ContainsKey("skillsbg" + back.name) &&
+                            UISpriteCache.TryGetValue("skillsbg" + back.name, out var skillbg))
+                        {
+                            back = skillbg;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.LogError("Issue with Skill colour tweaks: " + ex);
+            }
+            #endregion
+            #region Time Back
+            try
+            {
+                var timeb = trans.Find("TimeBack");
+                if (timeb != null)
+                {
+                    if (statHue != null)
+                    {
+                        foreach (Image image in timeb.GetComponentsInChildren<Image>())
+                        {
+                            if (UISpriteCache.ContainsKey("timebi" + image.name) &&
+                                UISpriteCache.TryGetValue("timebi" + image.name, out var timg))
+                            {
+                                image.sprite = timg;
+                            }
+                        }
+                        foreach (TextMeshProUGUI text in
+                            timeb.GetComponentsInChildren<TextMeshProUGUI>())
+                        {
+                            text.color = thisView.normalTextColor;
+                        }
+
+                        var sprites = timeb.GetComponentsInChildren<Sprite>();
+                        for (int i = 0; i < sprites.Count(); i++)
+                        {
+                            if (UISpriteCache.ContainsKey("timeb" + sprites[i].name) && UISpriteCache.TryGetValue("timeb" + sprites[i].name, out var spr))
+                            {
+                                sprites[i] = spr;
+                            }
+                        }
+                    }
+
+                    if (backHue != null)
+                    {
+                        if (UISpriteCache.ContainsKey("timeback") &&
+                            UISpriteCache.TryGetValue("timeback", out var spr))
+                        {
+                            timeb.GetComponent<Image>().sprite = spr;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.LogError("Issue with Time colour tweaks: " + ex);
+            }
+            #endregion
+            #region Crit Panel
+            try
+            {
+                var pcrit = thisView.criticalPanel;
+                if (pcrit != null && critHue != null)
+                {
+                    var im = pcrit.GetComponent<Image>().sprite;
+                    if (UISpriteCache.TryGetValue("crit" + im.name, out var sprite))
+                    {
+                        im = sprite;
+                    }
+                    pcrit.GetComponentInChildren<TextMeshProUGUI>()?.color =
+                        thisView.critTextColor;
+                    pcrit.GetComponent<TextMeshProUGUI>()?.color =
+                        thisView.critTextColor;
+
+                    foreach (Image img in
+                        pcrit.GetComponentsInChildren<Image>())
+                    {
+                        if (img != null && img.sprite != null &&
+                            img.sprite.texture != null)
+                        {
+                            if (UISpriteCache.ContainsKey("criti" + img.name) &&
+                                UISpriteCache.TryGetValue("criti" + img.name, out var newim))
+                            {
+                                img.sprite = newim;
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.LogError("Issue with Crit colour tweaks: " + ex);
+            }
+            #endregion
+            #region Stat Menu
+            try
+            {
+                var statm = thisView.mainStatsTrans;
+                if (statm != null && statHue != null)
+                {
+                    var spr = statm.GetComponent<Image>().sprite;
+                    if (UISpriteCache.ContainsKey("statm" + spr.name) &&
+                        UISpriteCache.TryGetValue("statm" + spr.name, out var sprite))
+                    {
+                        spr = sprite;
+                    }
+                    statm.Find("ECG").GetComponent<RawImage>().color =
+                        thisView.normalTextColor;
+
+                    statm.Find("VITALS").GetComponent<TextMeshProUGUI>().color =
+                        thisView.normalTextColor;
+
+                    var im = statm.GetComponentsInChildren<Image>();
+                    foreach (Image image in im)
+                    {
+                        if (image != null && image.sprite != null &&
+                            image.sprite.texture != null)
+                        {
+                            if (UISpriteCache.ContainsKey("statmi" + image.name) &&
+                               UISpriteCache.TryGetValue("statmi" + image.name, out var statmi))
+                            {
+                                image.sprite = statmi;
+                            }
+                        }
+                    }
+
+                    var sprites = statm.GetComponentsInChildren<Sprite>();
+                    for (int i = 0; i < sprites.Count(); i++)
+                    {
+                        if (sprites[i] != null && sprites[i].texture != null)
+                        {
+                            if (UISpriteCache.ContainsKey("statms" + sprites[i].name) && UISpriteCache.TryGetValue("statms" + sprites[i].name, out var ms))
+                            {
+                                sprites[i] = ms;
+                            }
+                        }
+                    }
+
+                    Color.RGBToHSV(thisView.normalTextColor, out float hue, out float _, out float _);
+                    foreach (Sprite mood in thisView.moodIcons)
+                    {
+                        SetHue(mood.texture, hue);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.LogError("Issue with Statmenu colour tweaks: " + ex);
+            }
+            #endregion
+
+            UISpriteCache.Clear();
         }
         #endregion
 
