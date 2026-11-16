@@ -26,15 +26,6 @@ internal class InitPersonas
                     {
                         body.harmer.cooldownTime = 500f;
                     }
-                    if (body.PlayerSelf().bodyTraits.Contains("missingeyeleft") &&
-                        !body.eyeGone)
-                    {
-                        body.eyeGone = true;
-                    }
-                    if (body.PlayerSelf().bodyTraits.Contains("missingeyeright"))
-                    {
-                        //body.bothEyesGone = true;
-                    }
                 }
                 #endregion
 

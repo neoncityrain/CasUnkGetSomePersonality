@@ -12,6 +12,7 @@ internal static class customWV
         internal Button.ButtonClickedEvent originalWorkoutAction;
         internal bool isDirty;
         internal Dictionary<string, Sprite> UISpriteCache = [];
+        internal Dictionary<string, Color> UITextColourCache = [];
         internal float? statHue;
         internal float? backHue;
         internal float? critHue;
@@ -86,6 +87,10 @@ internal static class customWV
             }
 
             #region General Text
+            if (!UITextColourCache.ContainsKey("critText"))
+            {
+                UITextColourCache.Add("critText", thisView.critTextColor);
+            }
             Color txt = thisView.critTextColor;
             Color.RGBToHSV(txt, out float _, out float s, out float v);
             if (critHue != null)
@@ -93,6 +98,10 @@ internal static class customWV
                 thisView.critTextColor = Color.HSVToRGB((float)critHue, s, v);
             }
 
+            if (!UITextColourCache.ContainsKey("normText"))
+            {
+                UITextColourCache.Add("normText", thisView.normalTextColor);
+            }
             txt = thisView.normalTextColor;
             Color.RGBToHSV(txt, out float _, out s, out v);
             if (statHue != null)
@@ -103,6 +112,10 @@ internal static class customWV
             #region Background
             if (backHue != null)
             {
+                if (!UISpriteCache.ContainsKey("ComputerBack"))
+                {
+                    UISpriteCache.Add("ComputerBack", trans.Find("ComputerBack").GetComponent<Image>().sprite);
+                }
                 RecolourUiHue(trans.Find("ComputerBack").GetComponent<Image>()
                     .sprite.texture, (float)backHue);
             }
@@ -127,6 +140,10 @@ internal static class customWV
                 var mode = trans.Find("ModeToggle");
                 if (mode != null && statHue != null)
                 {
+                    if (!UITextColourCache.ContainsKey("ModeToggleHighlight"))
+                    {
+                        UITextColourCache.Add("ModeToggleHighlight", mode.transform.GetComponent<Button>().colors.highlightedColor);
+                    }
                     var col = mode.transform.GetComponent<Button>().colors;
                     col.normalColor = thisView.normalTextColor;
                     v += 0.2f; s -= 0.1f;
@@ -151,10 +168,7 @@ internal static class customWV
                     {
                         foreach (TextMeshProUGUI text in ltxt)
                         {
-                            if (text != null)
-                            {
-                                text.color = thisView.normalTextColor;
-                            }
+                            text?.color = thisView.normalTextColor;
                         }
                     }
 
@@ -162,6 +176,10 @@ internal static class customWV
                     {
                         if (image != null)
                         {
+                            if (!UISpriteCache.ContainsKey("limbv" + image.name))
+                            {
+                                UISpriteCache.Add("limbv" + image.name, image.sprite);
+                            }
                             SetHue(image.sprite.texture, (float)statHue);
                         }
                     }
@@ -169,6 +187,10 @@ internal static class customWV
                     {
                         if (sprite != null)
                         {
+                            if (!UISpriteCache.ContainsKey("limbv" + sprite.name))
+                            {
+                                UISpriteCache.Add("limbv" + sprite.name, sprite);
+                            }
                             SetHue(sprite.texture, (float)statHue);
                         }
                     }
@@ -192,6 +214,10 @@ internal static class customWV
                             if (image != null && image.sprite != null &&
                                 image.sprite.texture != null)
                             {
+                                if (!UISpriteCache.ContainsKey("skillsb" + image.name))
+                                {
+                                    UISpriteCache.Add("skillsb" + image.name, image.sprite);
+                                }
                                 SetHue(image.sprite.texture, (float)statHue);
                             }
                         }
@@ -206,12 +232,19 @@ internal static class customWV
                         {
                             if (sprite != null && sprite.texture != null)
                             {
+                                if (!UISpriteCache.ContainsKey("skillsb" + sprite.name))
+                                {
+                                    UISpriteCache.Add("skillsb" + sprite.name, sprite);
+                                }
                                 SetHue(sprite.texture, (float)statHue);
                             }
                         }
                     }
 
-                    SetHue(skillb.GetComponent<Image>().sprite.texture, (float)backHue);
+                    if (backHue != null)
+                    {
+                        SetHue(skillb.GetComponent<Image>().sprite.texture, (float)backHue);
+                    }
                 }
             }
             catch (Exception ex)
@@ -229,6 +262,10 @@ internal static class customWV
                     {
                         foreach (Image image in timeb.GetComponentsInChildren<Image>())
                         {
+                            if (!UISpriteCache.ContainsKey("timeb" + image.name))
+                            {
+                                UISpriteCache.Add("timeb" + image.name, image.sprite);
+                            }
                             SetHue(image.sprite.texture, (float)statHue);
                         }
                         foreach (TextMeshProUGUI text in
@@ -238,11 +275,22 @@ internal static class customWV
                         }
                         foreach (Sprite sprite in timeb.GetComponentsInChildren<Sprite>())
                         {
+                            if (!UISpriteCache.ContainsKey("timeb" + sprite.name))
+                            {
+                                UISpriteCache.Add("timeb" + sprite.name, sprite);
+                            }
                             SetHue(sprite.texture, (float)statHue);
                         }
                     }
 
-                    SetHue(timeb.GetComponent<Image>().sprite.texture, (float)backHue);
+                    if (backHue != null)
+                    {
+                        if (!UISpriteCache.ContainsKey("timeback"))
+                        {
+                            UISpriteCache.Add("timeb", timeb.GetComponent<Image>().sprite);
+                        }
+                        SetHue(timeb.GetComponent<Image>().sprite.texture, (float)backHue);
+                    }
                 }
             }
             catch (Exception ex)
@@ -256,7 +304,12 @@ internal static class customWV
                 var pcrit = thisView.criticalPanel;
                 if (pcrit != null && critHue != null)
                 {
-                    SetHue(pcrit.GetComponent<Image>().sprite.texture, (float)critHue);
+                    var im = pcrit.GetComponent<Image>().sprite;
+                    if (!UISpriteCache.ContainsKey("crit" + im.name))
+                    {
+                        UISpriteCache.Add("crit" + im.name, im);
+                    }
+                    SetHue(im.texture, (float)critHue);
                     pcrit.GetComponentInChildren<TextMeshProUGUI>()?.color =
                         thisView.critTextColor;
                     pcrit.GetComponent<TextMeshProUGUI>()?.color =
@@ -268,6 +321,10 @@ internal static class customWV
                         if (img != null && img.sprite != null &&
                             img.sprite.texture != null)
                         {
+                            if (!UISpriteCache.ContainsKey("crit" + img.name))
+                            {
+                                UISpriteCache.Add("crit" + img.name, img.sprite);
+                            }
                             SetHue(img.sprite.texture, (float)critHue);
                         }
                     }
@@ -275,7 +332,7 @@ internal static class customWV
             }
             catch (Exception ex)
             {
-                Log.LogError("Issue with Time colour tweaks: " + ex);
+                Log.LogError("Issue with Crit colour tweaks: " + ex);
             }
             #endregion
             #region Stat Menu
@@ -284,8 +341,12 @@ internal static class customWV
                 var statm = thisView.mainStatsTrans;
                 if (statm != null && statHue != null)
                 {
-                    RecolourUiHue(statm.GetComponent<Image>().sprite.texture,
-                        (float)statHue);
+                    var spr = statm.GetComponent<Image>().sprite;
+                    if (!UISpriteCache.ContainsKey("statm" + spr.name))
+                    {
+                        UISpriteCache.Add("statm" + spr.name, spr);
+                    }
+                    RecolourUiHue(spr.texture, (float)statHue);
                     statm.Find("ECG").GetComponent<RawImage>().color =
                         thisView.normalTextColor;
 
@@ -298,6 +359,10 @@ internal static class customWV
                         if (image != null && image.sprite != null &&
                             image.sprite.texture != null)
                         {
+                            if (!UISpriteCache.ContainsKey("statm" + image.name))
+                            {
+                                UISpriteCache.Add("statm" + image.name, image.sprite);
+                            }
                             SetHue(image.sprite.texture, (float)statHue);
                         }
                     }
@@ -306,6 +371,10 @@ internal static class customWV
                     {
                         if (sprite != null && sprite.texture != null)
                         {
+                            if (!UISpriteCache.ContainsKey("statm" + sprite.name))
+                            {
+                                UISpriteCache.Add("statm" + sprite.name, sprite);
+                            }
                             SetHue(sprite.texture, (float)statHue);
                         }
                     }

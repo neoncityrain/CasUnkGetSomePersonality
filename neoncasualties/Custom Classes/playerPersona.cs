@@ -219,7 +219,7 @@ internal static class playerPersona
                 owner.eyeGone = true;
                 if (trait != "eyetornoutleft")
                 {
-                    owner.GetComponentInChildren<FacialExpression>().eyeTimeHealed = 350f;
+                    myFace.eyeTimeHealed = 350f;
                 }
             }
             if (trait == "missingeyeright" && !owner.eyeGone)
