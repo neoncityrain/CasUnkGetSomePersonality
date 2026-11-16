@@ -3,6 +3,6 @@ Inspired by tools such as Slugbase, "Get Some Personality" is a mod built to pro
 This mod is not at its full release state yet. Check back later!
 
 # CREDITS
-Main Developer: NeonCityRain
-Moodle Sprites: Nullrot
+Main Developer: NeonCityRain<br>
+Moodle Sprites: Nullrot<br>
 Playtesters: Scuglat, Kiizyt, Halley, TheShiningShadow ("Ugh, I'm GROSS" -battery charger), Cyberpeak
