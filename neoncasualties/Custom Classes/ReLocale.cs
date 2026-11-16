@@ -1264,14 +1264,16 @@ public static class ReLocale
 
             if ((!WorldGeneration.world.cutsceneActive &&
                 !str.Contains("endscreen")) ||
+                characterText == null || personaText == null ||
                 (!characterText.ContainsKey(body.PlayerSelf().codeName) &&
-                 !personaText.ContainsKey(body.PlayerSelf().personalityType)))
+                 !personaText.ContainsKey(body.PlayerSelf().personalityType)
+                 ))
             {
                 return;
             }
 
             var title = body.PlayerSelf().playerTitle;
-            if (characterText.TryGetValue(title, out var charfile))
+            if (characterText.Keys.Contains(title) && characterText.TryGetValue(title, out var charfile))
             {
                 if (charfile.cutsceneTexts != null &&
                     charfile.cutsceneTexts.TryGetValue(str, out var newScene))
@@ -1279,7 +1281,7 @@ public static class ReLocale
                     str = newScene;
                 }
             }
-            else if (personaText.TryGetValue(title, out var persfile))
+            else if (personaText.Keys.Contains(title) && personaText.TryGetValue(title, out var persfile))
             {
                 if (persfile.cutsceneTexts != null &&
                     persfile.cutsceneTexts.TryGetValue(str, out var newScene))

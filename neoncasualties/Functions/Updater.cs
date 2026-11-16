@@ -54,13 +54,13 @@ internal class Updater
                 try
                 {
                     var cam = PlayerCamera.main;
-                    if (Input.GetKey(KeyBinds.GetBind("pause")) && !PauseHandler.main.isPaused &&
+                    if ((Input.GetKey(KeyBinds.GetBind("pause")) && !PauseHandler.main.isPaused &&
                         body.PlayerSelf().personalSprites != null &&
                         currentSpriteCache != null &&
                         !ScrollableText.textExists && !cam.radialOpen &&
                         !cam.tradeMenu.activeSelf && !cam.itemCustomizer.activeSelf &&
                         !cam.craftingPanel.activeSelf && !cam.woundView.activeSelf &&
-                        !(bool)MinigameBase.main.currentMinigame
+                        !(bool)MinigameBase.main.currentMinigame) && reloadSpritesOnPause.Value == true
                         )
                     {
                         // if player is CLOSING the pause screen, reload sprites.

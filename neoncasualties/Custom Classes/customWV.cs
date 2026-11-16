@@ -41,14 +41,9 @@ internal static class customWV
                 {
                     thisView.versionText.text = myFile.woundviewFirmwareText;
                 }
-                if (myFile.displayName != null)
-                {
-                    thisView.speciesText.text = myFile.displayName;
-                }
             }
 
-
-            
+            thisView.speciesText.text = owner.PlayerSelf().displayName;
         }
 
         #region Colours
@@ -67,32 +62,6 @@ internal static class customWV
                     var newhue = hue + h;
                     if (newhue > 1f) { newhue -= 1f; }
                     colors[i] = Color.HSVToRGB(newhue, s, v);
-                    colors[i].a = a;
-                }
-            }
-
-            try
-            {
-                texture.SetPixels32(colors);
-                texture.Apply();
-            }
-            catch (Exception ex)
-            {
-                Log.LogDebug("Error setting texture to sprite: " + ex);
-            }
-        }
-
-        public static void SetHue(Texture2D texture, float hue)
-        {
-            var colors = texture.GetPixels32();
-
-            for (var i = 0; i < colors.Length; i++)
-            {
-                Color.RGBToHSV(colors[i], out float _, out float s, out float v);
-                if (v > 0f && v < 1f)
-                {
-                    var a = colors[i].a;
-                    colors[i] = Color.HSVToRGB(hue, s, v);
                     colors[i].a = a;
                 }
             }

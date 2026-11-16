@@ -7,6 +7,7 @@ internal class GSPConfig
     internal static ConfigEntry<bool> shouldUseGeneralStrings;
     internal static ConfigEntry<bool> allowAutospriting;
     internal static ConfigEntry<bool> allowRandomColours;
+    internal static ConfigEntry<bool> reloadSpritesOnPause;
 
     public static void initConfigs()
     {
@@ -29,5 +30,8 @@ internal class GSPConfig
         allowRandomColours = gspConfig.Bind(
             "Function", "allowRandomColours", true,
             "If new Expies should have randomized eye colour tints.");
+        reloadSpritesOnPause = gspConfig.Bind(
+            "Function", "reloadSpritesOnPause", false,
+            "If the autospriting functionality should reload upon pausing the game. Good for testing skins, but will likely cause a notable stutter.");
     }
 }

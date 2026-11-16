@@ -146,6 +146,10 @@ internal static class playerPersona
             {
                 foreach (string colName in myFile.colours.Keys)
                 {
+                    if (playerColours.Keys.Contains(colName))
+                    {
+                        playerColours.Remove(colName);
+                    }
                     if (myFile.colours.TryGetValue(colName, out var inttocol))
                     {
                         var col = new Color(
@@ -331,9 +335,11 @@ internal static class playerPersona
                     owner.talker.text.color = og;
                 }
 
-                if (playerColours.TryGetValue("eyes", out var eyecol))
+                if (playerColours.TryGetValue("eyes", out var eyecol) &&
+                    allowRandomColours.Value == true &&
+                    (personalSprites == null || personalSprites.Count == 0))
                 {
-                    //RecolourEyes(eyecol);
+                    RecolourEyes(eyecol);
                 }
 
                 bool recolwv = false;
@@ -396,9 +402,14 @@ internal static class playerPersona
         }
         public void RecolourEyes(Color eyecol)
         {
-            Color.RGBToHSV(eyecol, out float hue, out float sat, out float val);
+            Color.RGBToHSV(eyecol, out float hue, out float _, out float _);
 
-            Log.LogError("Considering possibly loading the colours for the eyes");
+            Log.LogError("Considering possibly loading the colours for the eyes?!");
+            if (savedVanillaEyeList == null || savedVanillaEyeList.Count <= 0 ||
+                !savedVanillaEyeList.ContainsKey("eyeList"))
+            {
+                savedVanillaEyeList.Add("eyeList", myFace.eyeList);
+            }
             for (int i = 0; i < myFace.eyeList.Count(); i++)
             {
                 Eye eye = myFace.eyeList[i];
@@ -408,24 +419,8 @@ internal static class playerPersona
 
                 if (!texture.isReadable)
                 { Log.LogError("Texture to recolour isn't readable: " + texture.name); }
-                var colors = texture.GetPixels32();
-                if (colors == null || colors.Length <= 0) { return; }
-
-
-                for (var l = 0; l < colors.Length; l++)
-                {
-                    var a = colors[l].a;
-
-                    Color.RGBToHSV(colors[l], out float h, out float s, out float v);
-                    if (s > 1 && h < 40)
-                    {
-                        colors[l] = Color.HSVToRGB(hue, sat, val);
-                    }
-
-                    colors[l].a = a;
-                }
-                texture.SetPixels32(colors);
-                texture.Apply();
+                SetHue(texture, hue);
+                SetHue(textwo, hue);
 
                 myFace.eyeList[i] = eye;
             }
