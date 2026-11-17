@@ -45,7 +45,7 @@ internal static class customWV
                 }
             }
 
-            thisView.speciesText.text = owner.PlayerSelf().displayName ?? thisView.speciesText.text;
+            thisView.speciesText.text = owner.PlayerSelf().displayName.ToUpper() ?? thisView.speciesText.text.ToUpper();
         }
 
         #region Colours

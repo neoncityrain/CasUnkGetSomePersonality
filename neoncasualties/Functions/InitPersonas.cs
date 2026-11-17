@@ -49,12 +49,15 @@ internal class InitPersonas
                 characterText.TryGetValue(coden, out characterFile myFile);
 
                 body.skills.INT += myFile.startINToffset;
-                if (body.skills.INT < 0) { body.skills.INT = 0; }
                 body.skills.STR += myFile.startSTRoffset;
-                if (body.skills.STR < 0) { body.skills.STR = 0; }
                 body.skills.RES += myFile.startRESoffset;
+                if (body.skills.INT < 0) { body.skills.INT = 0; }
+                if (body.skills.STR < 0) { body.skills.STR = 0; }
                 if (body.skills.RES < 0) { body.skills.RES = 0; }
                 body.skills.UpdateExpBoundaries();
+                body.skills.expINT = body.skills.minINT;
+                body.skills.expSTR = body.skills.minSTR;
+                body.skills.expRES = body.skills.minRES;
 
                 if (coden == ("polarischandran"))
                 {

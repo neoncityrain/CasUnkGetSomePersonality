@@ -223,7 +223,7 @@ internal class Updater
             if (__instance != null && __instance.body != null)
             {
                 var body = thisPlayer(__instance.body);
-                if (body.PlayerSelf().codeName == "polarischandran" &&
+                if (body.PlayerSelf().codeName == "eyemissin" &&
                     !body.bothEyesGone &&
                     !(bool)body.GetWearable("blindfold"))
                 {

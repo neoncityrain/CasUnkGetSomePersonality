@@ -6,7 +6,9 @@ internal class gspRunSettings : MonoBehaviour
         new gspInput("playername")
         ];
     internal GameObject GSPSettings;
-    public gspInput setTo;
+    public gspInput inputField;
+
+
     internal TMP_InputField input;
     internal TMP_ColorGradient colour;
 
@@ -18,7 +20,7 @@ internal class gspRunSettings : MonoBehaviour
 
     internal void Set(gspInput playSetting)
     {
-        setTo = playSetting;
+        inputField = playSetting;
     }
 
     internal void initInput()
@@ -27,7 +29,7 @@ internal class gspRunSettings : MonoBehaviour
         input.text = "";
         input.onValueChanged.AddListener(str =>
         {
-            setTo.inputValue = str;
+            inputField.inputValue = str;
         });
     }
 }

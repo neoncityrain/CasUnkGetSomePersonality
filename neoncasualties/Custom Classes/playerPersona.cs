@@ -53,7 +53,7 @@ internal static class playerPersona
             ownerAge = myWV.cInfo[1];
             idTag = myWV.cInfo[2];
             ownerVersion = myWV.cInfo[3];
-            var mult = 1f - (owner.heightMultiplier / ownerHeight);
+            var mult = ownerHeight / 150f;
             if (mult < 0f) { mult = -mult; }
             owner.heightMultiplier = mult;
             #endregion
@@ -121,7 +121,7 @@ internal static class playerPersona
         {
             if (myFile == null) { return; }
             if (myFile.age > -1) { ownerAge = myFile.age; }
-            if (myFile.heightCm > 0) { ownerHeight = myFile.heightCm; }
+            if (myFile.heightCm > -1) { ownerHeight = myFile.heightCm; }
             if (myFile.id > -1) { idTag = myFile.id; }
             if (myFile.versionNumber > -1) { ownerVersion = myFile.versionNumber; }
 
