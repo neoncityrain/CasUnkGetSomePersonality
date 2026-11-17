@@ -6,7 +6,7 @@ internal class multiplayer
 {
     public static Body multiplayerBody(Body body)
     {
-        if (!Net.IsRunning) return null;
+        if (!Net.IsRunning) return body;
 
         body.TryGetNetBody(out var player);
         return player.body;
