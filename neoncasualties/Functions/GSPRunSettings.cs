@@ -1,12 +1,12 @@
 ﻿namespace ncrGetSomePersonality;
-/*
+
 internal class gspRunSettings : MonoBehaviour
 {
-    public List<gspInput> settings = [
+    public static List<gspInput> settings = [
         new gspInput("playername")
         ];
     internal GameObject GSPSettings;
-    public gspInput currentSetting;
+    public gspInput setTo;
     internal TMP_InputField input;
     internal TMP_ColorGradient colour;
 
@@ -18,7 +18,7 @@ internal class gspRunSettings : MonoBehaviour
 
     internal void Set(gspInput playSetting)
     {
-        currentSetting = playSetting;
+        setTo = playSetting;
     }
 
     internal void initInput()
@@ -27,7 +27,7 @@ internal class gspRunSettings : MonoBehaviour
         input.text = "";
         input.onValueChanged.AddListener(str =>
         {
-            currentSetting.inputValue = str;
+            setTo.inputValue = str;
         });
     }
 }
@@ -45,4 +45,3 @@ public class gspInput
         this.name = name;
     }
 }
-*/

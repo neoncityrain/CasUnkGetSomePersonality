@@ -17,7 +17,7 @@ internal static class customWV
         internal float? backHue;
         internal float? critHue;
 
-        internal void reviseStats(characterFile myFile = null)
+        internal void reviseStats()
         {
             WoundView.specimenId = owner.PlayerSelf().idTag;
             thisView.bodyStatText.text =
@@ -28,7 +28,8 @@ internal static class customWV
             WoundView.firmwareVer = "v2.0" + owner.PlayerSelf().ownerVersion;
             thisView.versionText.text = "UNI-HEALTH " + WoundView.firmwareVer;
 
-            if (myFile != null)
+            var self = owner.PlayerSelf();
+            if (characterText != null && characterText.Count > 0 && self.codeName != null && !string.IsNullOrEmpty(self.codeName) && characterText.ContainsKey(self.codeName) && characterText.TryGetValue(self.codeName, out characterFile myFile))
             {
                 if (myFile.woundviewVersionText != null)
                 {
@@ -44,7 +45,7 @@ internal static class customWV
                 }
             }
 
-            thisView.speciesText.text = owner.PlayerSelf().displayName;
+            thisView.speciesText.text = owner.PlayerSelf().displayName ?? thisView.speciesText.text;
         }
 
         #region Colours

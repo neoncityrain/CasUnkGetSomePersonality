@@ -33,10 +33,9 @@ internal static class playerPersona
         internal WoundView myWV;
         #endregion
 
-        internal void reviseStats(Body body)
+        internal void reviseStats()
         {
             #region setInit
-            owner = thisPlayer(body);
             myFace = owner.limbs[0].GetComponent<FacialExpression>();
 
             if (myWV == null || myWV.CustomCall().owner == owner)
@@ -60,13 +59,10 @@ internal static class playerPersona
             #endregion
 
             #region ReloadFromJson
-            characterFile myFile = new();
-            if (characterText != null && characterText.Count > 0 && codeName != null &&
-                !string.IsNullOrEmpty(codeName) && characterText.ContainsKey(codeName))
+            if (characterText != null && characterText.Count > 0 && codeName != null && !string.IsNullOrEmpty(codeName) && characterText.ContainsKey(codeName) && characterText.TryGetValue(codeName, out characterFile myFile))
             {
                 try
                 {
-                    characterText.TryGetValue(codeName, out myFile);
                     reviseMyJsonBoy(myFile);
                 }
                 catch (Exception ex)
@@ -81,7 +77,7 @@ internal static class playerPersona
                 randomizePersona();
             }
             verifyTitle();
-            myWV.CustomCall().reviseStats(myFile);
+            myWV.CustomCall().reviseStats();
             reviseColours();
 
             #region Re-check Disabilities
@@ -176,7 +172,8 @@ internal static class playerPersona
                         personalityType);
 
                     if (allowRandomColours.Value == true &&
-                        (savedVanillaEyeList == null || savedVanillaEyeList.Count <= 0))
+                        (savedVanillaEyeList == null ||
+                        savedVanillaEyeList.Count <= 0))
                     {
                         var colour = new Color(Random.Range(0.2f, 0.8f), Random.Range(0.2f, 0.8f), Random.Range(0.2f, 0.8f));
                         playerColours.Add("eyes", colour);
@@ -319,7 +316,6 @@ internal static class playerPersona
             rightEyeHealed = 0f;
             myWV = null;
             myFace = null;
-            owner = null;
         }
 
         internal void verifyTitle()

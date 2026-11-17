@@ -26,22 +26,7 @@ internal class Updater
                     WoundView.view.CustomCall().isDirty)
                 {
                     WoundView.view.CustomCall().isDirty = false;
-
-                    TextMeshProUGUI component = WoundView.view.CustomCall().thisView?
-                        .transform?.Find(
-                        "ExperimentTitle")?.Find("Species")?.GetComponent<TextMeshProUGUI>();
-                    if (component != null && (!string.IsNullOrEmpty(
-                        body.PlayerSelf().personalName) || !string.IsNullOrEmpty(
-                        body.PlayerSelf().displayName)))
-                    {
-                        if ((component.text != body.PlayerSelf().personalName &&
-                            body.PlayerSelf().personalName != null) ||
-                            (component.text != body.PlayerSelf().displayName &&
-                            body.PlayerSelf().displayName != null))
-                        {
-                            body.PlayerSelf().reviseStats(body);
-                        }
-                    }
+                    WoundView.view.CustomCall().reviseStats();
                 }
                 else if (WoundView.view != null && !WoundView.view.enabled &&
                     !WoundView.view.CustomCall().isDirty)
@@ -202,15 +187,7 @@ internal class Updater
             if (body != null &&
                 body.PlayerSelf().personalityType != null)
             {
-                var self = body.PlayerSelf();
-                if (WoundView.specimenId != self.idTag ||
-                    WoundView.view.cInfo[0] != self.ownerHeight ||
-                    WoundView.view.cInfo[1] != self.ownerAge ||
-                    WoundView.view.cInfo[3] != self.ownerVersion
-                    )
-                {
-                    self.reviseStats(body);
-                }
+                body.PlayerSelf().reviseStats();
             }
         }
     }

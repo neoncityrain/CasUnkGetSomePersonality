@@ -15,7 +15,7 @@ internal static class characterAgency
         body.PlayerSelf().myWV = wv;
         wv.CustomCall().owner = body;
         wv.CustomCall().thisView = wv;
-        body.PlayerSelf().reviseStats(body);
+        body.PlayerSelf().reviseStats();
         return gameObject;
     }
 }

@@ -19,13 +19,13 @@ internal class multiplayer
             var self = player.body.PlayerSelf();
             if (string.IsNullOrEmpty(self.personalityType)) // player not initialized
             {
-                self.reviseStats(player.body);
+                self.reviseStats();
                 foreach (ScavPlayer others in ScavPlayer.AllLivingPlayers)
                 {
                     if (others.body.PlayerSelf().personalityType == self.personalityType)
                     {
                         self.personalityType = null;
-                        self.reviseStats(player.body);
+                        self.reviseStats();
                         // give it a higher chance of being different
                     }
                 }

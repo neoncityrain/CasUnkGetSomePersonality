@@ -2,16 +2,22 @@
 
 internal class InitPersonas
 {
-    [HarmonyPatch(typeof(PlayerCamera), "Start")]
+    [HarmonyPatch(typeof(Body), "Start")]
     internal static class grabPlacePlayer
     {
-        internal static void Postfix(PlayerCamera __instance)
+        internal static void Postfix(Body __instance)
         {
             if (__instance == null) { return; }
-            var body = thisPlayer(__instance.body);
+            var body = __instance;
+            if (body.PlayerSelf().owner == null ||
+                body.PlayerSelf().owner != body)
+            {
+                body.PlayerSelf().owner = body;
+            }
 
             if (body != null && WoundView.view.cInfo != null &&
-                (WorldGeneration.world.totalTraveled <= 0 ||
+                personaText != null && personaText.Count() > 0 &&
+                (!SaveSystem.loadedRun ||
                 string.IsNullOrEmpty(body.PlayerSelf().personalityType))
                 )
             {
@@ -20,7 +26,7 @@ internal class InitPersonas
                 {
                     body.PlayerSelf().codeName = forceSpecificEggValue.Value;
                 }
-                body.PlayerSelf().reviseStats(body);
+                body.PlayerSelf().reviseStats();
 
                 #region Traits
                 if (body.PlayerSelf().bodyTraits != null &&

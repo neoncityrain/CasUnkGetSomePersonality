@@ -19,7 +19,7 @@ internal class PreRunFix
                             body.PlayerSelf().resetCWTs();
                             body.PlayerSelf().returnToVanillaSprites();
                             body.PlayerSelf().codeName = args[1].ToString();
-                            body.PlayerSelf().reviseStats(body);
+                            body.PlayerSelf().reviseStats();
 
                             LogToConsole(__instance, "Player's egg is now: " +
                                 body.PlayerSelf().codeName);
@@ -77,7 +77,7 @@ internal class PreRunFix
                         if (args[1] != null && body != null)
                         {
                             body.PlayerSelf().personalName = args[1].ToString();
-                            body.PlayerSelf().reviseStats(body);
+                            body.PlayerSelf().reviseStats();
                             LogToConsole(__instance, "Player has been renamed to: " +
                                 body.PlayerSelf().personalName);
                         }
@@ -101,7 +101,7 @@ internal class PreRunFix
                             else
                             {
                                 body.PlayerSelf().addTrait(args[1].ToString());
-                                body.PlayerSelf().reviseStats(body);
+                                body.PlayerSelf().reviseStats();
 
                                 LogToConsole(__instance, "Added the trait: " + args[1].ToString());
                             }
@@ -121,7 +121,7 @@ internal class PreRunFix
                         {
                             if (body.PlayerSelf().bodyTraits.Remove(args[1].ToString()))
                             {
-                                body.PlayerSelf().reviseStats(body);
+                                body.PlayerSelf().reviseStats();
                                 LogToConsole(__instance, "Removed the trait: " + args[1].ToString());
                             }
                             else
@@ -145,7 +145,7 @@ internal class PreRunFix
                             if (int.TryParse(args[1], out var result))
                             {
                                 body.PlayerSelf().myWV.cInfo[2] = result;
-                                body.PlayerSelf().reviseStats(body);
+                                body.PlayerSelf().reviseStats();
                                 LogToConsole(__instance, "Player's ID is now: " +
                                     body.PlayerSelf().idTag);
                             }
@@ -169,7 +169,7 @@ internal class PreRunFix
                             if (int.TryParse(args[1], out var result))
                             {
                                 body.PlayerSelf().myWV.cInfo[1] = result;
-                                body.PlayerSelf().reviseStats(body);
+                                body.PlayerSelf().reviseStats();
                                 LogToConsole(__instance, "Player's age is now: " +
                                     body.PlayerSelf().ownerAge);
                             }
@@ -193,7 +193,7 @@ internal class PreRunFix
                             if (int.TryParse(args[1], out var result))
                             {
                                 body.PlayerSelf().myWV.cInfo[0] = result;
-                                body.PlayerSelf().reviseStats(body);
+                                body.PlayerSelf().reviseStats();
                                 LogToConsole(__instance, "Player's height is now: " +
                                     body.PlayerSelf().ownerHeight);
                             }
@@ -217,7 +217,7 @@ internal class PreRunFix
                             if (int.TryParse(args[1], out var result))
                             {
                                 body.PlayerSelf().myWV.cInfo[3] = result;
-                                body.PlayerSelf().reviseStats(body);
+                                body.PlayerSelf().reviseStats();
                                 LogToConsole(__instance, "Player's firmware is now: " +
                                     body.PlayerSelf().ownerVersion);
                             }

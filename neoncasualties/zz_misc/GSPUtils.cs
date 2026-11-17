@@ -13,7 +13,6 @@ public class GSPUtils
     public static Dictionary<string, Image[]> savedVanillaImageSets = [];
     public static Dictionary<string, List<Eye>> savedVanillaEyeList = [];
 
-
     public static void SetHue(Texture2D texture, float hue)
     {
         var colors = texture.GetPixels32();
