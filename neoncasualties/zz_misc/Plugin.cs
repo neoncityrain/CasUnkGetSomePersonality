@@ -13,13 +13,11 @@ public class PluginSetup : BaseUnityPlugin
         {
             harmony = new("neoncityrain.getsomepersonality");
             harmony.PatchAll();
-            /*
             foreach (MethodBase method in harmony.GetPatchedMethods())
             {
-                Utils.Log.LogDebug("Harmony has patched: " +
+                Log.LogDebug("Harmony has patched: " +
                 method.ToString());
             }
-            */
 
             if (assemblyExists("QoL Unknown"))
             {
@@ -47,7 +45,7 @@ public class PluginSetup : BaseUnityPlugin
             return;
         }
 
-        Log.LogDebug("GSP has loaded correctly.");
+        Log.LogInfo("GSP has loaded correctly!");
     }
 
     private void OnDestroy()

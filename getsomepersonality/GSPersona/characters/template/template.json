@@ -1,8 +1,9 @@
 {
-  "codeName": "your name to be used in the code. be sure these dont overlap, or there may be issues.",
+  "codeName": "your name to be used in the code. only overlap if you want to split the files into multiple different locations.",
   "name": "what you call yourself",
   "displayName": "the name to display on the woundview screen",
-  "personality": "personality type. 'template' if you want it to NEVER pull from a personality, blank to have it randomize.",
+  "fileType": "character",
+  "personality": "personality type. 'template' to NEVER pull from a personality, blank to randomize.",
   "personalitySubtypes": { "not implemented": "ignore this for now!" },
   "bodyTraits": ["traits that should be auto-added"],
   "id": 0,
@@ -10,23 +11,24 @@
   "versionNumber": 0,
   "heightCm": 0,
   "colours": {
-    "DELETEME": "colours are in RGB format, from 0-255.",
-
-
     "wvstats": [0, 0, 0],
     "wvback": [0, 0, 0],
     "wvcrit": [0, 0, 0],
 
     "text": [0, 0, 0],
+    "thoughts": [0, 0, 0],
+
     "primary": [0, 0, 0],
     "secondary": [0, 0, 0],
     "tert": [0, 0, 0],
     "blood": [0, 0, 0]
   },
+  "ABOUTCOLOURS": "colours are in RGB format, from 0-255.",
 
-  "woundviewFirmwareText": "in case you want even more control. usually this is 'UNI-HEALTH v2.0' + ownerVersion!",
-  "woundviewVersionText": "the aforementioned ownerversion",
+  "woundviewFirmwareText": "For whatever reason, this is the 'v2.0' + ownerVersion part of the text. I don't think it's used, but I'm not sure.",
+  "woundviewVersionText": "in case you want even more control. usually this is 'UNI-HEALTH v2.0' + ownerVersion!",
   "woundviewBodyText": "(height)cm | (age)y | #(id) <- default",
+  "endStatsID": "the text that can replace the 'id' portion of the death screen",
 
   "startSTRoffset": -7,
   "startRESoffset": 2,
@@ -49,12 +51,12 @@
   },
 
   "items":{
-    "itemname": "",
-    "itemdsc": ""
+    "itemname": "WORK IN PROGRESS!",
+    "itemdsc": "these do nothing yet, but will in the future."
   },
   "buildings":{
-    "buildingname": "",
-    "buildingdsc": ""
+    "buildingname": "WORK IN PROGRESS!",
+    "buildingdsc": "as above, so below."
   },
   "moodles": {
     "moodlecodename": "moodle readable name",
@@ -136,22 +138,25 @@
       "your skin is damaged, revealing the flesh beneath.", "can use <limb>"
     ],
     "sad": [
-      ""
+      "feeling a bit down, but nothing too serious", "probably looking a lil mopey"
     ],
     "gloomy": [
-      ""
+      "its like the joy has been sucked out of the air", "something is wrong, but you cant figure out a good angle to grapple with all this"
     ],
     "depressed": [
-      ""
+      "starting to consider death as an alternative.", "its like someone replaced you with a monster that wears your face"
     ],
     "miserable": [
-      ""
+      "nothing is worth this. this is the limit of your sanity"
+    ],
+    "selfharm-regulated": [
+      "for when self-harm brings you back to a neutral-positive mood.","generally used for the selfdestructive trait"
     ],
     "selfharm": [
-      ""
+      "for when self-harming while upset, and remaining upset"
     ],
     "angeronitem": [
-      ""
+      "beating the shit out of a plush toy", "what did they ever do to you"
     ],
     "suicide": [
       ""
@@ -180,7 +185,7 @@
     "breakcorpse": [
       "breaking a corpse, which lowers happiness quite a bit."
     ],
-    "breakcorpseCannibalistic": [
+    "breakcorpse-cannibalistic": [
       "for those who have no qualms with eating the flesh of their own kind.",
       "not everyone thinks of cannibalism as tabboo- its up to you if they do or not!"
     ],

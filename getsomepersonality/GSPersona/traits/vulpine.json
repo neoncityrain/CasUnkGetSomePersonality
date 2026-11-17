@@ -1,4 +1,5 @@
 {
-  "name": "vulpine",
+  "codeName": "vulpine",
+  "fileType": "trait",
   "desc": "You appear to be some manner of fox."
 }

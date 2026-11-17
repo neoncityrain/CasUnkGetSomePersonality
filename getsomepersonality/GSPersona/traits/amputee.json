@@ -1,5 +1,6 @@
 {
-  "name": "amputee",
+  "codeName": "amputee",
+  "fileType": "trait",
   "desc": "It seems your circumstances have cost you an arm and a leg.",
   "isDisability": true
 }

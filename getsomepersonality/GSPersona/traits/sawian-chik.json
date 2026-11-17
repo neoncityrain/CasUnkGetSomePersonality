@@ -1,5 +1,6 @@
 {
-  "name": "chik",
+  "codeName": "chik",
+  "fileType": "trait",
   "impliesTraits": [
     "winged"
   ]

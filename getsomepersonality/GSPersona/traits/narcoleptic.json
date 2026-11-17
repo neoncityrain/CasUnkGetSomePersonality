@@ -1,4 +1,5 @@
 {
-  "name": "narcoleptic",
+  "codeName": "narcoleptic",
+  "fileType": "trait",
   "desc": "Your sleep cycle is much shorter, but you don't feel the negative effects of sleeping on rough surfaces."
 }

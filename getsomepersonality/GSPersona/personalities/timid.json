@@ -1,6 +1,6 @@
 {
-  "name": "Timid",
-  "moodles": {},
+  "codeName": "Timid",
+  "fileType": "persona",
   "dialogue": {
     "seeGravel": [
       "Mmh... I'm not so sure about all this.","Wasn't there anyone more, you know... qualified? To do this?","This is a brand-new world. A new world for everyone, even... Gulp.","Maybe I could just... stay here? Live by this pod...? Oh, but that seems like a bad idea..."

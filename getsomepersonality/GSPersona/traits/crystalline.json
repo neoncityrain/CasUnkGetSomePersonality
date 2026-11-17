@@ -1,5 +1,6 @@
 {
-  "name": "crystalline",
+  "codeName": "crystalline",
+  "fileType": "trait",
   "desc": "Your body comprises of living crystals as a part of your tissue.",
   "impliesTraits": [ "livingmineral" ],
   "dialogue": {

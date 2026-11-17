@@ -1,6 +1,4 @@
 {
-  "name": "",
-  "moodles": {},
   "dialogue": {
     "seeGravel": [
       ""
@@ -77,6 +75,9 @@
     "miserable": [
       ""
     ],
+    "selfharm-regulated": [
+      ""
+    ],
     "selfharm": [
       ""
     ],
@@ -110,7 +111,7 @@
     "breakcorpse": [
       ""
     ],
-    "breakcorpseCannibalistic": [
+    "breakcorpse-cannibalistic": [
       ""
     ],
     "cold": [
@@ -213,6 +214,71 @@
       ""
     ],
     "selfdestruct": [
+      ""
+    ],"wwmr": [
+      ""
+    ],
+    "cargo1": [
+      ""
+    ],
+    "cargo2": [
+      ""
+    ],
+    "cargoimpale": [
+      ""
+    ],
+    "cargoimpale2": [
+      ""
+    ],
+    "cargoimpale3": [
+      ""
+    ],
+    "wwmrwrongway": [
+      ""
+    ],
+    "endlessloop0": [
+      ""
+    ], 
+    "endlessloop1": [
+      ""
+    ],
+    "endlessloop2": [
+      ""
+    ], 
+    "endlessloop3": [
+      ""
+    ],
+    "endlessloopdefault": [
+      ""
+    ],  
+    "endpodexamine": [
+      ""
+    ],
+    "ascententer": [
+      ""
+    ],
+    "labenter": [
+      ""
+    ],
+    "labresponse": [
+      ""
+    ],
+    "labthink1": [
+      ""
+    ],
+    "labthink2": [
+      ""
+    ],
+    "labthink2chip": [
+      ""
+    ],
+    "labshoot": [
+      ""
+    ],
+    "labcommentcalm": [
+      ""
+    ],
+    "labcommentcombat": [
       ""
     ],
 
@@ -330,6 +396,230 @@
     "dyingresponse": [
       ""
     ]},
+  "cutsceneTexts": {
+    "endscreenstatus": "",
+    "endscreenunresolved": "",
+    "endscreenresolved": "",
+    "endscreenescape": "",
+    "endscreenfailure": "",
+    "endscreencasualties": "",
+    "endscreenunknown": "",
+    "endscreenmerc": "",
+    "endscreenphysical": "",
+    "endscreendeceased": "",
+    "endscreenexamination": "",
+    "endscreenmental": "",
+    "endscreendepth": "",
+    "endscreendepthres": "",
+    "endscreentime": "",
+    "endscreencalories": "",
+    "endscreenmainmenu": "",
+    "endscreenclipboard": "",
+
+    "endsc1": "",
+    "endsc2": "",
+    "endsc3": "",
+    "endsc4": "",
+    "endsc5": "",
+    "endsc6": "",
+    "endsc7": "",
+    "endsc8": "",
+    "endsc9": "",
+    "endsc10": "",
+    "endsc11": "",
+    "endsc12": "",
+    "endsc13": "",
+    "endsctip": "",
+
+    "surfacebreachnote": "",
+    "labenternote": "",
+    "biopodnote": "",
+    "biopodnotealt": "",
+    "biopodnotealt2": "",
+    "escapenote1": "",
+    "escapenote2": "",
+    "mercnote1": "",
+    "mercnote2": "",
+    "mercnote3": ""
+  },
+  "moodles": {
+    "braindamage4": "",
+    "braindamage3": "",
+    "braindamage2": "",
+    "braindamage1": "",
+    "stroke": "",
+    "cantbreathe": "",
+    "thoraxdestroyed": "",
+    "pulmonaryembolism": "",
+    "oxygen1": "",
+    "oxygen2": "",
+    "oxygen3": "",
+    "oxygen4": "",
+    "fibrillation1": "",
+    "fibrillation2": "",
+    "fibrillation3": "",
+    "palpitations": "",
+    "cardiacarrest": "",
+    "hypoventilation1": "",
+    "hypoventilation2": "",
+    "hypotension1": "",
+    "hypotension2": "",
+    "hypotension3": "",
+    "hypotension4": "",
+    "hypertension1": "",
+    "hypertension2": "",
+    "hypertension3": "",
+    "hypertension4": "",
+    "venom1": "",
+    "venom2": "",
+    "venom3": "",
+    "venom4": "",
+    "pain1": "",
+    "pain2": "",
+    "pain3": "",
+    "pain4": "",
+    "shock": "",
+    "overdose1": "",
+    "overdose2": "",
+    "overdose3": "",
+    "overdose4": "",
+    "withdrawal1": "",
+    "withdrawal2": "",
+    "withdrawal3": "",
+    "withdrawal4": "",
+    "stimulated": "",
+    "drugoverdose": "",
+    "bleeding1": "",
+    "bleeding2": "",
+    "bleeding3": "",
+    "bleeding4": "",
+    "internalBleed": "",
+    "exertion1": "",
+    "exertion2": "",
+    "exertion3": "",
+    "exertion4": "",
+    "brokenbone": "",
+    "dislocation": "",
+    "brokenneck": "",
+    "brokenribs": "",
+    "dislocatedjaw": "",
+    "dislocatedspine": "",
+    "infected1": "",
+    "infected2": "",
+    "infected3": "",
+    "infected4": "",
+    "sepsis1": "",
+    "sepsis2": "",
+    "sepsis3": "",
+    "concussion": "",
+    "unconscious": "",
+    "incapacitated": "",
+    "asleep": "",
+    "confused1": "",
+    "confused2": "",
+    "confused3": "",
+    "tired1": "",
+    "tired2": "",
+    "tired3": "",
+    "tired4": "",
+    "hunger1": "",
+    "hunger2": "",
+    "hunger3": "",
+    "hunger4": "",
+    "hunger5": "",
+    "hunger6": "",
+    "thirst1": "",
+    "thirst2": "",
+    "thirst3": "",
+    "thirst4": "",
+    "overhydrated1": "",
+    "overhydrated2": "",
+    "overhydrated3": "",
+    "sick1": "",
+    "sick2": "",
+    "sick3": "",
+    "sick4": "",
+    "hot1": "",
+    "hot2": "",
+    "hot3": "",
+    "hot4": "",
+    "cold1": "",
+    "cold2": "",
+    "cold3": "",
+    "cold4": "",
+    "wet1": "",
+    "wet2": "",
+    "wet3": "",
+    "wet4": "",
+    "underweight1": "",
+    "underweight2": "",
+    "underweight3": "",
+    "underweight4": "",
+    "overweight1": "",
+    "overweight2": "",
+    "overweight3": "",
+    "overweight4": "",
+    "depression1": "",
+    "depression2": "",
+    "depression3": "",
+    "depression4": "",
+    "trauma1": "",
+    "trauma2": "",
+    "trauma3": "",
+    "trauma4": "",
+    "happy1": "",
+    "happy2": "",
+    "happy3": "",
+    "happy4": "",
+    "impairedspeech": "",
+    "deaf2": "",
+    "deaf3": "",
+    "deaf4": "",
+    "encumbered1": "",
+    "encumbered2": "",
+    "encumbered3": "",
+    "encumbered4": "",
+    "irradiated1": "",
+    "irradiated2": "",
+    "irradiated3": "",
+    "irradiated4": "",
+    "barotrauma1": "",
+    "barotrauma2": "",
+    "barotrauma3": "",
+    "barotrauma4": "",
+    "energized": "",
+    "hemothorax": "",
+    "hollow": "",
+    "badsleep": "",
+    "laststand": "",
+    "dirty1": "",
+    "dirty2": "",
+    "adrenaline": "",
+    "tachycardia": "",
+    "bradycardia": "",
+    "rnrs": "",
+    "rippedjaw": "",
+    "rippedeye": "",
+    "rippedeyes": "",
+    "lowimmunity": "",
+    "highimmunity": "",
+    "amputation": "",
+    "clawdamage1": "",
+    "clawdamage2": "",
+    "keratinbooster": "",
+    "impendingdoom": "",
+    "horrified": "",
+    "focused": "",
+    "cargo": "",
+    "prosthesis": "",
+    "loosescrews": "",
+    "bentprosthesis": "",
+    "materialloss": "",
+    "declawed": "",
+    "permanentlydeaf": "",
+    "colordeficient": "",
+    "colorblind": ""
+  },
   "pauseQuotes": {
     "normal": [
       ""

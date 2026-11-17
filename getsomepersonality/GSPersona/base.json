@@ -1,6 +1,7 @@
 {
-  "name": "base",
-  "basicAddedDialogue":{
+  "codeName": "base",
+  "fileType": "base",
+  "dialogue":{
       "randomnoises": [
       "Weh","Myeh","Ack","Rah","Tch","Ack","Mrr","Urgh","Urf","Ugh","Mmh","Myehhh","Arrrw","Hnnnh","Muhhhh","Snzz","Miiii","Hnf","Fnnn","Snnnh","Hsssk","Khh","Beh","Ghnnnn","Ghn","Guh","Mluh","Mrf","Uh","Ah","Er","I","Eh","Wh","Wha","Um","Erm","Mm","Muh","Myuh","Ahm","Ehl","Nghh","Ngh","Ahgnnn","Hrnh","Hrmf","Mrrrrr","Nyeh","Hrf","Ghhhhn","Ghaahhhhh","Ghhhhrk","Ngh","Khhg","Urghhh","Guhhhghhh","Gaahhhhnnn","Hrk","Hrrh","Grrrhk","Ghhhr","Muh","Buh","Hrrr","Pleh","Rrrh","Ghhh"
       ],

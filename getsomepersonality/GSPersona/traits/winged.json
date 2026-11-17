@@ -1,4 +1,5 @@
 {
-  "name": "winged",
+  "codeName": "winged",
+  "fileType": "trait",
   "desc": "not currently implimented"
 }

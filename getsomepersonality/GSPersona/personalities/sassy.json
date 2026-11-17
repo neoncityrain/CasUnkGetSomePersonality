@@ -1,5 +1,6 @@
 {
-  "name": "sassy",
+  "codeName": "sassy",
+  "fileType": "persona",
   "moodles":{
       "braindamage1dsc": "You've sustained brain damage. Generally, it's recommended to avoid this."
     },

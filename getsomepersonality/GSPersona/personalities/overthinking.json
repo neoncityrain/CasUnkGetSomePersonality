@@ -1,6 +1,6 @@
 {
-  "name": "overthinking",
-  "moodles":{},
+  "codeName": "overthinking",
+  "fileType": "persona",
   "dialogue": {
     "seeGravel": [
       "...This place looks like a big array of intestines.","The maw of a giant creature waits to swallow me whole...",

@@ -126,7 +126,6 @@ public class GSPUtils
         personaText = [];
         characterText = [];
         traitText = [];
-        worldText = [];
         LoadGSPJsons();
     }
 

@@ -93,6 +93,7 @@ internal static class playerPersona
                 randomizePersona();
             }
             verifyTitle();
+            itemRevision();
             reviseColours();
             myWV.CustomCall().reviseStats();
 
@@ -133,17 +134,26 @@ internal static class playerPersona
             // setPlayerTalkSound();
         }
 
+        internal void itemRevision()
+        {
+            foreach (KeyValuePair<string, ItemInfo> globalItem in Item.GlobalItems)
+            {
+                globalItem.Value.fullName = Locale.GetItem(globalItem.Key);
+                globalItem.Value.description = Locale.GetItem(globalItem.Key + "dsc");
+            }
+        }
+
         internal void reviseMyJsonBoy()
         {
             try
             {
-                if (characterText != null && characterText.Count > 0 && codeName != null && !string.IsNullOrEmpty(codeName) && characterText.ContainsKey(codeName) && characterText.TryGetValue(codeName, out characterFile myFile))
+                if (characterText != null && characterText.Count > 0 && codeName != null && !string.IsNullOrEmpty(codeName) && characterText.ContainsKey(codeName) && characterText.TryGetValue(codeName, out gspJsonLang myFile))
                 {
                     if (myFile == null) { return; }
-                    if (myFile.age > -1) { ownerAge = myFile.age; }
-                    if (myFile.heightCm > -1) { ownerHeight = myFile.heightCm; }
-                    if (myFile.id > -1) { idTag = myFile.id; }
-                    if (myFile.versionNumber > -1) { ownerVersion = myFile.versionNumber; }
+                    if (myFile.age > 0) { ownerAge = myFile.age; }
+                    if (myFile.heightCm > 0) { ownerHeight = myFile.heightCm; }
+                    if (myFile.id > 0) { idTag = myFile.id; }
+                    if (myFile.versionNumber > 0) { ownerVersion = myFile.versionNumber; }
 
                     if (myFile.personality != null) { personalityType = myFile.personality; }
                     if (myFile.name != null) { personalName = myFile.name; }
@@ -235,7 +245,7 @@ internal static class playerPersona
             {
                 owner.hasFur = true;
             }
-            if (trait == "missingeyeleft" && !owner.eyeGone)
+            if ((trait == "missingeyeleft" || trait == "eyetornoutleft") && !owner.eyeGone)
             {
                 owner.eyeGone = true;
                 if (trait != "eyetornoutleft")
@@ -243,7 +253,7 @@ internal static class playerPersona
                     myFace.eyeTimeHealed = 350f;
                 }
             }
-            if (trait == "missingeyeright" && !owner.eyeGone)
+            if ((trait == "missingeyeright" || trait == "eyetornoutright") && !owner.eyeGone)
             {
                 owner.eyeGone = true;
                 if (trait != "eyetornoutright")
@@ -251,7 +261,7 @@ internal static class playerPersona
                     rightEyeHealed = 350f;
                 }
             }
-            if (trait == "missingeyes" && !owner.bothEyesGone)
+            if ((trait == "missingeyes" || trait == "eyestornout") && !owner.bothEyesGone)
             {
                 owner.bothEyesGone = true;
                 if (trait != "eyestornout")
@@ -274,9 +284,9 @@ internal static class playerPersona
                 owner.clawHealth = 0f;
                 owner.clawRegrowTime = 0f;
             }
-            if (trait == "narcoleptic" && owner.sleepCycleSpeed < 1.2f)
+            if (trait == "narcoleptic")
             {
-                owner.sleepCycleSpeed = 1.2f;
+                owner.sleepCycleSpeed += 0.2f;
             }
             if (trait == "cantsweat" && owner.canSweat)
             {
@@ -286,13 +296,13 @@ internal static class playerPersona
 
             if (trait.EndsWith("milky") && owner.charType != 1)
             {
-                trait = "sawian-milky";
+                trait = "milky";
                 returnToVanillaSprites();
                 owner.charType = 1;
             }
             if (trait.EndsWith("dune") && owner.charType != 2)
             {
-                trait = "sawian-dune";
+                trait = "dune";
                 returnToVanillaSprites();
                 owner.charType = 2;
             }

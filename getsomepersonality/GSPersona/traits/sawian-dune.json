@@ -1,4 +1,5 @@
 {
-  "name": "sawian-dune",
+  "codeName": "dune",
+  "fileType": "trait",
   "impliesTraits": [ "arachnid","aquatic","gills" ]
 }

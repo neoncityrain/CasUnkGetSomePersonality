@@ -1,5 +1,6 @@
 {
-  "name": "furred",
+  "codeName": "furred",
+  "fileType": "trait",
   "desc": "You have fur covering your body.",
   "impliesTraits": [],
   "dialogue": {

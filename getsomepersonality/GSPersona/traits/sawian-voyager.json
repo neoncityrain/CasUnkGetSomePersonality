@@ -1,5 +1,6 @@
 {
-  "name": "voyager",
+  "codeName": "voyager",
+  "fileType": "trait",
   "impliesTraits": [
     "feline"
   ]

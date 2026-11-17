@@ -1,6 +1,5 @@
 {
-  "name": "casecapslock",
-  "desc": "YOU TEND TO SPEAK EXCLUSIVELY IN UPPERCASE.",
-  "impliesTraits": [],
-  "dialogue": {}
+  "codeName": "casecapslock",
+  "fileType": "trait",
+  "desc": "YOU TEND TO SPEAK EXCLUSIVELY IN UPPERCASE."
 }

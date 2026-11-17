@@ -1,5 +1,6 @@
 {
-  "name": "scaled",
+  "codeName": "scaled",
+  "fileType": "trait",
   "desc": "You have scales covering your body.",
   "impliesTraits": [],
   "dialogue": {

@@ -1,4 +1,5 @@
 {
-  "name": "roza",
+  "codeName": "roza",
+  "fileType": "trait",
   "impliesTraits": [ "furred","adaptedtocold" ]
 }

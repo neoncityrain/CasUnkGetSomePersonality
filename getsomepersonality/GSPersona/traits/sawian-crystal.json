@@ -1,4 +1,5 @@
 {
-  "name": "crystal",
+  "codeName": "crystal",
+  "fileType": "trait",
   "impliesTraits": [ "scaled","crystalline" ]
 }

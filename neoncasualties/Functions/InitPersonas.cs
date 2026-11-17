@@ -1,4 +1,6 @@
-﻿namespace ncrGetSomePersonality;
+﻿using Together;
+
+namespace ncrGetSomePersonality;
 
 internal class InitPersonas
 {
@@ -87,7 +89,7 @@ internal class InitPersonas
                 {
                     return;
                 }
-                characterText.TryGetValue(coden, out characterFile myFile);
+                characterText.TryGetValue(coden, out gspJsonLang myFile);
 
                 body.skills.INT += myFile.startINToffset;
                 body.skills.STR += myFile.startSTRoffset;
@@ -175,6 +177,7 @@ internal class InitPersonas
         }
     }
 
+
     [HarmonyPatch(typeof(TraderScript), "OnWillRenderObject")]
     internal class InitTraderPersona
     {
@@ -183,10 +186,12 @@ internal class InitPersonas
             try
             {
                 if (Application.isPlaying && __instance != null &&
-                    __instance.character == 0 &&
+                    __instance.character < 2 &&
                     __instance.TraderSelf().personalityType == null
                     )
                 {
+                    __instance.TraderSelf().myBody = __instance.GetComponent<BuildingEntity>();
+
                     Random.State state = Random.state;
                     int rand = (int)(__instance.transform.position.x +
                         __instance.transform.position.y * __instance.transform.position.z);

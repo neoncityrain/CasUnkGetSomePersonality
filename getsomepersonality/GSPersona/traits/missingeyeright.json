@@ -1,5 +1,6 @@
 {
-  "name": "missingeyeright",
+  "codeName": "missingeyeright",
+  "fileType": "trait",
   "desc": "One of your eyes is missing.",
   "isDisability": true
 }

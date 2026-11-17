@@ -1,4 +1,5 @@
 {
-  "name": "hidemissingeyeright",
+  "codeName": "hidemissingeyeright",
+  "fileType": "trait",
   "desc": "If missing, your right eye should not be rendered in WoundView."
 }

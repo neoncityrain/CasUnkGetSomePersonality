@@ -1,4 +1,5 @@
 {
-  "name": "antlered",
+  "codeName": "antlered",
+  "fileType": "trait",
   "desc": "You are decorated with antlers."
 }

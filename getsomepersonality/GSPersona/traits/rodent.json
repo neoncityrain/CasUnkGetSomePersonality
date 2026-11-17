@@ -1,4 +1,5 @@
 {
-  "name": "rodent",
+  "codeName": "rodent",
+  "fileType": "trait",
   "desc": "You appear to be some manner of mouse, rat, gerbil, or the like."
 }

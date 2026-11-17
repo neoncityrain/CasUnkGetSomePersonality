@@ -1,4 +1,5 @@
 {
-  "name": "horned",
+  "codeName": "horned",
+  "fileType": "trait",
   "desc": "You sport some impressive horns atop your head."
 }

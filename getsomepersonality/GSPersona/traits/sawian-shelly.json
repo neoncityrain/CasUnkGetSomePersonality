@@ -1,4 +1,5 @@
 {
-  "name": "sawian-shelly",
+  "codeName": "shelly",
+  "fileType": "trait",
   "impliesTraits": [ "arachnid","foureyed","mute" ]
 }

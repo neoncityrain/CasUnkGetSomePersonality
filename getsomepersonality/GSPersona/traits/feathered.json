@@ -1,5 +1,6 @@
 {
-  "name": "feathered",
+  "codeName": "feathered",
+  "fileType": "trait",
   "desc": "You have feathers covering your body.",
   "impliesTraits": []
 }

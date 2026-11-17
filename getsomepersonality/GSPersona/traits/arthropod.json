@@ -1,7 +1,7 @@
 {
-  "name": "arthropod",
+  "codeName": "arthropod",
+  "fileType": "trait",
   "desc": "You have an exoskeleton to protect your organs.",
-  "impliesTraits": [],
   "dialogue":{
     "limbskin": [
       "There's a crack in my armor...!","My exoskeleton's been compromised."

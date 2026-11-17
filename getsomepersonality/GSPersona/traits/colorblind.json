@@ -1,5 +1,6 @@
 {
-  "name": "colorblind",
+  "codeName": "colorblind",
+  "fileType": "trait",
   "desc": "You struggle to make out colours. Traps that are obvious to others may not be so easily spotted.",
   "isDisability": true
 }

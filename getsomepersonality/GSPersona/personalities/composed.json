@@ -1,5 +1,6 @@
 {
-  "name": "composed",
+  "codeName": "composed",
+  "fileType": "persona",
   "moodles":{
       "depression3dsc": "Everything feels so distant, so... empty. Is it even worth it to keep trying?",
       "depression4dsc": "<i>I will not go peacefully in the night...",

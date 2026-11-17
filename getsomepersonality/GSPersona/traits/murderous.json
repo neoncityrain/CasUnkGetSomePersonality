@@ -1,6 +1,5 @@
 {
-  "name": "murderous",
-  "desc": "Even the very idea of killing others excites you.",
-  "impliesTraits": [],
-  "dialogue": {}
+  "codeName": "murderous",
+  "fileType": "trait",
+  "desc": "Even the very idea of killing others excites you."
 }

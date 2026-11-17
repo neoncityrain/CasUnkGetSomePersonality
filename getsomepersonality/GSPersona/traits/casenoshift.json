@@ -1,6 +1,5 @@
 {
-  "name": "casenoshift",
-  "desc": "you tend to speak exclusively in lowercase.",
-  "impliesTraits": [],
-  "dialogue": {}
+  "codeName": "casenoshift",
+  "fileType": "trait",
+  "desc": "you tend to speak exclusively in lowercase."
 }

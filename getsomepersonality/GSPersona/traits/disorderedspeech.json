@@ -1,7 +1,6 @@
 {
-  "name": "disorderedspeech",
+  "codeName": "disorderedspeech",
+  "fileType": "trait",
   "desc": "You can't quite speak the same as everyone else and struggle to get words out.",
-  "isDisability": true,
-  "impliesTraits": [],
-  "dialogue": {}
+  "isDisability": true
 }

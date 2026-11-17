@@ -1,5 +1,6 @@
 {
-  "name": "livingmineral",
+  "codeName": "livingmineral",
+  "fileType": "trait",
   "desc": "Your body is comprised of material that's usually just considered to be terrain.",
   "dialogue": {
     "selfharm": [

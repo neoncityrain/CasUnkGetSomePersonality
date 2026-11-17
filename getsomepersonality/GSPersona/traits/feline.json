@@ -1,5 +1,6 @@
 {
-  "name": "feline",
+  "codeName": "feline",
+  "fileType": "trait",
   "desc": "You appear to be some manner of cat. Unfortunately, the whole 'nine lives' bit seems to be a paid DLC.",
   "items": {
     "dogfooddsc": "You would prefer not to eat this."

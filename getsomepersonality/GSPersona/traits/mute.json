@@ -1,7 +1,6 @@
 {
-  "name": "mute",
+  "codeName": "mute",
+  "fileType": "trait",
   "desc": "You cannot speak. When you try, sound doesn't properly leave your lungs.",
-  "isDisability": true,
-  "impliesTraits": [],
-  "dialogue": {}
+  "isDisability": true
 }

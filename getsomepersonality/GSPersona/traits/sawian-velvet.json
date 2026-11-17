@@ -1,4 +1,5 @@
 {
-  "name": "sawian-velvet",
+  "codeName": "velvet",
+  "fileType": "trait",
   "impliesTraits": [ "arachnid","sixeyed" ]
 }

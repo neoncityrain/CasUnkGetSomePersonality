@@ -2,6 +2,7 @@
   "codeName": "navichandran",
   "name": "Gamma",
   "displayName": "Gamma",
+  "fileType": "character",
   "personality": "energetic",
   "personalitySubtypes": {},
   "bodyTraits": [ "shelly" ],
@@ -10,6 +11,7 @@
   "versionNumber": 2,
   "heightCm": 140,
   "moodles":{},
+  
   "woundviewVersionText": "CHIP.TP_v3.0.13-beta",
   "woundviewBodystatText": "140cm | 9y | #2.47_1.6-3.0",
 
@@ -17,6 +19,8 @@
     "endscreenstatus": "PRJ-MRCY STATUS REPORT",
     "endscreenunresolved": "PUNISHED ADEQUATELY"
   },
+  
+  "startSTRoffset": -7,
 
   "dialogue":{
     "seeGravel": [

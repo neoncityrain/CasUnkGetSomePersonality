@@ -1,4 +1,5 @@
 {
-  "name": "canine",
+  "codeName": "canine",
+  "fileType": "trait",
   "desc": "You appear to be some manner of dog, or perhaps wolf."
 }

@@ -1,5 +1,6 @@
 {
-  "name": "deaf",
+  "codeName": "deaf",
+  "fileType": "trait",
   "desc": "You cannot hear most, if not all, sounds. It's as if the world holds a constant distance from you.",
   "isDisability": true
 }

@@ -1,4 +1,5 @@
 {
-  "name": "orange",
+  "codeName": "orange",
+  "fileType": "trait",
   "impliesTraits": [ "furred" ]
 }

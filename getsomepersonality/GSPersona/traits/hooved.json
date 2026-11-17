@@ -1,5 +1,6 @@
 {
-  "name": "hooved",
+  "codeName": "hooved",
+  "fileType": "trait",
   "desc": "Your legs end in tough hooves. But, believe it or not, stubbing a toe still hurts just as much.",
   "replacements": {
     "paws" : "hooves",

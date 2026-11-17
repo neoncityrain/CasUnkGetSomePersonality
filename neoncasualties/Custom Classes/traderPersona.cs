@@ -7,8 +7,9 @@ internal static class traderPersona
         internal string personalityType;
         internal List<string> bodyTraits = [];
         internal string ownName = "";
-        internal string easterEggType = "";
+        internal string codeName = "";
         internal string lastDialogueKey = "";
+        internal BuildingEntity myBody;
 
         internal TraderKind()
         {

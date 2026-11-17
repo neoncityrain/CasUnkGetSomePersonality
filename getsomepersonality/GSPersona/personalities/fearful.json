@@ -1,5 +1,6 @@
 {
-  "name": "fearful",
+  "codeName": "fearful",
+  "fileType": "persona",
   "dialogue": {
     "seeGravel": [
       "I'm not scared of a stupid fucking hole.","Helloooo? ... Yikes.","But... how do I get down?",

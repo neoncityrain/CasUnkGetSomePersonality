@@ -1,6 +1,5 @@
 {
-  "name": "declawed",
-  "desc": "You have survived the mortifying experience of losing your claws- and a part of your digits with them.",
-  "impliesTraits": [],
-  "dialogue": {}
+  "codeName": "declawed",
+  "fileType": "trait",
+  "desc": "You have survived the mortifying experience of losing your claws- and a part of your digits with them."
 }

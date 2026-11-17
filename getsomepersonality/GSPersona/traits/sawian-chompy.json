@@ -1,4 +1,5 @@
 {
-  "name": "chompy",
+  "codeName": "chompy",
+  "fileType": "trait",
   "impliesTraits": [ "gills","scaled" ]
 }

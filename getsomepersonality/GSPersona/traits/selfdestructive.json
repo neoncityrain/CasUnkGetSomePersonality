@@ -1,5 +1,6 @@
 {
-  "name": "selfdestructive",
+  "codeName": "selfdestructive",
+  "fileType": "trait",
   "desc": "Sometimes, it becomes hard to resist simply tearing yourself apart, peice by bloody peice.",
   "dialogue": {
     "sad": [

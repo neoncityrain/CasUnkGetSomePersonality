@@ -1,7 +1,7 @@
 {
-  "name": "baron",
+  "codeName": "baron",
+  "fileType": "trait",
   "impliesTraits": [
     "hooved","horned"
-  ],
-  "dialogue": {}
+  ]
 }

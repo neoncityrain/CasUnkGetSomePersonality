@@ -1,7 +1,7 @@
 {
-  "name": "eyestornout",
+  "codeName": "eyestornout",
+  "fileType": "trait",
   "desc": "You have survived the horrifying ordeal of losing your eyes in a violent manner.",
   "isDisability": true,
-  "impliesTraits": ["blind","missingeyes"],
-  "dialogue": {}
+  "impliesTraits": [ "blind","missingeyes" ]
 }

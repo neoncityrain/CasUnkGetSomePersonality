@@ -1,6 +1,6 @@
 {
-  "name": "easygoing",
-  "moodles":{},
+  "codeName": "easygoing",
+  "fileType": "persona",
   "dialogue": {
     "seeGravel": [
       "Well... shit, they weren't lying. That's a hole, alright.","They take any criticism on the transport, or...?",

@@ -1,4 +1,5 @@
 {
-  "name": "leapy",
+  "codeName": "leapy",
+  "fileType": "trait",
   "impliesTraits": [ "flora" ]
 }

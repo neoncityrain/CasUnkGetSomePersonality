@@ -22,44 +22,34 @@ internal static class customWV
             {
                 return;
             }
+
             try
             {
-                thisView.bodyStatText.text =
-                    owner.PlayerSelf().ownerHeight + "cm | " + owner.PlayerSelf().ownerAge +
-                    "y | #" + owner.PlayerSelf().idTag;
-                thisView.cInfo = [owner.PlayerSelf().ownerHeight, owner.PlayerSelf().ownerAge, owner.PlayerSelf().idTag, owner.PlayerSelf().ownerVersion];
-                WoundView.firmwareVer = "v2.0" + owner.PlayerSelf().ownerVersion.ToString();
-                thisView.versionText.text = "UNI-HEALTH " + WoundView.firmwareVer;
-
                 var self = owner.PlayerSelf();
-                if (characterText != null && characterText.Count > 0 && self.codeName != null && !string.IsNullOrEmpty(self.codeName) && characterText.ContainsKey(self.codeName) &&
-                    characterText.TryGetValue(self.codeName, out characterFile myFile))
+                if (self == null) { return; }
+
+                thisView.bodyStatText?.text = self.ownerHeight + "cm | " +
+                    self.ownerAge + "y | #" + self.idTag;
+                thisView.cInfo = [self.ownerHeight, self.ownerAge, self.idTag, self.ownerVersion];
+                thisView.versionText.text = "UNI-HEALTH v2.0" + self.ownerVersion.ToString();
+
+                if (characterText != null && characterText.Count > 0 && self.codeName != null && !string.IsNullOrEmpty(self.codeName) && characterText.ContainsKey(self.codeName) && characterText.TryGetValue(self.codeName, out gspJsonLang myFile))
                 {
                     if (myFile.woundviewBodystatText != null)
                     {
                         thisView.bodyStatText.text = myFile.woundviewBodystatText;
                     }
 
-                    if (myFile.woundviewFirmwareText != null)
-                    {
-                        WoundView.firmwareVer = myFile.woundviewFirmwareText;
-                    }
-                    else
-                    {
-                        WoundView.firmwareVer = "v2.0" + owner.PlayerSelf().ownerVersion.ToString();
-                    }
-
                     if (myFile.woundviewVersionText != null)
                     {
                         thisView.versionText.text = myFile.woundviewVersionText;
                     }
-                    else
-                    {
-                        thisView.versionText.text = "UNI-HEALTH " + WoundView.firmwareVer;
-                    }
                 }
 
-                thisView.speciesText.text = self.displayName.ToUpper() ?? self.personalName.ToUpper() ?? thisView.speciesText.text.ToUpper();
+                if (self.displayName != null || self.personalName != null)
+                {
+                    thisView.speciesText.text = self.displayName?.ToUpper() ?? self.personalName?.ToUpper();
+                }
             }
             catch (Exception ex)
             {

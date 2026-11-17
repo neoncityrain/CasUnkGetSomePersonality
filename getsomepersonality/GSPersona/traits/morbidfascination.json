@@ -1,5 +1,6 @@
 {
-  "name": "morbidfascination",
+  "codeName": "morbidfascination",
+  "fileType": "trait",
   "desc": "Gore, death, and viscera don't bother you as much as it does others.",
   "dialogue": {
     "limbskin": [

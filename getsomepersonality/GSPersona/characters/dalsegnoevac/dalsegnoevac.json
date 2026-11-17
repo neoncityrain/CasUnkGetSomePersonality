@@ -2,6 +2,7 @@
   "codeName": "dalsegnoevac",
   "name": "Evac",
   "displayName": "SEGNO",
+  "fileType": "character",
   "personality": "overthinking",
   "bodyTraits": [ "velvet", "morbidfascination" ],
   "id": 0,

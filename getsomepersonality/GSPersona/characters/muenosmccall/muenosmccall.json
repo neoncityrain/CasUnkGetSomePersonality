@@ -1,8 +1,9 @@
 {
   "codeName": "muenosmccall",
   "name": "Muenos",
+  "fileType": "character",
   "personality": "composed",
-  "bodyTraits": [ "baron","selfdestructive","morbidfascination" ],
+  "bodyTraits": [ "baron","selfdestructive","morbidfascination","levelheaded" ],
   "id": 17374,
   "age": 14,
   "versionNumber": 27,

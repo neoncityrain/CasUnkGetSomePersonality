@@ -3,13 +3,11 @@ namespace ncrGetSomePersonality;
 public static class ReLocale
 {
     #region texts
-    public static List<baseFile> baseText;
-    public static Dictionary<string, personalityFile> personaText;
-    public static Dictionary<string, characterFile> characterText;
-    public static Dictionary<string, traitFile> traitText;
-    public static Dictionary<string, tormentFile> tormentText;
-    public static Dictionary<string, worldFile> worldText;
-    public static Dictionary<string, systemFile> sysText;
+    public static List<gspJsonLang> baseText;
+    public static Dictionary<string, gspJsonLang> personaText;
+    public static Dictionary<string, gspJsonLang> characterText;
+    public static Dictionary<string, gspJsonLang> traitText;
+    public static Dictionary<string, gspJsonLang> tormentText;
     #endregion
 
     public static void LoadGSPJsons()
@@ -26,124 +24,116 @@ public static class ReLocale
 
         baseText = [];
         personaText = [];
-        sysText = [];
         characterText = [];
         tormentText = [];
         traitText = [];
 
         foreach (string path in dir)
         {
-            string filename = Path.GetFileNameWithoutExtension(path).ToLower();
-            // Log.LogDebug("Attempting to read json file " + filename);
-
-            if (filename == null || path.ToLower().Contains("template"))
+            if (path.ToLower().Contains("template") ||
+                path.ToLower().Contains("ignore"))
             {
                 // do NOT do a SINGLE thang.
             }
-            else if (filename.ToLower() == "base")
-            {
-                baseFile gsp = JsonConvert.DeserializeObject<baseFile>(
-                    File.ReadAllText(path));
-                if (gsp != null)
-                {
-                    string codeName = gsp.name ?? filename;
-                    // the name cant be null, so if it IS,
-                    // we assign a name to it.
-                    baseText.Add(gsp);
-                }
-            }
-            else if (path.ToLower().Contains("\\personalities\\") ||
-                path.ToLower().Contains("\\personality\\") ||
-                path.ToLower().Contains("/personalities/") ||
-                path.ToLower().Contains("/personality/"))
-            {
-                personalityFile gsp = JsonConvert.DeserializeObject<
-                    personalityFile>(File.ReadAllText(path));
-                if (gsp != null)
-                {
-                    string codeName = gsp.name ?? filename;
-                    personaText.Add(codeName, gsp);
-                }
-            }
-            else if (path.ToLower().Contains("\\character\\") ||
-                    path.ToLower().Contains("\\characters\\") ||
-                    path.ToLower().Contains("/character/") ||
-                    path.ToLower().Contains("/characters/"))
-            {
-                characterFile gsp = JsonConvert.DeserializeObject<
-                    characterFile>(File.ReadAllText(path));
-                if (gsp != null)
-                {
-                    if (string.IsNullOrEmpty(gsp.codeName))
-                    {
-                        Log.LogWarning("No codename is applied for the file at path \"" +
-                            path.ToString() +
-                            "\". While the json can be read, it may not be properly called." +
-                            " Please fix this when you are able.");
-                    }
-                    string codeName = gsp.codeName ?? filename;
-                    characterText.Add(codeName, gsp);
-                }
-            }
-            else if (path.ToLower().Contains("\\plural\\") ||
-                path.ToLower().Contains("\\plurality\\") ||
-                    path.ToLower().Contains("/plural/") ||
-                    path.ToLower().Contains("/plurality/"))
-            {
-                systemFile gsp = JsonConvert.DeserializeObject<
-                    systemFile>(File.ReadAllText(path));
-                if (gsp != null)
-                {
-                    string codeName = gsp.systemName ?? filename;
-                    sysText.Add(codeName, gsp);
-                }
-            }
-            else if (path.ToLower().Contains("\\worldstate\\") ||
-                path.ToLower().Contains("\\worldstates\\") ||
-                    path.ToLower().Contains("/worldstate/") ||
-                    path.ToLower().Contains("/worldstates/"))
-            {
-                worldFile gsp = JsonConvert.DeserializeObject<
-                    worldFile>(File.ReadAllText(path));
-
-                if (gsp != null)
-                {
-                    string codeName = gsp.name ?? filename;
-                    worldText.Add(codeName, gsp);
-                }
-            }
-            else if (path.ToLower().Contains("\\trait\\") ||
-                path.ToLower().Contains("\\traits\\") ||
-                path.ToLower().Contains("/trait/") ||
-                path.ToLower().Contains("/traits/"))
-            {
-                traitFile gsp = JsonConvert.DeserializeObject<
-                    traitFile>(File.ReadAllText(path));
-
-                if (gsp != null)
-                {
-                    string codeName = gsp.name ?? filename;
-                    traitText.Add(codeName, gsp);
-                }
-            }
-            else if (path.ToLower().Contains("\\torment\\") ||
-                path.ToLower().Contains("\\torments\\") ||
-                path.ToLower().Contains("/torment/") ||
-                path.ToLower().Contains("/torments/"))
-            {
-                tormentFile gsp = JsonConvert.DeserializeObject<
-                    tormentFile>(File.ReadAllText(path));
-
-                if (gsp != null)
-                {
-                    string codeName = gsp.name ?? filename;
-                    tormentText.Add(codeName, gsp);
-                }
-            }
             else
             {
-                Log.LogWarning("Found a file, but unsure what to do with it: " +
-                    path);
+                Log.LogDebug("Attempting to read JSON file named: " + Path.GetFileNameWithoutExtension(path));
+                gspJsonLang gsp = new();
+                try
+                {
+                    gsp = JsonConvert.DeserializeObject<gspJsonLang>(
+                        File.ReadAllText(path));
+                }
+                catch (Exception ex)
+                {
+                    Log.LogError("Could not read the following json file: " + ex);
+                }
+
+                if (gsp != null && string.IsNullOrEmpty(gsp.fileType))
+                {
+                    Log.LogWarning("As FileType is not present, GSP cannot read the following json file: " + path.ToString());
+                    Log.LogWarning("Please update your file to match the latest version.");
+                }
+
+                if (gsp != null && gsp.fileType != null)
+                {
+                    gsp.fileType = gsp.fileType.ToLower();
+                    if (string.IsNullOrEmpty(gsp.codeName))
+                    {
+                        if (gsp.name == null)
+                        {
+                            Log.LogWarning("No codename OR name is applied for this file: " + path.ToString() + ", which will cause issues. Aborting.");
+                            return;
+                        }
+                        else
+                        {
+                            Log.LogWarning("No codename is applied for this file: " + path.ToString() + ".");
+                            Log.LogWarning("While not inherently bad, there's a high likelihood that the file cannot be read naturally.");
+                            gsp.codeName = gsp.name;
+                        }
+                    }
+
+                    if (gsp.fileType == "base")
+                    {
+                        baseText.Add(gsp);
+                    }
+                    else if (gsp.fileType == "character" || gsp.fileType == "char")
+                    {
+                        if (!characterText.ContainsKey(gsp.codeName))
+                        {
+                            characterText.Add(gsp.codeName, gsp);
+                        }
+                        else
+                        {
+                            characterText.TryGetValue(gsp.codeName, out var basis);
+                            basis.Merge(gsp);
+                        }
+                    }
+                    else if (gsp.fileType == "personality" || gsp.fileType == "pers" || gsp.fileType == "persona")
+                    {
+                        if (!personaText.ContainsKey(gsp.codeName))
+                        {
+                            personaText.Add(gsp.codeName, gsp);
+                        }
+                        else
+                        {
+                            personaText.TryGetValue(gsp.codeName, out var basis);
+                            basis.Merge(gsp);
+                        }
+                    }
+                    else if (gsp.fileType == "trait" || gsp.fileType == "bodytrait" || gsp.fileType == "body")
+                    {
+                        if (!traitText.ContainsKey(gsp.codeName))
+                        {
+                            traitText.Add(gsp.codeName, gsp);
+                        }
+                        else
+                        {
+                            traitText.TryGetValue(gsp.codeName, out var basis);
+                            basis.Merge(gsp);
+                        }
+                    }
+                    else if (gsp.fileType == "torment" || gsp.fileType == "torm" || gsp.fileType == "misery" || gsp.fileType == "miserable")
+                    {
+                        if (!tormentText.ContainsKey(gsp.codeName))
+                        {
+                            tormentText.Add(gsp.codeName, gsp);
+                        }
+                        else
+                        {
+                            tormentText.TryGetValue(gsp.codeName, out var basis);
+                            basis.Merge(gsp);
+                        }
+                    }
+                    else
+                    {
+                        Log.LogError("GSP is not sure what to do with a filetype by the name of " + gsp.fileType + ", so the file at \"" + path + "\" cannot be read.");
+                    }
+                }
+                else
+                {
+                    Log.LogError("GSP was considered to be null for some reason.");
+                }
             }
         }
         #endregion
@@ -156,7 +146,7 @@ public static class ReLocale
             LoadGSPJsons();
         }
 
-        foreach (baseFile baselang in baseText)
+        foreach (gspJsonLang baselang in baseText)
         {
             if (baselang.main.TryGetValue(str, out var main))
             {
@@ -180,11 +170,11 @@ public static class ReLocale
 
         if (baseText.Count > 0)
         {
-            foreach (baseFile lang in baseText)
+            foreach (gspJsonLang lang in baseText)
             {
-                for (int i = 0; i < lang.basicAddedDialogue.Count; i++)
+                for (int i = 0; i < lang.dialogue.Count; i++)
                 {
-                    if (lang.basicAddedDialogue.TryGetValue(
+                    if (lang.dialogue.TryGetValue(
                         str, out var gspLang))
                     {
                         return gspLang;
@@ -296,8 +286,8 @@ public static class ReLocale
                 }
 
                 #region Moodle Grouping and setting
-                personalityFile perslang = new();
-                characterFile charlang = new();
+                gspJsonLang perslang = new();
+                gspJsonLang charlang = new();
                 if (player.PlayerSelf().personalityType != null)
                 {
                     personaText.TryGetValue(player.PlayerSelf().personalityType,
@@ -349,7 +339,7 @@ public static class ReLocale
                 if (player.PlayerSelf().codeName != null &&
                     player.PlayerSelf().codeName == "polarischandran" &&
                     characterText.TryGetValue("polarischandran",
-                    out characterFile pollang)
+                    out gspJsonLang pollang)
                     )
                 {
                     if (icon == "hunger" && intensity < 2)
@@ -372,9 +362,9 @@ public static class ReLocale
         }
     }
 
-    public static string GetRelocaledMoodle(string str, personalityFile persona = null,
-        characterFile character = null, List<string> traits = null,
-        tormentFile torment = null, int? IDnumber = null)
+    public static string GetRelocaledMoodle(string str, gspJsonLang persona = null,
+        gspJsonLang character = null, List<string> traits = null,
+        gspJsonLang torment = null, int? IDnumber = null)
     {
         if (baseText?.Count <= 0 ||
             (characterText?.Count <= 0 && character != null) ||
@@ -390,7 +380,7 @@ public static class ReLocale
         if (baseText != null && baseText.Count > 0 &&
             shouldUseGeneralStrings.Value == true)
         {
-            foreach (baseFile lan in baseText)
+            foreach (gspJsonLang lan in baseText)
             {
                 if (lan.moodles != null && lan.moodles.TryGetValue(str, out var baseLang) && baseLang != str)
                 {
@@ -453,36 +443,6 @@ public static class ReLocale
     #endregion
 
     #region Talk
-    //[HarmonyPatch(typeof(Talker), "Update")]
-    public class soundEffectSwap
-    {
-        internal static void Prefix(Talker __instance)
-        {
-            if (__instance.body != null && PlayerCamera.main != null &&
-                PlayerCamera.main.body != null &&
-                PlayerCamera.main.body == __instance.body &&
-                PlayerCamera.main.body.conscious
-                )
-            {
-                var chat = Resources.Load<AudioClip>("Sounds/watchtalk");
-                if (__instance.body.PlayerSelf().lastDialogueKey != "" //&&
-                    //__instance.body.PlayerSelf().sys != null
-                    )
-                {
-                    var sound = __instance.transform.GetComponent<Sound>;
-                    var method = sound.GetMethodInfo();
-                    if (method.Attributes.ToString() != null)
-                    {
-                        Log.LogDebug("Found talktext yayyyyyy! " + method.Attributes.ToString());
-
-                    }
-                }
-                __instance.body.PlayerSelf().lastDialogueKey = "";
-            }
-        }
-    }
-
-
     [HarmonyPatch(typeof(Talker), "Talk", [typeof(List<string>),typeof(Limb),
         typeof(bool),typeof(bool)])]
     public class TalkerTalk
@@ -492,6 +452,7 @@ public static class ReLocale
         {
             try
             {
+                    #region Nullchecks
                 if (lines != null && __instance != null && PlayerCamera.main != null &&
                     PlayerCamera.main.body != null && __instance.body != null
                     )
@@ -505,6 +466,7 @@ public static class ReLocale
                     {
                         LoadGSPJsons();
                     }
+                    #endregion
 
                     #region Initiating Variables
                     List<string> dialoguePool = [];
@@ -536,10 +498,10 @@ public static class ReLocale
                     string myName = isTrader ? trader.TraderSelf().ownName :
                         body.PlayerSelf().personalName;
 
-                    if ((isTrader && !string.IsNullOrEmpty(trader.TraderSelf().easterEggType)) ||
+                    if ((isTrader && !string.IsNullOrEmpty(trader.TraderSelf().codeName)) ||
                         (!isTrader && !string.IsNullOrEmpty(body.PlayerSelf().codeName)))
                     {
-                        myName = isTrader ? trader.TraderSelf().easterEggType :
+                        myName = isTrader ? trader.TraderSelf().codeName :
                         body.PlayerSelf().codeName;
                         // for those with names different than their easter egg types,
                         // since the eggstring is whats recorded in the key of charactertext
@@ -557,16 +519,46 @@ public static class ReLocale
 
                     if (dialogue == "shouldnotspeak")
                     {
-                        lines = [""];
+                        lines.Clear(); limb = null;
                         return;
                     }
 
-                    if (bodyTraits.Contains("deaf") &&
-                        dialogue == "loud")
+                    if (bodyTraits != null && bodyTraits.Count > 0)
                     {
-                        dialogue = "deafloud";
-                    }
+                        if (bodyTraits.Contains("deaf") &&
+                        dialogue == "loud")
+                        {
+                            dialogue = "deafloud";
+                        }
 
+                        if (dialogue == "murderregret")
+                        {
+                            if (bodyTraits.Contains("murderous"))
+                            {
+                                dialogue = "murderglee";
+                                body.happiness += 20f;
+                                body.traumaAmount -= 30f;
+                                body.sicknessAmount -= 30f * (body.mindWipe ? 0.5f : 1f);
+                                body.specialCrying = false;
+                            }
+                            else if (bodyTraits.Contains("murderdesensitized"))
+                            {
+                                dialogue = "murderdesensitized";
+                                body.happiness += 10f;
+                                body.traumaAmount -= 30f;
+                                body.sicknessAmount -= 30f * (body.mindWipe ? 0.5f : 1f);
+                                body.specialCrying = false;
+                            }
+                            else if (bodyTraits.Contains("levelheaded"))
+                            {
+                                dialogue = "murdercalmregret";
+                                body.happiness += 5f;
+                                body.traumaAmount -= 15f;
+                                body.sicknessAmount -= 10f * (body.mindWipe ? 0.5f : 1f);
+                            }
+                        }
+                    }
+                    
                     try
                     {
                         #region Body Trait Pool
@@ -574,7 +566,7 @@ public static class ReLocale
                         {
                             foreach (string bodytype in bodyTraits)
                             {
-                                if (traitText.TryGetValue(bodytype, out traitFile lan) &&
+                                if (traitText.TryGetValue(bodytype, out gspJsonLang lan) &&
                                     lan.dialogue != null && lan.dialogue.Count > 0)
                                 {
                                     if (lan.dialogue.TryGetValue(
@@ -660,17 +652,17 @@ public static class ReLocale
                             dialoguePool.Count < 100
                             )
                         {
-                            foreach (baseFile lang in baseText)
+                            foreach (gspJsonLang lang in baseText)
                             {
-                                if (lang?.basicAddedDialogue != null &&
-                                    lang?.basicAddedDialogue?.Count > 0)
+                                if (lang?.dialogue != null &&
+                                    lang?.dialogue?.Count > 0)
                                 {
-                                    if (lang.basicAddedDialogue.TryGetValue(
+                                    if (lang.dialogue.TryGetValue(
                                     dialogue, out var genPool))
                                     {
                                         dialoguePool.AddRange(genPool);
                                     }
-                                    if (lang.basicAddedDialogue.TryGetValue(
+                                    if (lang.dialogue.TryGetValue(
                                         "randomnoises", out var soundPool))
                                     {
                                         randomnoises.AddRange(soundPool);
@@ -702,12 +694,15 @@ public static class ReLocale
 
                     try
                     {
-                        dialoguePool ??= tweakMe(dialoguePool,
+                        if (dialoguePool != null)
+                        {
+                            dialoguePool = tweakMe(dialoguePool,
                             randomnoises ?? null,
                             limb ?? null,
                             body ?? null,
                             trader ?? null
                             );
+                        }
                     }
                     catch (Exception ex)
                     {
@@ -782,8 +777,8 @@ public static class ReLocale
                 __instance.pauseText.text = "...";
                 return;
             }
-            personalityFile perslang = new();
-            characterFile charlang = new();
+            gspJsonLang perslang = new();
+            gspJsonLang charlang = new();
 
             var self = player.PlayerSelf();
 
@@ -895,8 +890,8 @@ public static class ReLocale
 
 
     public static string GetPauseThoughts(string type,
-        personalityFile persona = null, characterFile character = null,
-        List<string> traits = null, tormentFile torment = null)
+        gspJsonLang persona = null, gspJsonLang character = null,
+        List<string> traits = null, gspJsonLang torment = null)
     {
         if ((baseText?.Count <= 0) ||
         (characterText?.Count <= 0 && character != null) ||
@@ -913,7 +908,7 @@ public static class ReLocale
         try
         {
             #region Base thoughts
-            foreach (baseFile baselang in baseText)
+            foreach (gspJsonLang baselang in baseText)
             {
                 if (baselang != null && baselang?.pauseThoughts != null &&
                 baselang?.pauseThoughts?.Count > 0 &&
@@ -940,7 +935,7 @@ public static class ReLocale
             {
                 foreach (string trait in traits)
                 {
-                    if (traitText.TryGetValue(trait, out traitFile file) &&
+                    if (traitText.TryGetValue(trait, out gspJsonLang file) &&
                         file.pauseThoughts != null && file.pauseThoughts.Count > 0 &&
                         file.pauseThoughts.TryGetValue(type, out List<string> traitpause))
                     {
@@ -976,7 +971,7 @@ public static class ReLocale
         }
         if (potentialPauseThought.Count <= 1)
         {
-            foreach (baseFile baselang in baseText)
+            foreach (gspJsonLang baselang in baseText)
             {
                 if (baselang != null && baselang?.pauseThoughts != null &&
                 baselang?.pauseThoughts?.Count > 0 &&
@@ -1007,8 +1002,8 @@ public static class ReLocale
     }
 
     public static string GetRelocaledPause(string type,
-        personalityFile persona = null, characterFile character = null,
-        List<string> traits = null, tormentFile torment = null)
+        gspJsonLang persona = null, gspJsonLang character = null,
+        List<string> traits = null, gspJsonLang torment = null)
     {
         if ((baseText?.Count <= 0) ||
             (characterText?.Count <= 0 && character != null) ||
@@ -1021,7 +1016,7 @@ public static class ReLocale
         }
 
         List<string> potentialPauseText = [];
-        foreach (baseFile baselang in baseText)
+        foreach (gspJsonLang baselang in baseText)
         {
             if (baselang != null && baselang?.pauseQuotes != null &&
             baselang?.pauseQuotes?.Count > 0 &&
@@ -1048,7 +1043,7 @@ public static class ReLocale
         {
             foreach (string trait in traits)
             {
-                if (traitText.TryGetValue(trait, out traitFile file) &&
+                if (traitText.TryGetValue(trait, out gspJsonLang file) &&
                     file.pauseQuotes != null && file.pauseQuotes.Count > 0 &&
                     file.pauseQuotes.TryGetValue(type, out List<string> traitpause))
                 {
@@ -1086,17 +1081,17 @@ public static class ReLocale
 
     #region FetchText
     public static List<string> fetchDialogueForAllVariables(string text,
-        personalityFile persona = null,
-        characterFile character = null,
+        gspJsonLang persona = null,
+        gspJsonLang character = null,
         List<string> traits = null,
-        tormentFile torment = null)
+        gspJsonLang torment = null)
     {
         List<string> dialogueCollected = [];
-        foreach (baseFile baselang in baseText)
+        foreach (gspJsonLang baselang in baseText)
         {
-            if (baselang != null && baselang?.basicAddedDialogue != null &&
+            if (baselang != null && baselang?.dialogue != null &&
             shouldUseGeneralStrings.Value == true &&
-            baselang.basicAddedDialogue.TryGetValue(
+            baselang.dialogue.TryGetValue(
                 text, out var baseT))
             {
                 dialogueCollected.AddRange(baseT);
@@ -1117,7 +1112,7 @@ public static class ReLocale
         {
             foreach (string trait in traits)
             {
-                if (traitText.TryGetValue(trait, out traitFile file) &&
+                if (traitText.TryGetValue(trait, out gspJsonLang file) &&
                     file.dialogue != null && file.dialogue.TryGetValue(
                         text, out var traitT))
                 {
@@ -1207,7 +1202,7 @@ public static class ReLocale
 
                 foreach (string currentTrait in bodyTraits)
                 {
-                    if (traitText.TryGetValue(currentTrait, out traitFile trait))
+                    if (traitText.TryGetValue(currentTrait, out gspJsonLang trait))
                     {
                         for (int i = 0; trait.replacements.Count > i; i++)
                         {

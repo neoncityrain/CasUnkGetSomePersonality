@@ -1,5 +1,6 @@
 {
-  "name": "arachnid",
+  "codeName": "arachnid",
+  "fileType": "trait",
   "desc": "You are some manner of spider, scorpion, mite, or the like.",
   "impliesTraits": [ "arthropod" ]
 }
