@@ -8,12 +8,12 @@ public class GSPUtils
     internal static string gspLocation = Path.GetDirectoryName(
         typeof(PluginSetup).Assembly.Location) ?? Path.Combine(Paths.PluginPath,
             "neoncasualties");
-    public static string saveFileName = "saveGSP.sv";
     internal static bool QOLEnabled = false;
     internal static bool playingMultiplayer = false;
     public static Dictionary<string, Sprite[]> savedVanillaSpriteSets = [];
     public static Dictionary<string, Image[]> savedVanillaImageSets = [];
     public static Dictionary<string, List<Eye>> savedVanillaEyeList = [];
+    internal static Dictionary<string, Sprite> UISpriteCache = [];
 
     public static void SetHue(Texture2D texture, float hue)
     {

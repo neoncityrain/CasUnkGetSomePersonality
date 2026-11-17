@@ -7,14 +7,14 @@ internal class Updater
         internal static void Prefix(Body __instance)
         {
             var body = thisPlayer(__instance);
-            if (body != null && body.alive)
+            if (body != null && body.alive && body.PlayerSelf().personalityType != null)
             {
                 #region Eggs
                 if (body.PlayerSelf().codeName == "polarischandran")
                 {
                     if (body.hunger > 120f)
                     {
-                        body.happiness -= body.hunger * 0.0005f *
+                        body.happiness -= body.hunger * 0.0007f *
                             Time.deltaTime * WorldGeneration.GetRunSettingFloat(
                                 "metabolismrate");
                     }

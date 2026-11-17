@@ -3,7 +3,16 @@
 internal class gspRunSettings : MonoBehaviour
 {
     public static List<gspInput> settings = [
-        new gspInput("playername")
+        new gspInput("displayname"),
+        new gspInput("codename"),
+        new gspInput("personalname"),
+
+        new gspInput("forceage"),
+        new gspInput("forceheight"),
+        new gspInput("forceid"),
+        new gspInput("forcevers"),
+
+        new gspInput("addedtraits")
         ];
     internal GameObject GSPSettings;
     public gspInput inputField;
@@ -32,15 +41,20 @@ internal class gspRunSettings : MonoBehaviour
             inputField.inputValue = str;
         });
     }
+    public static gspInput FetchSetting(string name)
+    {
+        return settings.First(x => x.name == name);
+    }
 }
 public class gspInput
 {
     internal string name;
-    internal bool boolValue;
-    internal float floatValue;
-    internal int intValue;
+    internal bool? boolValue;
+    internal float? floatValue;
+    internal int? intValue;
     internal string inputValue;
-    internal Color colorValue;
+    internal Color? colorValue;
+    internal List<string> stringListValue;
 
     public gspInput(string name)
     {

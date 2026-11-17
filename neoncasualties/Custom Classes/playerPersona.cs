@@ -9,10 +9,10 @@ internal static class playerPersona
         internal string desc;
         internal Dictionary<string, string> personalitySubtypes = [];
         internal string personalName;
-        internal int idTag;
-        internal int ownerHeight;
-        internal int ownerAge;
-        internal int ownerVersion;
+        internal int idTag = -1;
+        internal int ownerHeight = -1;
+        internal int ownerAge = -1;
+        internal int ownerVersion = -1;
         internal List<string> bodyTraits = [];
         internal string codeName;
         internal string displayName;
@@ -36,7 +36,7 @@ internal static class playerPersona
         internal void reviseStats()
         {
             #region setInit
-            myFace = owner.limbs[0].GetComponent<FacialExpression>();
+            myFace = owner?.limbs[0]?.GetComponent<FacialExpression>();
 
             if (myWV == null || myWV.CustomCall().owner == owner)
             {
@@ -49,36 +49,52 @@ internal static class playerPersona
                 myWV.CustomCall().owner = owner;
             }
 
-            ownerHeight = myWV.cInfo[0];
-            ownerAge = myWV.cInfo[1];
-            idTag = myWV.cInfo[2];
-            ownerVersion = myWV.cInfo[3];
+            if (ownerHeight == -1)
+            {
+                ownerHeight = myWV.cInfo[0];
+            }
+            else
+            {
+                myWV.cInfo[0] = ownerHeight;
+            }
+            if (ownerAge == -1)
+            {
+                ownerAge = myWV.cInfo[1];
+            }
+            else
+            {
+                myWV.cInfo[1] = ownerAge;
+            }
+            if (idTag == -1)
+            {
+                idTag = myWV.cInfo[2];
+            }
+            else
+            {
+                myWV.cInfo[2] = idTag;
+            }
+            if (ownerVersion == -1)
+            {
+                ownerVersion = myWV.cInfo[3];
+            }
+            else
+            {
+                myWV.cInfo[3] = ownerVersion;
+            }
+
             var mult = ownerHeight / 150f;
             if (mult < 0f) { mult = -mult; }
             owner.heightMultiplier = mult;
             #endregion
 
-            #region ReloadFromJson
-            if (characterText != null && characterText.Count > 0 && codeName != null && !string.IsNullOrEmpty(codeName) && characterText.ContainsKey(codeName) && characterText.TryGetValue(codeName, out characterFile myFile))
-            {
-                try
-                {
-                    reviseMyJsonBoy(myFile);
-                }
-                catch (Exception ex)
-                {
-                    Log.LogDebug("Error loading character from json file: " + ex);
-                }
-            }
-            #endregion
-
+            reviseMyJsonBoy();
             if (string.IsNullOrEmpty(personalityType))
             {
                 randomizePersona();
             }
             verifyTitle();
-            myWV.CustomCall().reviseStats();
             reviseColours();
+            myWV.CustomCall().reviseStats();
 
             #region Re-check Disabilities
             if (!bodyTraits.Contains("amputee"))
@@ -117,43 +133,53 @@ internal static class playerPersona
             // setPlayerTalkSound();
         }
 
-        internal void reviseMyJsonBoy(characterFile myFile)
+        internal void reviseMyJsonBoy()
         {
-            if (myFile == null) { return; }
-            if (myFile.age > -1) { ownerAge = myFile.age; }
-            if (myFile.heightCm > -1) { ownerHeight = myFile.heightCm; }
-            if (myFile.id > -1) { idTag = myFile.id; }
-            if (myFile.versionNumber > -1) { ownerVersion = myFile.versionNumber; }
+            try
+            {
+                if (characterText != null && characterText.Count > 0 && codeName != null && !string.IsNullOrEmpty(codeName) && characterText.ContainsKey(codeName) && characterText.TryGetValue(codeName, out characterFile myFile))
+                {
+                    if (myFile == null) { return; }
+                    if (myFile.age > -1) { ownerAge = myFile.age; }
+                    if (myFile.heightCm > -1) { ownerHeight = myFile.heightCm; }
+                    if (myFile.id > -1) { idTag = myFile.id; }
+                    if (myFile.versionNumber > -1) { ownerVersion = myFile.versionNumber; }
 
-            if (myFile.personality != null) { personalityType = myFile.personality; }
-            if (myFile.name != null) { personalName = myFile.name; }
-            if (myFile.displayName != null) { displayName = myFile.displayName; }
-            if (myFile.bodyTraits != null && myFile.bodyTraits.Length > 0)
-            {
-                foreach (string trait in myFile.bodyTraits)
-                {
-                    addTrait(trait);
+                    if (myFile.personality != null) { personalityType = myFile.personality; }
+                    if (myFile.name != null) { personalName = myFile.name; }
+                    if (myFile.displayName != null) { displayName = myFile.displayName; }
+                    if (myFile.bodyTraits != null && myFile.bodyTraits.Length > 0)
+                    {
+                        foreach (string trait in myFile.bodyTraits)
+                        {
+                            addTrait(trait);
+                        }
+                    }
+                    if (myFile.colours != null && myFile.colours.Count > 0)
+                    {
+                        foreach (string colName in myFile.colours.Keys)
+                        {
+                            if (playerColours.Keys.Contains(colName))
+                            {
+                                playerColours.Remove(colName);
+                            }
+                            if (myFile.colours.TryGetValue(colName, out var inttocol))
+                            {
+                                var col = new Color(
+                                    ((float)inttocol[0] / 2.55f) * 0.01f,
+                                    ((float)inttocol[1] / 2.55f) * 0.01f,
+                                    ((float)inttocol[2] / 2.55f) * 0.01f);
+                                playerColours.Add(colName, col);
+                            }
+                        }
+                    }
+                    if (myFile.description != null) { desc = myFile.description; }
                 }
             }
-            if (myFile.colours != null && myFile.colours.Count > 0)
+            catch (Exception ex)
             {
-                foreach (string colName in myFile.colours.Keys)
-                {
-                    if (playerColours.Keys.Contains(colName))
-                    {
-                        playerColours.Remove(colName);
-                    }
-                    if (myFile.colours.TryGetValue(colName, out var inttocol))
-                    {
-                        var col = new Color(
-                            ((float)inttocol[0] / 2.55f) * 0.01f,
-                            ((float)inttocol[1] / 2.55f) * 0.01f,
-                            ((float)inttocol[2] / 2.55f) * 0.01f);
-                        playerColours.Add(colName, col);
-                    }
-                }
+                Log.LogDebug("Error loading character from json file: " + ex);
             }
-            if (myFile.description != null) { desc = myFile.description; }
         }
 
         internal void randomizePersona()
@@ -293,7 +319,7 @@ internal static class playerPersona
             {
                 returnToVanillaSprites();
             }
-            if (myWV != null && myWV.CustomCall().UISpriteCache != null && myWV.CustomCall().UISpriteCache.Count > 0)
+            if (myWV != null && UISpriteCache != null && UISpriteCache.Count > 0)
             {
                 myWV.CustomCall().returnToDefault();
             }
@@ -406,7 +432,7 @@ internal static class playerPersona
                     owner.furColors.colorKeys[3].color = blood;
                 }
 
-                if (recolwv && myWV.CustomCall().UISpriteCache.Count <= 0)
+                if (recolwv && UISpriteCache.Count <= 0)
                 {
                     myWV.CustomCall().recolourMeBaby();
                 }
@@ -453,7 +479,7 @@ internal static class playerPersona
                 if (playerTitle != null)
                 {
                     if ((personalSprites == null || personalSprites.Count <= 0) &&
-                        Directory.Exists(gspLocation))
+                        Directory.Exists(gspLocation) && codeName != null)
                     {
                         loadAllPersonalSprites(owner);
                     }

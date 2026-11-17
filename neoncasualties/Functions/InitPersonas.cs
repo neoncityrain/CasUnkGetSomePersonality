@@ -26,6 +26,47 @@ internal class InitPersonas
                 {
                     body.PlayerSelf().codeName = forceSpecificEggValue.Value;
                 }
+
+                #region Apply Run Settings
+                if (gspRunSettings.FetchSetting("codename").inputValue != null)
+                {
+                    body.PlayerSelf().codeName = gspRunSettings.FetchSetting("codename").inputValue;
+                }
+                if (gspRunSettings.FetchSetting("displayname").inputValue != null)
+                {
+                    body.PlayerSelf().displayName = gspRunSettings.FetchSetting("displayname").inputValue;
+                }
+                if (gspRunSettings.FetchSetting("personalname").inputValue != null)
+                {
+                    body.PlayerSelf().personalName = gspRunSettings.FetchSetting("personalname").inputValue;
+                }
+
+                if (gspRunSettings.FetchSetting("forceage").intValue != null)
+                {
+                    body.PlayerSelf().ownerAge = (int)gspRunSettings.FetchSetting("forceage").intValue;
+                }
+                if (gspRunSettings.FetchSetting("forcevers").intValue != null)
+                {
+                    body.PlayerSelf().ownerVersion = (int)gspRunSettings.FetchSetting("forcevers").intValue;
+                }
+                if (gspRunSettings.FetchSetting("forceheight").intValue != null)
+                {
+                    body.PlayerSelf().ownerHeight = (int)gspRunSettings.FetchSetting("forceheight").intValue;
+                }
+                if (gspRunSettings.FetchSetting("forceid").intValue != null)
+                {
+                    body.PlayerSelf().idTag = (int)gspRunSettings.FetchSetting("forceid").intValue;
+                }
+
+                if (gspRunSettings.FetchSetting("addedtraits").stringListValue != null && gspRunSettings.FetchSetting("addedtraits").stringListValue.Count() > 0)
+                {
+                    foreach (string str in gspRunSettings.FetchSetting("addedtraits").stringListValue)
+                    {
+                        body.PlayerSelf().addTrait(str);
+                    }
+                }
+                #endregion
+
                 body.PlayerSelf().reviseStats();
 
                 #region Traits

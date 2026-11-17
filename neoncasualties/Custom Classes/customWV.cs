@@ -11,7 +11,6 @@ internal static class customWV
         internal Sprite originalWOsprite;
         internal Button.ButtonClickedEvent originalWorkoutAction;
         internal bool isDirty;
-        internal Dictionary<string, Sprite> UISpriteCache = [];
         internal Dictionary<string, Color> UITextColourCache = [];
         internal float? statHue;
         internal float? backHue;
@@ -19,34 +18,53 @@ internal static class customWV
 
         internal void reviseStats()
         {
-            WoundView.specimenId = owner.PlayerSelf().idTag;
-            thisView.bodyStatText.text =
-                owner.PlayerSelf().ownerHeight + "cm | " + owner.PlayerSelf().ownerAge +
-                "y | #" + owner.PlayerSelf().idTag;
-            thisView.cInfo = [owner.PlayerSelf().ownerHeight, owner.PlayerSelf().ownerAge,
-                owner.PlayerSelf().idTag, owner.PlayerSelf().ownerVersion];
-            WoundView.firmwareVer = "v2.0" + owner.PlayerSelf().ownerVersion;
-            thisView.versionText.text = "UNI-HEALTH " + WoundView.firmwareVer;
-
-            var self = owner.PlayerSelf();
-            if (characterText != null && characterText.Count > 0 && self.codeName != null && !string.IsNullOrEmpty(self.codeName) && characterText.ContainsKey(self.codeName) &&
-                characterText.TryGetValue(self.codeName, out characterFile myFile))
+            if (thisView == null)
             {
-                if (myFile.woundviewVersionText != null)
-                {
-                    WoundView.firmwareVer = myFile.woundviewVersionText;
-                }
-                if (myFile.woundviewBodystatText != null)
-                {
-                    thisView.bodyStatText.text = myFile.woundviewBodystatText;
-                }
-                if (myFile.woundviewFirmwareText != null)
-                {
-                    thisView.versionText.text = myFile.woundviewFirmwareText;
-                }
+                return;
             }
+            try
+            {
+                thisView.bodyStatText.text =
+                    owner.PlayerSelf().ownerHeight + "cm | " + owner.PlayerSelf().ownerAge +
+                    "y | #" + owner.PlayerSelf().idTag;
+                thisView.cInfo = [owner.PlayerSelf().ownerHeight, owner.PlayerSelf().ownerAge, owner.PlayerSelf().idTag, owner.PlayerSelf().ownerVersion];
+                WoundView.firmwareVer = "v2.0" + owner.PlayerSelf().ownerVersion.ToString();
+                thisView.versionText.text = "UNI-HEALTH " + WoundView.firmwareVer;
 
-            thisView.speciesText.text = owner.PlayerSelf().displayName.ToUpper() ?? thisView.speciesText.text.ToUpper();
+                var self = owner.PlayerSelf();
+                if (characterText != null && characterText.Count > 0 && self.codeName != null && !string.IsNullOrEmpty(self.codeName) && characterText.ContainsKey(self.codeName) &&
+                    characterText.TryGetValue(self.codeName, out characterFile myFile))
+                {
+                    if (myFile.woundviewBodystatText != null)
+                    {
+                        thisView.bodyStatText.text = myFile.woundviewBodystatText;
+                    }
+
+                    if (myFile.woundviewFirmwareText != null)
+                    {
+                        WoundView.firmwareVer = myFile.woundviewFirmwareText;
+                    }
+                    else
+                    {
+                        WoundView.firmwareVer = "v2.0" + owner.PlayerSelf().ownerVersion.ToString();
+                    }
+
+                    if (myFile.woundviewVersionText != null)
+                    {
+                        thisView.versionText.text = myFile.woundviewVersionText;
+                    }
+                    else
+                    {
+                        thisView.versionText.text = "UNI-HEALTH " + WoundView.firmwareVer;
+                    }
+                }
+
+                thisView.speciesText.text = self.displayName.ToUpper() ?? self.personalName.ToUpper() ?? thisView.speciesText.text.ToUpper();
+            }
+            catch (Exception ex)
+            {
+                Log.LogError("Error setting WoundVeiw stats: " + ex);
+            }
         }
 
         #region Colours
