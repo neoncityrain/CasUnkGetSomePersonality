@@ -3,7 +3,7 @@ namespace ncrGetSomePersonality;
 public static class ReLocale
 {
     #region texts
-    public static Dictionary<string, baseFile> baseText;
+    public static List<baseFile> baseText;
     public static Dictionary<string, personalityFile> personaText;
     public static Dictionary<string, characterFile> characterText;
     public static Dictionary<string, traitFile> traitText;
@@ -34,11 +34,9 @@ public static class ReLocale
         foreach (string path in dir)
         {
             string filename = Path.GetFileNameWithoutExtension(path).ToLower();
+            // Log.LogDebug("Attempting to read json file " + filename);
 
-            if (filename == null ||
-                (!path.ToLower().Contains("gspersona") &&
-                !path.ToLower().Contains("neoncasualties")) ||
-                path.ToLower().Contains("template"))
+            if (filename == null || path.ToLower().Contains("template"))
             {
                 // do NOT do a SINGLE thang.
             }
@@ -46,13 +44,12 @@ public static class ReLocale
             {
                 baseFile gsp = JsonConvert.DeserializeObject<baseFile>(
                     File.ReadAllText(path));
-
                 if (gsp != null)
                 {
                     string codeName = gsp.name ?? filename;
                     // the name cant be null, so if it IS,
                     // we assign a name to it.
-                    baseText.Add(codeName, gsp);
+                    baseText.Add(gsp);
                 }
             }
             else if (path.ToLower().Contains("\\personalities\\") ||
@@ -159,7 +156,7 @@ public static class ReLocale
             LoadGSPJsons();
         }
 
-        if (baseText.TryGetValue("base", out baseFile baselang))
+        foreach (baseFile baselang in baseText)
         {
             if (baselang.main.TryGetValue(str, out var main))
             {
@@ -183,7 +180,7 @@ public static class ReLocale
 
         if (baseText.Count > 0)
         {
-            foreach (baseFile lang in baseText.Values)
+            foreach (baseFile lang in baseText)
             {
                 for (int i = 0; i < lang.basicAddedDialogue.Count; i++)
                 {
@@ -390,11 +387,16 @@ public static class ReLocale
         }
 
         List<string> potentialMoodles = [];
-        if (baseText.TryGetValue("base", out baseFile lan) && baseText != null &&
-            lan.moodles != null && lan.moodles.TryGetValue(str, out var baseLang) &&
-            baseLang != str && shouldUseGeneralStrings.Value == true)
+        if (baseText != null && baseText.Count > 0 &&
+            shouldUseGeneralStrings.Value == true)
         {
-            potentialMoodles.Add(baseLang);
+            foreach (baseFile lan in baseText)
+            {
+                if (lan.moodles != null && lan.moodles.TryGetValue(str, out var baseLang) && baseLang != str)
+                {
+                    potentialMoodles.Add(baseLang);
+                }
+            }
         }
 
         if (character != null && character.moodles != null && characterText != null && 
@@ -444,12 +446,6 @@ public static class ReLocale
             {
                 return potentialMoodles.First();
             }
-        }
-        else if (shouldUseGeneralStrings.Value == false && lan != null &&
-            lan.moodles.TryGetValue(str, out var genLang) && genLang != str
-            )
-        {
-                return genLang;
         }
 
         return null; // return vanilla
@@ -661,22 +657,26 @@ public static class ReLocale
                         #region General Lines
                         if (baseText != null &&
                             shouldUseGeneralStrings.Value == true &&
-                            dialoguePool.Count < 100 &&
-                            baseText.TryGetValue(
-                            "base", out baseFile lang) &&
-                            lang?.basicAddedDialogue != null &&
-                            lang?.basicAddedDialogue?.Count > 0)
+                            dialoguePool.Count < 100
+                            )
                         {
-                                if (lang.basicAddedDialogue.TryGetValue(
+                            foreach (baseFile lang in baseText)
+                            {
+                                if (lang?.basicAddedDialogue != null &&
+                                    lang?.basicAddedDialogue?.Count > 0)
+                                {
+                                    if (lang.basicAddedDialogue.TryGetValue(
                                     dialogue, out var genPool))
-                                {
-                                    dialoguePool.AddRange(genPool);
+                                    {
+                                        dialoguePool.AddRange(genPool);
+                                    }
+                                    if (lang.basicAddedDialogue.TryGetValue(
+                                        "randomnoises", out var soundPool))
+                                    {
+                                        randomnoises.AddRange(soundPool);
+                                    }
                                 }
-                                if (lang.basicAddedDialogue.TryGetValue(
-                                    "randomnoises", out var soundPool))
-                                {
-                                    randomnoises.AddRange(soundPool);
-                                }
+                            }
                         }
                         #endregion
 
@@ -694,27 +694,6 @@ public static class ReLocale
                             }
                         }
                         #endregion
-
-                        #region General Lines Backup
-                        if (baseText.TryGetValue(
-                            "base", out baseFile gen) &&
-                            gen?.basicAddedDialogue != null &&
-                            gen?.basicAddedDialogue?.Count > 0 &&
-                            shouldUseGeneralStrings.Value == false &&
-                            dialoguePool.Count <= 0)
-                        {
-                            if (gen.basicAddedDialogue.TryGetValue(
-                                    dialogue, out var genPool))
-                            {
-                                dialoguePool.AddRange(genPool);
-                            }
-                            if (gen.basicAddedDialogue.TryGetValue(
-                                "randomnoises", out var soundPool))
-                            {
-                                randomnoises.AddRange(soundPool);
-                            }
-                        }
-#endregion
                     }
                     catch (Exception ex)
                     {
@@ -808,7 +787,6 @@ public static class ReLocale
 
             var self = player.PlayerSelf();
 
-            baseText.TryGetValue("base", out baseFile baselang);
             if (self.personalityType != null)
             {
                 personaText.TryGetValue(self.personalityType, out perslang);
@@ -859,7 +837,6 @@ public static class ReLocale
                 pauseQuotesAreThoughts.Value == true)
             {
                 newpause = GetPauseThoughts(type,
-                    baselang,
                     perslang ?? null,
                     charlang ?? null,
                     self.bodyTraits ?? null
@@ -900,7 +877,6 @@ public static class ReLocale
             else
             {
                 newpause = GetRelocaledPause(type,
-                    baselang,
                     perslang ?? null,
                     charlang ?? null,
                     self.bodyTraits ?? null
@@ -919,11 +895,10 @@ public static class ReLocale
 
 
     public static string GetPauseThoughts(string type,
-        baseFile baselang = null,
         personalityFile persona = null, characterFile character = null,
         List<string> traits = null, tormentFile torment = null)
     {
-        if ((baseText?.Count <= 0 && baselang != null) ||
+        if ((baseText?.Count <= 0) ||
         (characterText?.Count <= 0 && character != null) ||
         (traitText?.Count <= 0 && traits != null) ||
         (personaText?.Count <= 0 && persona != null) ||
@@ -938,13 +913,17 @@ public static class ReLocale
         try
         {
             #region Base thoughts
-            if (baselang != null && baselang?.pauseThoughts != null &&
+            foreach (baseFile baselang in baseText)
+            {
+                if (baselang != null && baselang?.pauseThoughts != null &&
                 baselang?.pauseThoughts?.Count > 0 &&
                 shouldUseGeneralStrings.Value == true &&
                 baselang.pauseThoughts.TryGetValue(type, out List<string> basepause))
-            {
-                potentialPauseThought.AddRange(basepause);
+                {
+                    potentialPauseThought.AddRange(basepause);
+                }
             }
+            
             if (character != null && character?.pauseThoughts != null &&
                 character?.pauseThoughts?.Count > 0 &&
                 character.pauseThoughts.TryGetValue(type, out List<string> charpause))
@@ -987,21 +966,26 @@ public static class ReLocale
         {
             potentialPauseThought.AddRange(
                 fetchDialogueForAllVariables("seeGravel",
-                baselang, persona, character, traits, torment));
+                persona, character, traits, torment));
             potentialPauseThought.AddRange(
                 fetchDialogueForAllVariables("sadresponse",
-                baselang, persona, character, traits, torment));
+                persona, character, traits, torment));
             potentialPauseThought.AddRange(
                 fetchDialogueForAllVariables("depressedresponse",
-                baselang, persona, character, traits, torment));
+                persona, character, traits, torment));
         }
-        if (potentialPauseThought.Count <= 1 &&
-            baselang != null && baselang?.pauseThoughts != null &&
-            baselang?.pauseThoughts?.Count > 0 &&
-            shouldUseGeneralStrings.Value == false &&
-            baselang.pauseThoughts.TryGetValue(type, out List<string> genpause))
+        if (potentialPauseThought.Count <= 1)
         {
-            potentialPauseThought.AddRange(genpause);
+            foreach (baseFile baselang in baseText)
+            {
+                if (baselang != null && baselang?.pauseThoughts != null &&
+                baselang?.pauseThoughts?.Count > 0 &&
+                shouldUseGeneralStrings.Value == false &&
+                baselang.pauseThoughts.TryGetValue(type, out List<string> genpause))
+                {
+                    potentialPauseThought.AddRange(genpause);
+                }
+            }
         }
         #endregion
         if (potentialPauseThought != null && potentialPauseThought.Count > 1)
@@ -1023,11 +1007,10 @@ public static class ReLocale
     }
 
     public static string GetRelocaledPause(string type,
-        baseFile baselang = null,
         personalityFile persona = null, characterFile character = null,
         List<string> traits = null, tormentFile torment = null)
     {
-        if ((baseText?.Count <= 0 && baselang != null) ||
+        if ((baseText?.Count <= 0) ||
             (characterText?.Count <= 0 && character != null) ||
             (traitText?.Count <= 0 && traits != null) ||
             (personaText?.Count <= 0 && persona != null) ||
@@ -1038,13 +1021,17 @@ public static class ReLocale
         }
 
         List<string> potentialPauseText = [];
-        if (baselang != null && baselang?.pauseQuotes != null &&
+        foreach (baseFile baselang in baseText)
+        {
+            if (baselang != null && baselang?.pauseQuotes != null &&
             baselang?.pauseQuotes?.Count > 0 &&
             shouldUseGeneralStrings.Value == true &&
             baselang.pauseQuotes.TryGetValue(type, out List<string> basepause))
-        {
-            potentialPauseText.AddRange(basepause);
+            {
+                potentialPauseText.AddRange(basepause);
+            }
         }
+        
         if (character != null && character?.pauseQuotes != null &&
             character?.pauseQuotes.Count > 0 &&
             character.pauseQuotes.TryGetValue(type, out List<string> charpause))
@@ -1099,20 +1086,23 @@ public static class ReLocale
 
     #region FetchText
     public static List<string> fetchDialogueForAllVariables(string text,
-        baseFile baselang = null,
         personalityFile persona = null,
         characterFile character = null,
         List<string> traits = null,
         tormentFile torment = null)
     {
         List<string> dialogueCollected = [];
-        if (baselang != null && baselang?.basicAddedDialogue != null &&
+        foreach (baseFile baselang in baseText)
+        {
+            if (baselang != null && baselang?.basicAddedDialogue != null &&
             shouldUseGeneralStrings.Value == true &&
             baselang.basicAddedDialogue.TryGetValue(
                 text, out var baseT))
-        {
-            dialogueCollected.AddRange(baseT);
+            {
+                dialogueCollected.AddRange(baseT);
+            }
         }
+        
         if (character != null && character?.dialogue != null &&
             character.dialogue.TryGetValue(text, out var characterT))
         {

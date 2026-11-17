@@ -1,4 +1,6 @@
-﻿namespace ncrGetSomePersonality;
+﻿using System.Xml.Linq;
+
+namespace ncrGetSomePersonality;
 public class GSPUtils
 {
     public static ManualLogSource Log;
@@ -90,9 +92,9 @@ public class GSPUtils
         texture.Apply();
     }
     
-    public static void loadAllPersonalSprites(string targetLocation, Body body)
+    public static void loadAllPersonalSprites(Body body)
     {
-        IEnumerable<string> dir = Directory.EnumerateFiles(targetLocation,
+        IEnumerable<string> dir = Directory.EnumerateFiles(gspLocation,
                 $"*.png", searchOption: SearchOption.AllDirectories);
         if (dir != null && dir.Count() > 0
             )
@@ -101,12 +103,18 @@ public class GSPUtils
             {
                 if (path.ToLower().Contains(body.PlayerSelf().codeName.ToLower()))
                 {
-                    string fileAndFolder = path.Replace(targetLocation +
-                    Path.DirectorySeparatorChar.ToString(), " ").ToLower().TrimStart();
-                    // Log.LogDebug("Found sprite filename: " + fileAndFolder);
+                    string fileAndFolder = path.ToLower();
+                    fileAndFolder.Replace(gspLocation + Path.DirectorySeparatorChar, " ");
+                    fileAndFolder.TrimStart();
 
+                    // Log.LogDebug("Found sprite! True code name is: " + fileAndFolder);
+
+                    float num = 0f;
+                    if (fileAndFolder.Contains("overworld") ||
+                        fileAndFolder.Contains("minigame")) { num = 8f; }
+                    if (fileAndFolder.Contains("woundview")) { num = 33f; }
                     body.PlayerSelf().personalSprites[fileAndFolder] =
-                        LoadCustomSprite(path);
+                        LoadCustomSprite(path, num);
                 }
             }
         }

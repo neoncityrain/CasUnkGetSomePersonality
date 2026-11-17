@@ -29,7 +29,8 @@ internal static class customWV
             thisView.versionText.text = "UNI-HEALTH " + WoundView.firmwareVer;
 
             var self = owner.PlayerSelf();
-            if (characterText != null && characterText.Count > 0 && self.codeName != null && !string.IsNullOrEmpty(self.codeName) && characterText.ContainsKey(self.codeName) && characterText.TryGetValue(self.codeName, out characterFile myFile))
+            if (characterText != null && characterText.Count > 0 && self.codeName != null && !string.IsNullOrEmpty(self.codeName) && characterText.ContainsKey(self.codeName) &&
+                characterText.TryGetValue(self.codeName, out characterFile myFile))
             {
                 if (myFile.woundviewVersionText != null)
                 {

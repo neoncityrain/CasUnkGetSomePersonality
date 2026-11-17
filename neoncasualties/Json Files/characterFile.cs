@@ -5,6 +5,7 @@ public class characterFile
     public string codeName;
     public string name;
     public string displayName;
+    public string fileType;
     public string description;
     public string personality;
     public Dictionary<string, string> personalitySubtypes;
@@ -24,13 +25,14 @@ public class characterFile
     public string woundviewVersionText;
     public string woundviewBodystatText;
     public string woundviewFirmwareText;
+    public string endStatsID;
+
     public int startSTRoffset = 0;
     public int startRESoffset = 0;
     public int startINToffset = 0;
 
     public Dictionary<string, string> cutsceneTexts;
 
-    public string endStatsID;
 
 
     public characterFile()

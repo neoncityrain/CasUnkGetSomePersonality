@@ -452,27 +452,10 @@ internal static class playerPersona
             {
                 if (playerTitle != null)
                 {
-                    var path = Path.Combine(gspLocation, "GSPersona", "characters",
-                    playerTitle);
-                    if (!Directory.Exists(path))
-                    {
-                        path = Path.Combine(gspLocation, "characters",
-                            playerTitle);
-                    }
-                    if (!Directory.Exists(path))
-                    {
-                        path = Path.Combine(gspLocation, "Assets", playerTitle);
-                    }
-                    if (!Directory.Exists(path))
-                    {
-                        path = Path.Combine(gspLocation, playerTitle);
-                    }
-
-
                     if ((personalSprites == null || personalSprites.Count <= 0) &&
-                        Directory.Exists(path))
+                        Directory.Exists(gspLocation))
                     {
-                        loadAllPersonalSprites(path, owner);
+                        loadAllPersonalSprites(owner);
                     }
                 }
             }
@@ -494,7 +477,7 @@ internal static class playerPersona
                         name, out Sprite currentSprite);
                     // Log.LogDebug("Current sprite load: " + name + ", aka " + currentSprite.name);
 
-                    if (name.StartsWith("overworld"))
+                    if (name.Contains("overworld"))
                     {
                         if (currentSprite.name.StartsWith("eye"))
                         {
@@ -537,7 +520,7 @@ internal static class playerPersona
                                     eyeBack = currentSprite;
                                     ivalue = 0;
                                 }
-                                if (currentSprite.name == "eyeopenback")
+                                else if (currentSprite.name == "eyeopenback")
                                 {
                                     eyeBack = currentSprite;
                                     ivalue = 0;
@@ -590,12 +573,12 @@ internal static class playerPersona
                                 { eyeBack = currentSprite; ivalue = 7; }
                                 #endregion
 
-                                if (eyeBack != null)
+                                if (eyeBack != null && eyeFront != eyeBack)
                                 {
                                     eye.back = eyeBack;
                                     eye.front = myFace.eyeList[ivalue].front;
                                 }
-                                if (eyeFront != null)
+                                if (eyeFront != null && eyeBack != eyeFront)
                                 {
                                     eye.front = eyeFront;
                                     eye.back = myFace.eyeList[ivalue].back;
@@ -755,7 +738,7 @@ internal static class playerPersona
                             }
                         }
                     }
-                    else if (name.StartsWith("woundview"))
+                    else if (name.Contains("woundview"))
                     {
                         if (savedVanillaImageSets != null &&
                             !savedVanillaImageSets.ContainsKey("limbimages"))
@@ -772,17 +755,8 @@ internal static class playerPersona
                                 Image originalLimb = myWV.limbImages[i];
                                 if (currentSprite != null && originalLimb != null)
                                 {
-                                    Vector2 initialSize = originalLimb.rectTransform.sizeDelta;
-                                    Vector2 initialHeightAndWidth = new(
-                                        originalLimb.sprite.rect.width,
-                                        originalLimb.sprite.rect.height);
-
                                     originalLimb.sprite = currentSprite;
-                                    originalLimb.rectTransform.sizeDelta = new(
-                                        initialSize.x * originalLimb.sprite.rect.width /
-                                        initialHeightAndWidth.x,
-                                        initialSize.y * originalLimb.sprite.rect.height /
-                                        initialHeightAndWidth.y);
+                                    originalLimb.SetNativeSize();
                                 }
                             }
                             else if (limbname == currentSprite.name)
@@ -791,17 +765,8 @@ internal static class playerPersona
                                     0).GetComponent<Image>();
                                 if (currentSprite != null && originalLimb != null)
                                 {
-                                    Vector2 initialSize = originalLimb.rectTransform.sizeDelta;
-                                    Vector2 initialHeightAndWidth = new(
-                                        originalLimb.sprite.rect.width,
-                                        originalLimb.sprite.rect.height);
-
                                     originalLimb.sprite = currentSprite;
-                                    originalLimb.rectTransform.sizeDelta = new(
-                                        initialSize.x * originalLimb.sprite.rect.width /
-                                        initialHeightAndWidth.x,
-                                        initialSize.y * originalLimb.sprite.rect.height /
-                                        initialHeightAndWidth.y);
+                                    originalLimb.SetNativeSize();
                                 }
                             }
                         }
@@ -816,6 +781,7 @@ internal static class playerPersona
                                     [myWV.disfiguredImage]);
                             }
                             myWV.disfiguredImage.sprite = currentSprite;
+                            myWV.disfiguredImage.SetNativeSize();
                         }
                         if (currentSprite.name == "eyelessleft")
                         {
@@ -826,6 +792,7 @@ internal static class playerPersona
                                     [myWV.eyeGoneImage]);
                             }
                             myWV.eyeGoneImage.sprite = currentSprite;
+                            myWV.eyeGoneImage.SetNativeSize();
                         }
                         if (currentSprite.name == "eyelessright")
                         {
@@ -836,6 +803,7 @@ internal static class playerPersona
                                     [myWV.bothEyesGoneImage]);
                             }
                             myWV.bothEyesGoneImage.sprite = currentSprite;
+                            myWV.bothEyesGoneImage.SetNativeSize();
                         }
 
                         if (bodyTraits.Contains("hidemissingeyeleft") &&
@@ -857,7 +825,7 @@ internal static class playerPersona
                         }
                         #endregion
                     }
-                    else if (name.StartsWith("minigame"))
+                    else if (name.Contains("minigame"))
                     {
                         if (savedVanillaSpriteSets != null &&
                             !savedVanillaSpriteSets.ContainsKey("handsprites"))
@@ -879,26 +847,6 @@ internal static class playerPersona
                         }
                     }
                 }
-
-                #region eyes
-                if (bodyTraits != null &&
-                    bodyTraits.Count > 0 &&
-                    bodyTraits.Contains("hidemissingeyeleft") ||
-                    bodyTraits.Contains("hidemissingeyes"))
-                {
-                    Color col = myWV.eyeGoneImage.color;
-                    col.a = 0f;
-                    myWV.eyeGoneImage.color = col;
-                }
-                if (bodyTraits != null && bodyTraits.Count > 0 &&
-                    bodyTraits.Contains("hidemissingeyeright") ||
-                    bodyTraits.Contains("hidemissingeyes"))
-                {
-                    Color col = myWV.bothEyesGoneImage.color;
-                    col.a = 0f;
-                    myWV.bothEyesGoneImage.color = col;
-                }
-                #endregion
             }
             catch (Exception ex)
             {
